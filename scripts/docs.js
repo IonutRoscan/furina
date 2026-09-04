@@ -473,21 +473,19 @@ function updateDirectorPayload() {
     return
   }
 
-  const lines = []
+  const notes = []
 
   if (directorPersistentToggle?.checked) {
-    lines.push(
-      'RULE:',
-      "- Never write dialogue, thoughts, decisions or actions for the user's character.",
-      ''
+    notes.push(
+      "[RULE] Never write dialogue, thoughts, decisions or actions for the user's character."
     )
   }
 
   if (directorCanonToggle?.checked) {
-    lines.push('CANON:', "- Aya's left arm is still injured.", '')
+    notes.push("[CANON] Aya's left arm is still injured.")
   }
 
-  if (lines.length === 0) {
+  if (notes.length === 0) {
     directorPayloadPreview.textContent = 'I try to lift the old wooden box.'
 
     return
@@ -495,7 +493,9 @@ function updateDirectorPayload() {
 
   directorPayloadPreview.textContent = `ooc: furina-director:
 [FURINA_DIRECTOR_NOTES]
-${lines.join('\n').trim()}
+[CONTINUITY]
+${notes.join('\n')}
+[/CONTINUITY]
 [/FURINA_DIRECTOR_NOTES]
 
 I try to lift the old wooden box.`
@@ -1193,27 +1193,8 @@ document.addEventListener('keydown', event => {
   }
 })
 
-const timelineFilters = Array.from(
-  document.querySelectorAll('[data-timeline-filter]')
-)
-const timelineEvents = Array.from(
-  document.querySelectorAll('[data-timeline-status]')
-)
-
-timelineFilters.forEach(button => {
-  button.addEventListener('click', () => {
-    const filter = button.dataset.timelineFilter
-    timelineFilters.forEach(item =>
-      item.classList.toggle('is-active', item === button)
-    )
-    timelineEvents.forEach(event => {
-      event.classList.toggle(
-        'is-hidden',
-        filter !== 'all' && event.dataset.timelineStatus !== filter
-      )
-    })
-  })
-})
+// Timeline statuses above are a documentation legend. The current extension stores
+// completed / ongoing / planned on entries, but does not expose filter controls here.
 
 const snapshotSceneValue = document.getElementById('snapshotSceneValue')
 const snapshotMoodValue = document.getElementById('snapshotMoodValue')
@@ -1232,7 +1213,7 @@ document
     }
     if (snapshotSavedCard) {
       snapshotSavedCard.classList.add('has-snapshot')
-      snapshotSavedCard.innerHTML = `<span>${savedSnapshot.scene}</span><p>Mood: ${savedSnapshot.mood}<br>Objective: ${savedSnapshot.objective}</p>`
+      snapshotSavedCard.innerHTML = `<span>${savedSnapshot.scene}</span><p>Mood: ${savedSnapshot.mood}<br>Objective: ${savedSnapshot.objective}<br><br>Restore Scene State reapplies these scene fields. The real snapshot also records chapter, Director preset, active Guard Rails and enabled Continuity for reference / its copied alternate-scene package.</p>`
     }
     if (restoreSnapshotButton) restoreSnapshotButton.disabled = false
   })
@@ -1278,39 +1259,8 @@ bookmarkToggles.forEach(button => {
 
 updateBookmarkCount()
 
-const storyBibleCheckboxes = Array.from(
-  document.querySelectorAll('[data-story-bible-component]')
-)
-const storyBibleSummary = document.getElementById('storyBibleSummary')
-const storyBibleResult = document.getElementById('storyBibleResult')
-
-function selectedStoryBibleComponents() {
-  return storyBibleCheckboxes
-    .filter(input => input.checked)
-    .map(input => input.dataset.storyBibleComponent)
-}
-
-function updateStoryBibleSummary() {
-  if (!storyBibleSummary) return
-  const count = selectedStoryBibleComponents().length
-  storyBibleSummary.textContent = `${count} ${count === 1 ? 'component' : 'components'} included`
-}
-
-storyBibleCheckboxes.forEach(input =>
-  input.addEventListener('change', updateStoryBibleSummary)
-)
-
-document
-  .getElementById('buildStoryBibleButton')
-  ?.addEventListener('click', () => {
-    if (!storyBibleResult) return
-    const selected = selectedStoryBibleComponents()
-    storyBibleResult.textContent = selected.length
-      ? `Example package: ${selected.join(' · ')}.`
-      : 'Nothing is selected, so the example package would contain no story components.'
-  })
-
-updateStoryBibleSummary()
+// Story Bible contents are presented as read-only documentation. The actual export
+// automatically builds the available versioned story-data package; it has no component picker.
 
 /* ============================================================
    INTERFACES GUIDE

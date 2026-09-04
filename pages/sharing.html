@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Learn Furina theme sharing, Full Setup portability, Story Bible import/export and backup workflows.">
+    <title>Sharing & Portability — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true"><div class="site-background__glow site-background__glow--one"></div><div class="site-background__glow site-background__glow--two"></div><div class="site-background__grid"></div><div class="site-background__noise"></div></div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Sharing & Portability</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="guides.html">Browse Guides</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>FURINA GUIDES</small><h2>Export the right thing.</h2><p>Different Furina packages preserve different layers of your setup.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">SHARING</span>
+                    <a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a>
+                    <a class="docs-nav__link" href="#theme"><span>02</span>Theme export</a>
+                    <a class="docs-nav__link" href="#full-setup"><span>03</span>Full Setup</a>
+                    <a class="docs-nav__link" href="#story-bible"><span>04</span>Story Bible</a>
+                    <a class="docs-nav__link" href="#profile"><span>05</span>Profile data</a>
+                    <a class="docs-nav__link" href="#safety"><span>06</span>Import safety</a>
+                </div>
+                <div class="docs-nav__group"><span class="docs-nav__label">GUIDES</span><a class="docs-nav__link docs-nav__link--page" href="story.html"><span>◒</span>Story Tools</a><a class="docs-nav__link docs-nav__link--page" href="profile-atelier.html"><span>◎</span>Profile Atelier</a><a class="docs-nav__link docs-nav__link--page" href="troubleshooting.html"><span>?</span>Troubleshooting</a></div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status"><i></i>Versioned exports</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow"><span>↗</span> SHARING & PORTABILITY</div>
+                <h1>Back up a layer. <span>Or package the whole experience.</span></h1>
+                <p class="docs-hero__lead">Furina has multiple export systems because a visual theme, a full conversation setup and a roleplay Story Bible are not the same kind of data.</p>
+                <p>Exports are versioned Furina data. Imports are validated before use, and the visual setup import flow can preview selected components before you choose to keep them.</p>
+            </section>
+
+            <section class="docs-section" id="theme">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>THEME JSON</small><h2>Share the look without the rest.</h2><p>Theme export is for Furina's visual theme settings. It does not need to include stickers, music, Director data or your story.</p></div></div>
+                <div class="share-package share-package--theme"><div class="share-package__file"><span>✦</span><small>FURINA THEME</small><strong>Purple Butterflies</strong><p>Versioned visual settings</p></div><div class="share-package__contents"><span>Colors</span><span>Background</span><span>Message styling</span><span>Typography</span><span>Layout</span><span>Visual effects</span></div></div>
+                <div class="docs-callout docs-callout--good"><div class="docs-callout__icon">✓</div><div><strong>Theme imports preview before you keep them.</strong><p>Furina can temporarily apply a validated imported theme, then either keep it in the current Theme Scope or restore what you had before.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="full-setup">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>FULL SETUP</small><h2>Share the atmosphere around a conversation.</h2><p>A Full Setup combines the visual theme with other immersion settings that make a conversation feel like itself.</p></div></div>
+                <div class="setup-builder-demo" id="setupBuilderDemo">
+                    <div class="setup-builder-demo__options">
+                        <label><input type="checkbox" data-setup-part="Theme" checked><i></i><span><strong>Theme</strong><small>Background, messages, typography and layout</small></span></label>
+                        <label><input type="checkbox" data-setup-part="Reader" checked><i></i><span><strong>Reader settings</strong><small>Reader / Focus presentation preferences</small></span></label>
+                        <label><input type="checkbox" data-setup-part="Stickers" checked><i></i><span><strong>Stickers</strong><small>Placed decorative image setup</small></span></label>
+                        <label><input type="checkbox" data-setup-part="Atmosphere" checked><i></i><span><strong>Atmosphere</strong><small>Environmental effect settings</small></span></label>
+                        <label><input type="checkbox" data-setup-part="Music / Ambience" checked><i></i><span><strong>Music / Ambience</strong><small>Audio source and playback settings</small></span></label>
+                    </div>
+                    <div class="setup-builder-demo__result"><small>FULL SETUP</small><strong id="setupBuilderCount">5 components selected</strong><div id="setupBuilderSummary">Theme · Reader · Stickers · Atmosphere · Music / Ambience</div><button id="setupPreviewButton" type="button">Preview example import <span>→</span></button><p id="setupPreviewStatus">Nothing changes until you choose what to keep.</p></div>
+                </div>
+                <div class="docs-callout"><div class="docs-callout__icon">◆</div><div><strong>Full Setup is not a Story Bible.</strong><p>It carries the conversation's presentation setup. Director, Continuity and story records use Story Bible portability instead.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="story-bible">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>STORY BIBLE</small><h2>Move the roleplay's Furina-side story state.</h2><p>Story Bible JSON can carry multiple story systems together. A Markdown export is also available for a human-readable record.</p></div></div>
+                <div class="story-bible-map">
+                    <article><span>◆</span><strong>Continuity</strong><p>Vault entries and continuity settings.</p></article>
+                    <article><span>🎬</span><strong>Director</strong><p>Persistent notes plus advanced Director tools.</p></article>
+                    <article><span>◒</span><strong>Scene State</strong><p>Current scene facts and conditions.</p></article>
+                    <article><span>≡</span><strong>Scene Intelligence</strong><p>Recaps, timeline and snapshots.</p></article>
+                    <article><span>★</span><strong>Bookmarks</strong><p>Saved message landmarks.</p></article>
+                    <article><span>▦</span><strong>Chapters</strong><p>Named conversation sections.</p></article>
+                </div>
+                <div class="merge-demo"><div><span>IMPORT MODE</span><button class="is-active" type="button" data-bible-mode="merge">Merge</button><button type="button" data-bible-mode="replace">Replace</button></div><p id="bibleModeDescription"><strong>Merge:</strong> keep current data and combine incoming items where possible.</p></div>
+            </section>
+
+            <section class="docs-section" id="profile">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>MIYABI PROFILE DATA</small><h2>Profile customization has its own backup.</h2><p>Profile Atelier can export and import Miyabi settings separately from chat themes and story packages.</p></div></div>
+                <div class="portability-grid"><article><span>◎</span><strong>Why separate?</strong><p>Profile layout settings target your connected profile rather than a chat conversation.</p></article><article><span>↗</span><strong>Export</strong><p>Keep a portable copy of your profile appearance and effects.</p></article><article><span>↙</span><strong>Import</strong><p>Restore a previous Miyabi setup.</p></article><article><span>↺</span><strong>Reset</strong><p>Reset Miyabi without treating it as a chat-theme reset.</p></article></div>
+            </section>
+
+            <section class="docs-section" id="safety">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>IMPORT SAFETY</small><h2>Preview first. Keep backups. Know the scope.</h2></div></div>
+                <div class="safety-checklist"><article><span>01</span><strong>Use Furina-formatted files</strong><p>Version and format checks protect against treating arbitrary JSON as a Furina export.</p></article><article><span>02</span><strong>Check Theme Scope</strong><p>A theme you keep may save globally or to the current conversation depending on the active scope.</p></article><article><span>03</span><strong>Preview Full Setup components</strong><p>Full Setup imports can select which available pieces should be previewed and committed.</p></article><article><span>04</span><strong>Back up important story state</strong><p>Especially before using Story Bible replace mode or resetting a large configuration.</p></article></div>
+            </section>
+
+            <section class="docs-next"><small>NEXT GUIDE</small><h2>When something looks wrong, start here.</h2><p>The troubleshooting guide covers installation mistakes, stale extension contexts, backgrounds, media, state and alternate interfaces.</p><div class="docs-next__actions"><a class="button button--secondary" href="profile-atelier.html">← Profile Atelier</a><a class="button button--primary" href="troubleshooting.html">Troubleshooting <span class="button__arrow">→</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

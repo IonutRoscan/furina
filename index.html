@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#07060d">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Furina: Clank Chat Atelier — customize ClankWorld, direct your stories, and keep long roleplays organized."
+    >
+
+    <title>Furina: Clank Chat Atelier</title>
+
+    <link rel="icon" href="assets/images/furina-icon.png">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+    <!-- =========================================================
+         BACKGROUND / DECORATION
+    ========================================================== -->
+
+    <div
+        class="site-background"
+        aria-hidden="true"
+    >
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__glow site-background__glow--three"></div>
+
+        <div class="site-background__grid"></div>
+
+        <div class="site-background__noise"></div>
+
+        <div class="star-field">
+            <span style="--x: 12%; --y: 18%; --delay: 0s;"></span>
+            <span style="--x: 30%; --y: 9%; --delay: 1.2s;"></span>
+            <span style="--x: 76%; --y: 14%; --delay: 0.6s;"></span>
+            <span style="--x: 88%; --y: 31%; --delay: 2s;"></span>
+            <span style="--x: 8%; --y: 62%; --delay: 1.8s;"></span>
+            <span style="--x: 51%; --y: 44%; --delay: 0.4s;"></span>
+            <span style="--x: 68%; --y: 73%; --delay: 1.1s;"></span>
+            <span style="--x: 92%; --y: 80%; --delay: 2.4s;"></span>
+            <span style="--x: 22%; --y: 86%; --delay: 0.8s;"></span>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="site-header">
+        <a
+            class="brand"
+            href="#top"
+            aria-label="Furina home"
+        >
+            <span class="brand__mark">✦</span>
+
+            <span class="brand__text">
+                <strong>FURINA</strong>
+                <small>CLANK CHAT ATELIER</small>
+            </span>
+        </a>
+
+
+        <nav class="main-nav">
+            <a
+                class="main-nav__link is-active"
+                href="#top"
+            >
+                Home
+            </a>
+
+            <a
+                class="main-nav__link"
+                href="#features"
+            >
+                Features
+            </a>
+
+            <a
+                class="main-nav__link"
+                href="pages/getting-started.html"
+            >
+                Getting Started
+            </a>
+
+            <a
+                class="main-nav__link"
+                href="pages/guides.html"
+            >
+                Guides
+            </a>
+        </nav>
+
+
+        <a
+            class="header-download"
+            href="assets/downloads/Furina-Clank-Chat-Atelier-1.3.1.zip"
+            download
+        >
+            <span>Download</span>
+            <strong>1.3.1</strong>
+        </a>
+
+
+        <button
+            class="mobile-nav-button"
+            id="mobileNavButton"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+
+    <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-hidden="true"
+    >
+        <a href="#top">Home</a>
+        <a href="#features">Features</a>
+        <a href="pages/getting-started.html">Getting Started</a>
+        <a href="pages/guides.html">Guides</a>
+    </nav>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main id="top">
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero section-shell">
+
+            <div class="hero__copy">
+                <div class="eyebrow reveal">
+                    <span class="eyebrow__spark">✦</span>
+                    Furina 1.3.1
+                    <span class="eyebrow__dot"></span>
+                    Client-side ClankWorld extension
+                </div>
+
+
+                <h1 class="hero__title reveal">
+                    <span>Customize</span>
+                    <span>the chat.</span>
+
+                    <span class="hero__title-accent">
+                        Direct the story.
+                    </span>
+
+                    <span>Remember what matters.</span>
+                </h1>
+
+
+                <p class="hero__description reveal">
+                    Furina turns ClankWorld into your own roleplay atelier —
+                    combining deep visual customization, immersive interfaces,
+                    story direction and continuity tools in one client-side
+                    extension.
+                </p>
+
+
+                <div class="hero__actions reveal">
+                    <a
+                        class="button button--primary"
+                        href="assets/downloads/Furina-Clank-Chat-Atelier-1.3.1.zip"
+                        download
+                    >
+                        <span class="button__icon">↓</span>
+
+                        <span>
+                            <small>Download</small>
+                            Furina 1.3.1
+                        </span>
+                    </a>
+
+                    <a
+                        class="button button--secondary"
+                        href="#features"
+                    >
+                        Explore Furina
+                        <span class="button__arrow">→</span>
+                    </a>
+                </div>
+
+
+                <div class="hero__meta reveal">
+
+                    <div class="meta-pill">
+                        <span class="meta-pill__icon">◆</span>
+
+                        <span>
+                            <small>Interface</small>
+                            Essentials + Full Atelier
+                        </span>
+                    </div>
+
+                    <div class="meta-pill">
+                        <span class="meta-pill__icon">◈</span>
+
+                        <span>
+                            <small>Built for</small>
+                            Long-form roleplay
+                        </span>
+                    </div>
+
+                    <div class="meta-pill">
+                        <span class="meta-pill__icon">◇</span>
+
+                        <span>
+                            <small>Architecture</small>
+                            Client-side only
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- =================================================
+                 HERO MOCKUP
+            ================================================== -->
+
+            <div
+                class="hero-showcase reveal"
+                id="heroShowcase"
+            >
+
+                <div class="hero-orbit hero-orbit--one"></div>
+                <div class="hero-orbit hero-orbit--two"></div>
+
+
+                <div
+                    class="floating-tag floating-tag--continuity"
+                    data-depth="18"
+                >
+                    <span>◆</span>
+                    CONTINUITY
+                </div>
+
+                <div
+                    class="floating-tag floating-tag--director"
+                    data-depth="12"
+                >
+                    <span>🎬</span>
+                    DIRECTOR
+                </div>
+
+                <div
+                    class="floating-tag floating-tag--scene"
+                    data-depth="20"
+                >
+                    <span>✦</span>
+                    SCENE STATE
+                </div>
+
+                <div
+                    class="floating-tag floating-tag--vn"
+                    data-depth="15"
+                >
+                    <span>◇</span>
+                    VISUAL NOVEL
+                </div>
+
+
+                <div
+                    class="furina-window"
+                    data-depth="7"
+                >
+                    <div class="furina-window__glow"></div>
+
+                    <div class="furina-window__header">
+                        <div class="furina-window__identity">
+                            <span class="furina-window__logo">✦</span>
+
+                            <div>
+                                <strong>FURINA</strong>
+                                <small>Clank Chat Atelier</small>
+                            </div>
+                        </div>
+
+                        <div class="furina-window__controls">
+                            <span>?</span>
+                            <span>×</span>
+                        </div>
+                    </div>
+
+
+                    <div class="mode-switch">
+                        <button
+                            class="mode-switch__button is-active"
+                            type="button"
+                        >
+                            Essentials
+                        </button>
+
+                        <button
+                            class="mode-switch__button"
+                            type="button"
+                        >
+                            Full Atelier
+                        </button>
+                    </div>
+
+
+                    <div class="furina-tabs">
+                        <span class="is-active">Home</span>
+                        <span>Customize</span>
+                        <span>Roleplay</span>
+                        <span>Immersion</span>
+                        <span>More</span>
+                    </div>
+
+
+                    <div class="furina-window__body">
+
+                        <div class="mock-heading">
+                            <small>ESSENTIALS</small>
+
+                            <h2>
+                                Have fun first.
+                                <br>
+                                <span>Tune everything later.</span>
+                            </h2>
+                        </div>
+
+
+                        <div class="mock-actions">
+
+                            <button
+                                class="mock-action"
+                                type="button"
+                                data-mock-status="Theme ready"
+                            >
+                                <span class="mock-action__icon">✦</span>
+
+                                <span>
+                                    <strong>Make it yours</strong>
+                                    <small>Themes & backgrounds</small>
+                                </span>
+
+                                <span class="mock-action__arrow">↗</span>
+                            </button>
+
+
+                            <button
+                                class="mock-action"
+                                type="button"
+                                data-mock-status="Director ready"
+                            >
+                                <span class="mock-action__icon">◆</span>
+
+                                <span>
+                                    <strong>Help the story</strong>
+                                    <small>Memory & Director</small>
+                                </span>
+
+                                <span class="mock-action__arrow">↗</span>
+                            </button>
+
+
+                            <button
+                                class="mock-action"
+                                type="button"
+                                data-mock-status="Atmosphere ready"
+                            >
+                                <span class="mock-action__icon">☁</span>
+
+                                <span>
+                                    <strong>Set the mood</strong>
+                                    <small>Music & atmosphere</small>
+                                </span>
+
+                                <span class="mock-action__arrow">↗</span>
+                            </button>
+
+
+                            <button
+                                class="mock-action"
+                                type="button"
+                                data-mock-status="Interfaces ready"
+                            >
+                                <span class="mock-action__icon">◇</span>
+
+                                <span>
+                                    <strong>More Furina</strong>
+                                    <small>VN & advanced tools</small>
+                                </span>
+
+                                <span class="mock-action__arrow">↗</span>
+                            </button>
+
+                        </div>
+
+
+                        <div class="mock-status">
+                            <span class="mock-status__pulse"></span>
+
+                            <span
+                                id="mockStatusText"
+                            >
+                                Everything ready.
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             TRUST / STATUS STRIP
+        ====================================================== -->
+
+        <section class="status-strip">
+
+            <div class="status-strip__item">
+                <span>01</span>
+
+                <div>
+                    <strong>Local-first</strong>
+                    <small>Your Furina setup stays client-side.</small>
+                </div>
+            </div>
+
+
+            <div class="status-strip__divider"></div>
+
+
+            <div class="status-strip__item">
+                <span>02</span>
+
+                <div>
+                    <strong>Conversation aware</strong>
+                    <small>Keep different chats feeling completely different.</small>
+                </div>
+            </div>
+
+
+            <div class="status-strip__divider"></div>
+
+
+            <div class="status-strip__item">
+                <span>03</span>
+
+                <div>
+                    <strong>Built for roleplay</strong>
+                    <small>Not just prettier chats — better story control.</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FEATURES
+        ====================================================== -->
+
+        <section
+            class="features-section section-shell"
+            id="features"
+        >
+
+            <div class="section-heading reveal">
+                <div class="eyebrow">
+                    <span class="eyebrow__spark">✦</span>
+                    Inside the Atelier
+                </div>
+
+                <h2>
+                    One extension.
+                    <br>
+                    <span>A ridiculous amount of Furina.</span>
+                </h2>
+
+                <p>
+                    Start simple with Essentials, or open Full Atelier and tune
+                    practically every part of the experience.
+                </p>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <article class="feature-card feature-card--large reveal">
+                    <div class="feature-card__number">
+                        01
+                    </div>
+
+                    <div class="feature-card__icon">
+                        ✦
+                    </div>
+
+                    <div class="feature-card__content">
+                        <small>CUSTOMIZATION</small>
+
+                        <h3>
+                            Make every conversation feel like its own world.
+                        </h3>
+
+                        <p>
+                            Themes, solid colors, gradients, images, live
+                            wallpapers, character backgrounds, message styling,
+                            typography, stickers, visual effects and more.
+                        </p>
+
+                        <div class="feature-card__tags">
+                            <span>Live wallpaper</span>
+                            <span>Parallax</span>
+                            <span>Stickers</span>
+                            <span>Atmosphere</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-card__number">
+                        02
+                    </div>
+
+                    <div class="feature-card__icon">
+                        🎬
+                    </div>
+
+                    <div class="feature-card__content">
+                        <small>DIRECTOR</small>
+
+                        <h3>
+                            Guide the story without cluttering the story.
+                        </h3>
+
+                        <p>
+                            Persistent guidance, next-reply direction, Guard
+                            Rails, future Cues and character knowledge
+                            boundaries.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-card__number">
+                        03
+                    </div>
+
+                    <div class="feature-card__icon">
+                        ◆
+                    </div>
+
+                    <div class="feature-card__content">
+                        <small>CONTINUITY</small>
+
+                        <h3>
+                            Remember what matters.
+                        </h3>
+
+                        <p>
+                            Save canon, relationships, injuries, secrets,
+                            inventory, open threads and other story facts in the
+                            Continuity Vault.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-card__number">
+                        04
+                    </div>
+
+                    <div class="feature-card__icon">
+                        ◒
+                    </div>
+
+                    <div class="feature-card__content">
+                        <small>STORY</small>
+
+                        <h3>
+                            Give long roleplays structure.
+                        </h3>
+
+                        <p>
+                            Scene State, recaps, Previously On, timelines,
+                            snapshots, bookmarks, chapters and Story Bible
+                            portability.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="feature-card reveal">
+                    <div class="feature-card__number">
+                        05
+                    </div>
+
+                    <div class="feature-card__icon">
+                        ◇
+                    </div>
+
+                    <div class="feature-card__content">
+                        <small>INTERFACES</small>
+
+                        <h3>
+                            Stop looking at a normal chat window.
+                        </h3>
+
+                        <p>
+                            Read and continue conversations through experimental
+                            Visual Novel Mode or Phantom Chat.
+                        </p>
+                    </div>
+                </article>
+
+
+                <article class="feature-card feature-card--accent reveal">
+                    <div class="feature-card__number">
+                        06
+                    </div>
+
+                    <div class="feature-card__icon">
+                        ♫
+                    </div>
+
+                    <div class="feature-card__content">
+                        <small>IMMERSION</small>
+
+                        <h3>
+                            Set the mood.
+                        </h3>
+
+                        <p>
+                            Music, SoundCloud, YouTube, rain, snow, fog,
+                            embers, sparkles, Reader Mode and cinematic
+                            presentation tools.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             ESSENTIALS VS FULL ATELIER
+        ====================================================== -->
+
+        <section
+            class="paths-section section-shell"
+            id="paths"
+        >
+
+            <div class="section-heading section-heading--center reveal">
+                <div class="eyebrow">
+                    <span class="eyebrow__spark">✦</span>
+                    Start wherever you want
+                </div>
+
+                <h2>
+                    Furina doesn't have to
+                    <br>
+                    <span>be complicated.</span>
+                </h2>
+
+                <p>
+                    Version 1.3.1 includes two ways to use the same underlying
+                    Furina systems.
+                </p>
+            </div>
+
+
+            <div class="paths">
+
+                <article class="path-card path-card--essentials reveal">
+                    <div class="path-card__badge">
+                        Recommended for new users
+                    </div>
+
+                    <div class="path-card__symbol">
+                        ✦
+                    </div>
+
+                    <small>ESSENTIALS</small>
+
+                    <h3>
+                        Have fun first.
+                    </h3>
+
+                    <p>
+                        A simpler Furina workspace built around what you want to
+                        do instead of exposing every advanced setting at once.
+                    </p>
+
+                    <ul>
+                        <li>Quick themes and backgrounds</li>
+                        <li>Memory and Director shortcuts</li>
+                        <li>Music and atmosphere</li>
+                        <li>Easy access to interfaces</li>
+                        <li>Same underlying settings as Full Atelier</li>
+                    </ul>
+
+                    <a
+                        class="path-card__link"
+                        href="pages/getting-started.html#first-five"
+                    >
+                        Start with Essentials
+                        <span>→</span>
+                    </a>
+                </article>
+
+
+                <div class="paths__bridge reveal">
+                    <span></span>
+                    <strong>OR</strong>
+                    <span></span>
+                </div>
+
+
+                <article class="path-card path-card--atelier reveal">
+                    <div class="path-card__symbol">
+                        ◆
+                    </div>
+
+                    <small>FULL ATELIER</small>
+
+                    <h3>
+                        Tune everything.
+                    </h3>
+
+                    <p>
+                        The complete Furina workspace for users who want direct
+                        access to every advanced system and setting.
+                    </p>
+
+                    <ul>
+                        <li>Full customization controls</li>
+                        <li>Complete Continuity Vault</li>
+                        <li>Director Cues and Guard Rails</li>
+                        <li>Scene and story management</li>
+                        <li>Advanced CSS and portability tools</li>
+                    </ul>
+
+                    <a
+                        class="path-card__link"
+                        href="pages/guides.html"
+                    >
+                        Explore Full Atelier
+                        <span>→</span>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             GUIDE LIBRARY
+        ====================================================== -->
+
+        <section class="home-guides-section section-shell" id="guides">
+            <div class="section-heading reveal">
+                <div class="eyebrow"><span class="eyebrow__spark">✦</span> Furina documentation</div>
+                <h2>Learn the system <span>when you actually need it.</span></h2>
+                <p>The site is organized around real tasks: customize a chat, direct a reply, preserve continuity, structure a story, or troubleshoot a problem.</p>
+            </div>
+
+            <div class="home-guide-grid">
+                <a class="home-guide-card reveal" href="pages/getting-started.html"><span>✦</span><small>START HERE</small><strong>Getting Started</strong><p>Install Furina, choose Essentials or Full Atelier, and try the first five useful things.</p><i>Open guide →</i></a>
+                <a class="home-guide-card reveal" href="pages/customization.html"><span>◈</span><small>VISUAL</small><strong>Customization</strong><p>Themes, backgrounds, live wallpapers, chat presentation and advanced visual controls.</p><i>Open guide →</i></a>
+                <a class="home-guide-card reveal" href="pages/immersion.html"><span>☁</span><small>ATMOSPHERE</small><strong>Immersion</strong><p>Rain, fog, music, YouTube, SoundCloud, stickers, Reader Mode and Focus Mode.</p><i>Open guide →</i></a>
+                <a class="home-guide-card reveal" href="pages/director.html"><span>🎬</span><small>ROLEPLAY</small><strong>Director</strong><p>Persistent notes, one-shot direction, Guard Rails, cues and knowledge boundaries.</p><i>Open guide →</i></a>
+                <a class="home-guide-card reveal" href="pages/continuity.html"><span>◆</span><small>MEMORY</small><strong>Continuity</strong><p>Save important facts and let Furina select a small relevant group for the current message.</p><i>Open guide →</i></a>
+                <a class="home-guide-card reveal" href="pages/story.html"><span>◒</span><small>STRUCTURE</small><strong>Story Tools</strong><p>Scene State, recaps, timeline, snapshots, bookmarks, chapters and Story Bible.</p><i>Open guide →</i></a>
+                <a class="home-guide-card reveal" href="pages/interfaces.html"><span>◇</span><small>INTERFACES</small><strong>Alternate Interfaces</strong><p>Visual Novel Mode and Phantom Chat turn the same conversation into a different kind of stage.</p><i>Open guide →</i></a>
+                <a class="home-guide-card home-guide-card--all reveal" href="pages/guides.html"><span>✦</span><small>EVERYTHING</small><strong>Browse all guides</strong><p>Response Styles, Profile Atelier, sharing, troubleshooting and release notes live in the full library.</p><i>Browse library →</i></a>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CLIENT SIDE EXPLANATION
+        ====================================================== -->
+
+        <section class="clarity-section section-shell">
+
+            <div class="clarity-card reveal">
+
+                <div class="clarity-card__graphic">
+                    <div class="clarity-orb">
+                        <span>✦</span>
+                    </div>
+
+                    <div class="clarity-line"></div>
+
+                    <div class="clarity-orb clarity-orb--secondary">
+                        <span>CLANK</span>
+                    </div>
+                </div>
+
+
+                <div class="clarity-card__content">
+                    <small>WHAT FURINA IS — AND ISN'T</small>
+
+                    <h2>
+                        Powerful tools.
+                        <span>No pretend magic.</span>
+                    </h2>
+
+                    <p>
+                        Furina remains a client-side browser extension. It does
+                        not modify Clank's backend memory or increase a model's
+                        real context window.
+                    </p>
+
+                    <p>
+                        Its roleplay systems organize information locally and,
+                        when necessary, prepare user-controlled context for the
+                        messages you choose to send.
+                    </p>
+
+                    <a href="pages/troubleshooting.html#boundaries">
+                        Learn how Furina works
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             DOWNLOAD
+        ====================================================== -->
+
+        <section
+            class="download-section section-shell"
+            id="download"
+        >
+
+            <div class="download-card reveal">
+
+                <div class="download-card__flare"></div>
+
+                <div class="download-card__content">
+                    <div class="eyebrow">
+                        <span class="eyebrow__spark">✦</span>
+                        Current release
+                    </div>
+
+                    <h2>
+                        Enter the Atelier.
+                    </h2>
+
+                    <p>
+                        Furina: Clank Chat Atelier 1.3.1
+                    </p>
+
+
+                    <div class="download-card__actions">
+                        <a
+                            class="button button--primary button--large"
+                            href="assets/downloads/Furina-Clank-Chat-Atelier-1.3.1.zip"
+                            download
+                        >
+                            <span class="button__icon">↓</span>
+
+                            <span>
+                                <small>Download extension</small>
+                                Version 1.3.1
+                            </span>
+                        </a>
+
+                        <a
+                            class="button button--secondary"
+                            href="pages/getting-started.html#install"
+                        >
+                            Installation guide
+                            <span class="button__arrow">→</span>
+                        </a>
+                    </div>
+
+
+                    <div class="download-card__note">
+                        <span>◇</span>
+
+                        <p>
+                            The bundled download is Furina 1.3.1. Installation,
+                            feature guides, troubleshooting and release notes are available on this site.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="download-card__version">
+                    <small>FURINA</small>
+                    <strong>1.3.1</strong>
+                    <span>CLANK CHAT ATELIER</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="site-footer__brand">
+            <span>✦</span>
+
+            <div>
+                <strong>FURINA</strong>
+                <small>CLANK CHAT ATELIER</small>
+            </div>
+        </div>
+
+
+        <p>
+            A client-side ClankWorld customization and roleplay extension.
+        </p>
+
+
+        <div class="site-footer__links">
+            <a href="#top">Home</a>
+            <a href="pages/guides.html">Guides</a>
+            <a href="pages/releases.html">Releases</a>
+            <a href="pages/troubleshooting.html">Support</a>
+            <a href="https://ionutroscan.github.io" target="_blank" rel="noopener noreferrer">Portfolio ↗</a>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

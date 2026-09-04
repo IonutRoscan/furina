@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#07060d">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Getting started with Furina: Clank Chat Atelier."
+    >
+
+    <title>
+        Getting Started — Furina: Clank Chat Atelier
+    </title>
+
+    
+    <link rel="icon" href="../assets/images/furina-icon.png">
+<link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../styles/docs.css"
+    >
+</head>
+
+<body class="docs-page">
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div
+        class="site-background"
+        aria-hidden="true"
+    >
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+
+    <!-- =====================================================
+         DOCUMENTATION HEADER
+    ====================================================== -->
+
+    <header class="docs-header">
+
+        <a
+            class="brand"
+            href="../index.html"
+        >
+            <span class="brand__mark">
+                ✦
+            </span>
+
+            <span class="brand__text">
+                <strong>FURINA</strong>
+                <small>CLANK CHAT ATELIER</small>
+            </span>
+        </a>
+
+
+        <div class="docs-header__center">
+            <span>
+                DOCUMENTATION
+            </span>
+
+            <strong>
+                Getting Started
+            </strong>
+        </div>
+
+
+        <div class="docs-header__actions">
+
+            <a
+                class="docs-header__link"
+                href="guides.html"
+            >
+                Browse Guides
+            </a>
+
+            <button
+                class="docs-mobile-nav-button"
+                id="docsMobileNavButton"
+                type="button"
+                aria-label="Open documentation navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         DOCUMENTATION LAYOUT
+    ====================================================== -->
+
+    <main class="docs-layout">
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside
+            class="docs-sidebar"
+            id="docsSidebar"
+        >
+
+            <div class="docs-sidebar__top">
+
+                <small>
+                    FURINA GUIDES
+                </small>
+
+                <h2>
+                    Learn the Atelier.
+                </h2>
+
+                <p>
+                    Start simple. Open the advanced tools when
+                    you're ready.
+                </p>
+
+            </div>
+
+
+            <nav class="docs-nav">
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        GETTING STARTED
+                    </span>
+
+                    <a
+                        class="docs-nav__link is-active"
+                        href="#welcome"
+                    >
+                        <span>01</span>
+                        Welcome
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#install"
+                    >
+                        <span>02</span>
+                        Installation
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#open-furina"
+                    >
+                        <span>03</span>
+                        Opening Furina
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#modes"
+                    >
+                        <span>04</span>
+                        Essentials vs Atelier
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#first-five"
+                    >
+                        <span>05</span>
+                        First five minutes
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#updating"
+                    >
+                        <span>06</span>
+                        Updating
+                    </a>
+
+                </div>
+
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        FEATURE GUIDES
+                    </span>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="customization.html"
+                    >
+                        <span>✦</span>
+                        Customize
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="immersion.html"
+                    >
+                        <span>☁</span>
+                        Immersion
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="director.html"
+                    >
+                        <span>🎬</span>
+                        Director
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="continuity.html"
+                    >
+                        <span>◆</span>
+                        Continuity
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="story.html"
+                    >
+                        <span>◒</span>
+                        Story
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="interfaces.html"
+                    >
+                        <span>◇</span>
+                        Interfaces
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="profile-atelier.html"
+                    >
+                        <span>◎</span>
+                        Profile Atelier
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <div class="docs-sidebar__footer">
+
+                <span class="docs-sidebar__status">
+                    <i></i>
+                    Furina 1.3.1
+                </span>
+
+                <a href="../index.html">
+                    Furina 1.3.1
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             DOCUMENT CONTENT
+        ================================================== -->
+
+        <article class="docs-content">
+
+            <!-- =============================================
+                 WELCOME
+            ============================================== -->
+
+            <section
+                class="docs-hero"
+                id="welcome"
+            >
+
+                <div class="docs-eyebrow">
+                    <span>✦</span>
+                    GETTING STARTED
+                </div>
+
+                <h1>
+                    Welcome to
+                    <span>Furina.</span>
+                </h1>
+
+                <p class="docs-hero__lead">
+                    Furina can do a lot.
+                    You don't need to learn all of it before having fun.
+                </p>
+
+                <p>
+                    This guide covers the basics: installing Furina,
+                    opening the panel, choosing between Essentials and
+                    Full Atelier, and trying the most useful features
+                    without diving into every advanced control.
+                </p>
+
+
+                <div class="docs-callout docs-callout--accent">
+
+                    <div class="docs-callout__icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <strong>
+                            New user recommendation
+                        </strong>
+
+                        <p>
+                            Start with <b>Essentials</b>.
+                            It uses the same underlying Furina settings as
+                            Full Atelier, but keeps the advanced controls
+                            out of the way until you want them.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 INSTALL
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="install"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        01
+                    </span>
+
+                    <div>
+                        <small>
+                            INSTALLATION
+                        </small>
+
+                        <h2>
+                            Install Furina.
+                        </h2>
+
+                        <p>
+                            Furina currently uses a normal unpacked
+                            Chromium-extension workflow.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="install-steps">
+
+                    <article class="install-step">
+
+                        <span class="install-step__number">
+                            1
+                        </span>
+
+                        <div>
+                            <h3>
+                                Download Furina
+                            </h3>
+
+                            <p>
+                                Download the current Furina 1.3.1 ZIP from this site.
+                            </p>
+
+                            <a class="inline-doc-link" href="../assets/downloads/Furina-Clank-Chat-Atelier-1.3.1.zip" download>
+                                Download Furina 1.3.1 ↓
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="install-step">
+
+                        <span class="install-step__number">
+                            2
+                        </span>
+
+                        <div>
+                            <h3>
+                                Extract the ZIP
+                            </h3>
+
+                            <p>
+                                Furina must be extracted before the
+                                browser can load it as an unpacked
+                                extension.
+                            </p>
+
+                            <div class="mini-example">
+                                <span>ZIP</span>
+                                <b>→</b>
+                                <span>Furina folder</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="install-step">
+
+                        <span class="install-step__number">
+                            3
+                        </span>
+
+                        <div>
+                            <h3>
+                                Open your browser's extensions page
+                            </h3>
+
+                            <p>
+                                In Chrome, Brave, Edge or another
+                                Chromium-based browser, open the browser's
+                                extensions manager.
+                            </p>
+
+                            <div class="browser-path">
+                                Extensions
+                                <span>→</span>
+                                Manage Extensions
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="install-step">
+
+                        <span class="install-step__number">
+                            4
+                        </span>
+
+                        <div>
+                            <h3>
+                                Enable Developer Mode
+                            </h3>
+
+                            <p>
+                                Turn on <b>Developer mode</b> on the
+                                extensions page.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="install-step">
+
+                        <span class="install-step__number">
+                            5
+                        </span>
+
+                        <div>
+                            <h3>
+                                Load unpacked
+                            </h3>
+
+                            <p>
+                                Choose <b>Load unpacked</b>, then select
+                                the extracted Furina folder containing
+                                <code>manifest.json</code>.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="install-step">
+
+                        <span class="install-step__number">
+                            6
+                        </span>
+
+                        <div>
+                            <h3>
+                                Open ClankWorld
+                            </h3>
+
+                            <p>
+                                Open a Clank conversation.
+                                Furina should initialize automatically on
+                                supported chat pages.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="docs-callout">
+
+                    <div class="docs-callout__icon">
+                        ◆
+                    </div>
+
+                    <div>
+                        <strong>
+                            Choosing the correct folder
+                        </strong>
+
+                        <p>
+                            When using <b>Load unpacked</b>, choose the
+                            folder where <code>manifest.json</code> is
+                            directly visible — not a folder above it.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="permission-grid">
+                    <article><span>storage</span><strong>Save Furina settings</strong><p>The extension uses browser extension storage for themes, per-chat state, Director/Continuity data and other Furina settings.</p></article>
+                    <article><span>clank.world</span><strong>Run on ClankWorld</strong><p>The current manifest's host access is limited to <code>https://www.clank.world/*</code> so Furina can add its client-side UI and behavior there.</p></article>
+                </div>
+
+                <div class="docs-callout"><div class="docs-callout__icon">i</div><div><strong>Current Chromium requirement</strong><p>Furina 1.3.1 declares Chrome 118 as its minimum Chrome version. Other Chromium browsers need an equivalent modern extension platform.</p></div></div>
+
+            </section>
+
+
+            <!-- =============================================
+                 OPEN FURINA
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="open-furina"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        02
+                    </span>
+
+                    <div>
+                        <small>
+                            THE PANEL
+                        </small>
+
+                        <h2>
+                            Open the Atelier.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Furina appears on supported Clank chat pages.
+                    Use the Furina launcher to open the panel.
+                </p>
+
+
+                <div class="launcher-demo">
+
+                    <div class="launcher-demo__page">
+
+                        <span class="launcher-demo__message"></span>
+                        <span class="launcher-demo__message launcher-demo__message--short"></span>
+                        <span class="launcher-demo__message"></span>
+
+                    </div>
+
+
+                    <div class="launcher-demo__button">
+                        ✦
+                    </div>
+
+
+                    <div class="launcher-demo__label">
+                        <strong>
+                            Furina launcher
+                        </strong>
+
+                        <span>
+                            Open the Atelier from your chat.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Furina remembers your selected panel mode, so you
+                    don't have to choose Essentials or Full Atelier
+                    every time you reopen it.
+                </p>
+
+            </section>
+
+
+            <!-- =============================================
+                 MODES
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="modes"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        03
+                    </span>
+
+                    <div>
+                        <small>
+                            PANEL MODES
+                        </small>
+
+                        <h2>
+                            Essentials or Full Atelier?
+                        </h2>
+
+                        <p>
+                            Same Furina. Different amount of control.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="mode-guide"
+                    id="modeGuide"
+                >
+
+                    <div class="mode-guide__switch">
+
+                        <button
+                            class="mode-guide__button is-active"
+                            type="button"
+                            data-mode="essentials"
+                        >
+                            ✦ Essentials
+                        </button>
+
+                        <button
+                            class="mode-guide__button"
+                            type="button"
+                            data-mode="atelier"
+                        >
+                            ◆ Full Atelier
+                        </button>
+
+                    </div>
+
+
+                    <div class="mode-guide__stage">
+
+                        <div
+                            class="mode-guide__panel is-active"
+                            data-mode-panel="essentials"
+                        >
+
+                            <div class="mode-guide__panel-top">
+
+                                <span>
+                                    ESSENTIALS
+                                </span>
+
+                                <strong>
+                                    Have fun first.
+                                </strong>
+
+                                <small>
+                                    Tune everything later.
+                                </small>
+
+                            </div>
+
+
+                            <div class="mode-guide__cards">
+
+                                <article>
+                                    <span>✦</span>
+
+                                    <div>
+                                        <strong>
+                                            Make it yours
+                                        </strong>
+
+                                        <small>
+                                            Themes & backgrounds
+                                        </small>
+                                    </div>
+                                </article>
+
+
+                                <article>
+                                    <span>◆</span>
+
+                                    <div>
+                                        <strong>
+                                            Help the story
+                                        </strong>
+
+                                        <small>
+                                            Memory & Director
+                                        </small>
+                                    </div>
+                                </article>
+
+
+                                <article>
+                                    <span>☁</span>
+
+                                    <div>
+                                        <strong>
+                                            Set the mood
+                                        </strong>
+
+                                        <small>
+                                            Music & atmosphere
+                                        </small>
+                                    </div>
+                                </article>
+
+
+                                <article>
+                                    <span>◇</span>
+
+                                    <div>
+                                        <strong>
+                                            More Furina
+                                        </strong>
+
+                                        <small>
+                                            Interfaces & tools
+                                        </small>
+                                    </div>
+                                </article>
+
+                            </div>
+
+
+                            <p>
+                                Best when you want Furina's major features
+                                without managing every detailed control.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="mode-guide__panel"
+                            data-mode-panel="atelier"
+                        >
+
+                            <div class="atelier-demo">
+
+                                <aside>
+                                    <span>⌂</span>
+                                    <span>✦</span>
+                                    <span>☁</span>
+                                    <span>🎬</span>
+                                    <span>◆</span>
+                                    <span>◒</span>
+                                    <span>◇</span>
+                                    <span>↗</span>
+                                    <span>⚙</span>
+                                </aside>
+
+                                <div>
+
+                                    <small>
+                                        FULL ATELIER
+                                    </small>
+
+                                    <h3>
+                                        Everything,
+                                        directly accessible.
+                                    </h3>
+
+
+                                    <div class="atelier-demo__rows">
+
+                                        <span>
+                                            Themes
+                                        </span>
+
+                                        <span>
+                                            Chat presentation
+                                        </span>
+
+                                        <span>
+                                            Atmosphere
+                                        </span>
+
+                                        <span>
+                                            Director
+                                        </span>
+
+                                        <span>
+                                            Continuity
+                                        </span>
+
+                                        <span>
+                                            Story tools
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <p>
+                                Best when you want full access to Furina's
+                                detailed settings and advanced roleplay tools.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout docs-callout--good">
+
+                    <div class="docs-callout__icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            You can switch whenever you want.
+                        </strong>
+
+                        <p>
+                            Essentials and Full Atelier do not maintain
+                            separate copies of your settings.
+                            Change something in one, and the other sees
+                            the same state.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 FIRST FIVE MINUTES
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="first-five"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        04
+                    </span>
+
+                    <div>
+                        <small>
+                            FIRST FIVE MINUTES
+                        </small>
+
+                        <h2>
+                            Five things worth trying first.
+                        </h2>
+
+                        <p>
+                            You can safely ignore most of Furina until
+                            you actually need it.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="first-five-grid">
+
+                    <article class="first-five-card">
+
+                        <span class="first-five-card__number">
+                            01
+                        </span>
+
+                        <div class="first-five-card__icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Pick a theme
+                        </h3>
+
+                        <p>
+                            Give the conversation an immediate visual
+                            identity.
+                        </p>
+
+                        <small>
+                            Essentials → Customize
+                        </small>
+
+                    </article>
+
+
+                    <article class="first-five-card">
+
+                        <span class="first-five-card__number">
+                            02
+                        </span>
+
+                        <div class="first-five-card__icon">
+                            ◈
+                        </div>
+
+                        <h3>
+                            Set a background
+                        </h3>
+
+                        <p>
+                            Use a solid color, gradient, image, live
+                            wallpaper or the current character's image.
+                        </p>
+
+                        <small>
+                            Essentials → Customize
+                        </small>
+
+                    </article>
+
+
+                    <article class="first-five-card">
+
+                        <span class="first-five-card__number">
+                            03
+                        </span>
+
+                        <div class="first-five-card__icon">
+                            ☁
+                        </div>
+
+                        <h3>
+                            Add atmosphere
+                        </h3>
+
+                        <p>
+                            Rain, snow, fog, particles and music can
+                            completely change the feel of a chat.
+                        </p>
+
+                        <small>
+                            Essentials → Immersion
+                        </small>
+
+                    </article>
+
+
+                    <article class="first-five-card">
+
+                        <span class="first-five-card__number">
+                            04
+                        </span>
+
+                        <div class="first-five-card__icon">
+                            ◆
+                        </div>
+
+                        <h3>
+                            Save one memory
+                        </h3>
+
+                        <p>
+                            Try saving one important continuity fact from
+                            your current roleplay.
+                        </p>
+
+                        <small>
+                            Essentials → Roleplay
+                        </small>
+
+                    </article>
+
+
+                    <article class="first-five-card">
+
+                        <span class="first-five-card__number">
+                            05
+                        </span>
+
+                        <div class="first-five-card__icon">
+                            🎬
+                        </div>
+
+                        <h3>
+                            Try one Director rule
+                        </h3>
+
+                        <p>
+                            A simple rule such as “Don't control my
+                            character” is enough to understand the basic
+                            idea.
+                        </p>
+
+                        <small>
+                            Essentials → Roleplay
+                        </small>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 UPDATING
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="updating"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        05
+                    </span>
+
+                    <div>
+                        <small>
+                            UPDATING
+                        </small>
+
+                        <h2>
+                            Moving to a newer Furina build.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Furina stores its settings through the browser's extension
+                    storage rather than inside the downloaded ZIP. For an unpacked
+                    install, the safest update is to keep the same installed folder
+                    path, replace its files with the new build, and use Reload in the
+                    browser's extension manager.
+                </p>
+
+
+                <div class="update-flow">
+
+                    <div>
+                        <span>
+                            1
+                        </span>
+
+                        <strong>
+                            Download the new release
+                        </strong>
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                    <div>
+                        <span>
+                            2
+                        </span>
+
+                        <strong>
+                            Back up, then replace the old folder's contents
+                        </strong>
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                    <div>
+                        <span>
+                            3
+                        </span>
+
+                        <strong>
+                            Click Reload, then refresh Clank
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout docs-callout--warning">
+
+                    <div class="docs-callout__icon">
+                        !
+                    </div>
+
+                    <div>
+                        <strong>
+                            Keep a backup when experimenting.
+                        </strong>
+
+                        <p>
+                            Furina includes Theme, Full Setup, Story Bible and profile exports for different kinds of data. Loading a newly extracted folder from a different path can be treated as a separate unpacked extension by the browser, so back up important state before changing install paths.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 NEXT
+            ============================================== -->
+
+            <section class="docs-next">
+
+                <small>
+                    YOU'RE READY
+                </small>
+
+                <h2>
+                    That's enough to start using Furina.
+                </h2>
+
+                <p>
+                    The rest of the documentation will explain individual
+                    systems only when you want to go deeper.
+                </p>
+
+
+                <div class="docs-next__actions">
+
+                    <a
+                        class="button button--primary"
+                        href="../index.html#download"
+                    >
+                        Download Furina
+                        <span class="button__arrow">
+                            →
+                        </span>
+                    </a>
+
+                    <a
+                        class="button button--secondary"
+                        href="../index.html#features"
+                    >
+                        Explore features
+                        <span class="button__arrow">
+                            →
+                        </span>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <script src="../scripts/docs.js"></script>
+
+</body>
+</html>

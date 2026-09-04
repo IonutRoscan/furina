@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07060d">
+  <meta name="robots" content="noindex">
+  <title>Page Not Found — Furina</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07060d;
+      --surface: rgba(18, 15, 31, .86);
+      --border: rgba(206, 194, 255, .12);
+      --border-strong: rgba(187, 168, 255, .28);
+      --text: #f6f2ff;
+      --muted: #817a94;
+      --accent: #9d7cff;
+      --accent-bright: #bba5ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 30px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(113, 73, 229, .18), transparent 34%),
+        radial-gradient(circle at 88% 82%, rgba(90, 60, 175, .14), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .11;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 88%);
+    }
+    .not-found {
+      position: relative;
+      z-index: 1;
+      width: min(620px, 100%);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 42px;
+      background: var(--surface);
+      box-shadow: 0 34px 90px rgba(0,0,0,.42);
+      text-align: center;
+      backdrop-filter: blur(24px);
+    }
+    .not-found__mark {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto;
+      border: 1px solid var(--border-strong);
+      border-radius: 18px;
+      color: var(--accent-bright);
+      background: rgba(143,103,239,.1);
+      box-shadow: 0 0 32px rgba(143,103,239,.12);
+    }
+    small {
+      display: block;
+      margin-top: 22px;
+      color: var(--accent);
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .16em;
+    }
+    h1 {
+      margin: 10px 0 0;
+      font-size: clamp(42px, 8vw, 72px);
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+    p {
+      max-width: 470px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    a {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+      border: 1px solid rgba(198,181,255,.36);
+      border-radius: 14px;
+      padding: 10px 18px;
+      background: linear-gradient(135deg, #7f62d9, #6048ad);
+      box-shadow: 0 12px 30px rgba(84,51,171,.28), inset 0 1px 0 rgba(255,255,255,.16);
+      color: white;
+      font-size: 12px;
+      font-weight: 750;
+      text-decoration: none;
+      transition: transform 150ms ease, background 150ms ease;
+    }
+    a:hover { transform: translateY(-2px); background: linear-gradient(135deg, #9071ec, #6e51c2); }
+    a span { color: var(--accent-bright); }
+    @media (max-width: 520px) { .not-found { padding: 32px 22px; } }
+  </style>
+</head>
+<body>
+  <main class="not-found">
+    <div class="not-found__mark">✦</div>
+    <small>FURINA · 404</small>
+    <h1>Wrong corridor.</h1>
+    <p>This page does not exist, moved, or the link is outdated. The Atelier is still exactly where you left it.</p>
+    <a id="furinaHomeLink" href="./">Return to Furina <span>→</span></a>
+  </main>
+
+  <script>
+    // GitHub Pages project sites live under /repository-name/. A custom-domain
+    // deployment normally lives at /. Resolve the home link correctly for both.
+    const homeLink = document.getElementById('furinaHomeLink')
+    if (homeLink && location.hostname.endsWith('.github.io')) {
+      const firstPathPart = location.pathname.split('/').filter(Boolean)[0]
+      homeLink.href = firstPathPart ? `/${firstPathPart}/` : '/'
+    }
+  </script>
+</body>
+</html>

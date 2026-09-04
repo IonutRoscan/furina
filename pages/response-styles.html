@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Browse Furina's response-style library and learn how to use styles with Clank Custom Response Styles.">
+    <title>Response Styles — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Response Styles</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="guides.html">Browse Guides</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>FURINA GUIDES</small><h2>Change the writing style.</h2><p>A curated prompt library built for Clank's Custom Response Styles.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">RESPONSE STYLES</span>
+                    <a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a>
+                    <a class="docs-nav__link" href="#how-to"><span>02</span>How to use</a>
+                    <a class="docs-nav__link" href="#library"><span>03</span>Style Library</a>
+                    <a class="docs-nav__link" href="#pairing"><span>04</span>Pairing with Furina</a>
+                    <a class="docs-nav__link" href="#limits"><span>05</span>Limits & tips</a>
+                </div>
+                <div class="docs-nav__group"><span class="docs-nav__label">GUIDES</span><a class="docs-nav__link docs-nav__link--page" href="interfaces.html"><span>◇</span>Interfaces</a><a class="docs-nav__link docs-nav__link--page" href="director.html"><span>🎬</span>Director</a><a class="docs-nav__link docs-nav__link--page" href="troubleshooting.html"><span>?</span>Troubleshooting</a></div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status"><i></i>32 library styles</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow"><span>Aa</span> RESPONSE STYLE LIBRARY</div>
+                <h1>Give the model a <span>direction to write in.</span></h1>
+                <p class="docs-hero__lead">Furina includes a library of ready-made prompts for Clank's Custom Response Styles, from Cinematic Roleplay and Horror to Slow Burn, Academy Focused and Visual Novel.</p>
+                <p>Furina does not secretly replace Clank's response-style system. It gives you a searchable library and copies the selected prompt so you can paste it into Clank's own Custom Response Style field.</p>
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">Aa</div><div><strong>Clank still owns the response style.</strong><p>Once pasted and selected in Clank, the response style behaves as a Clank setting. Furina is the library and copy helper.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="how-to">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>HOW TO USE</small><h2>Four steps.</h2></div></div>
+                <div class="response-flow">
+                    <article><span>1</span><strong>Open Response Styles in Furina</strong><p>Browse or search the built-in library.</p></article>
+                    <b>→</b>
+                    <article><span>2</span><strong>Choose a style</strong><p>Read the description and copy its prompt.</p></article>
+                    <b>→</b>
+                    <article><span>3</span><strong>Open Clank's custom style editor</strong><p>Create or edit a Custom Response Style.</p></article>
+                    <b>→</b>
+                    <article><span>4</span><strong>Paste and select it</strong><p>Clank applies the style to the conversation.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="library">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>LIBRARY</small><h2>Find the vibe you actually want.</h2><p>This page lists the style names and purposes included with Furina 1.3.1. The full prompts remain inside the extension.</p></div></div>
+
+                <div class="style-library-controls">
+                    <label class="style-search"><span>⌕</span><input id="responseStyleSearch" type="search" placeholder="Search styles, genres or descriptions…" autocomplete="off"></label>
+                    <div class="style-filter-row" id="responseStyleFilters">
+                        <button class="is-active" type="button" data-style-filter="all">All</button>
+                        <button type="button" data-style-filter="general">General</button>
+                        <button type="button" data-style-filter="relationship">Relationship</button>
+                        <button type="button" data-style-filter="genre">Genre</button>
+                        <button type="button" data-style-filter="story">Story</button>
+                        <button type="button" data-style-filter="group">Group</button>
+                        <button type="button" data-style-filter="pacing">Pacing</button>
+                    </div>
+                    <div class="style-library-count"><span id="responseStyleCount">32 styles</span><small>Furina 1.3.1</small></div>
+                </div>
+
+                <div class="response-style-grid" id="responseStyleGrid"></div>
+                <div class="empty-state" id="responseStyleEmpty" hidden><span>◇</span><strong>No styles matched.</strong><p>Try a broader search or switch back to All.</p></div>
+            </section>
+
+            <section class="docs-section" id="pairing">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>PAIRING</small><h2>Response Style + Furina tools.</h2><p>Writing style and story control solve different problems, so they can be combined.</p></div></div>
+                <div class="pairing-demo">
+                    <article><span>STYLE</span><strong>Visual Novel</strong><p>Controls the model's writing structure and speaker-oriented presentation.</p></article><b>+</b><article><span>INTERFACE</span><strong>Visual Novel Mode</strong><p>Changes how the current conversation is rendered and navigated.</p></article><b>=</b><article class="pairing-demo__result"><span>PAIRING</span><strong>A more VN-like experience</strong><p>They complement each other, but neither depends on the other.</p></article>
+                </div>
+                <div class="pairing-examples"><article><strong>Horror + Atmosphere</strong><p>Use the Horror style for writing and a darker Furina theme/rain/ambience for presentation.</p></article><article><strong>Slow Burn + Director</strong><p>Use the style for gradual relationship pacing and Director Notes for specific boundaries or canon.</p></article><article><strong>Ensemble + Knowledge Boundaries</strong><p>Use the group style for cast participation and Furina knowledge rules for who knows what.</p></article></div>
+            </section>
+
+            <section class="docs-section" id="limits">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>LIMITS & TIPS</small><h2>Use styles as guidance, not guarantees.</h2></div></div>
+                <div class="experimental-grid">
+                    <article><strong>5,000-character hard limit</strong><p>Furina's library prompts are designed to stay within Clank's Custom Response Style limit.</p></article>
+                    <article><strong>One style cannot fix every scene</strong><p>If a conversation changes tone, changing styles can be better than forcing one prompt to cover everything.</p></article>
+                    <article><strong>Director is more specific</strong><p>Use Response Styles for broad writing behavior. Use Director for current rules, next-reply direction and story-specific guidance.</p></article>
+                    <article><strong>Persona is separate</strong><p>A Persona describes who you are in the conversation. Response Style describes how the assistant should write.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-next"><small>NEXT GUIDE</small><h2>Customize more than the chat.</h2><p>Profile Atelier uses Furina's Miyabi engine to restyle one connected ClankWorld profile locally.</p><div class="docs-next__actions"><a class="button button--secondary" href="interfaces.html">← Interfaces</a><a class="button button--primary" href="profile-atelier.html">Profile Atelier <span class="button__arrow">→</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../data/site-data.js"></script>
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

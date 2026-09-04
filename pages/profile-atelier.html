@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Learn Furina Profile Atelier and the Miyabi profile customization engine for ClankWorld.">
+    <title>Profile Atelier — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Profile Atelier</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="guides.html">Browse Guides</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>MIYABI ENGINE</small><h2>Your profile, your world.</h2><p>Local profile customization attached to one connected ClankWorld profile.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">PROFILE ATELIER</span>
+                    <a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a>
+                    <a class="docs-nav__link" href="#connect"><span>02</span>Connect profile</a>
+                    <a class="docs-nav__link" href="#appearance"><span>03</span>Appearance</a>
+                    <a class="docs-nav__link" href="#effects"><span>04</span>Effects</a>
+                    <a class="docs-nav__link" href="#atmosphere"><span>05</span>Atmosphere & Themes</a>
+                    <a class="docs-nav__link" href="#data"><span>06</span>Profile data</a>
+                    <a class="docs-nav__link" href="#boundaries"><span>07</span>What it changes</a>
+                </div>
+                <div class="docs-nav__group"><span class="docs-nav__label">GUIDES</span><a class="docs-nav__link docs-nav__link--page" href="customization.html"><span>◈</span>Chat Customization</a><a class="docs-nav__link docs-nav__link--page" href="sharing.html"><span>↗</span>Sharing</a><a class="docs-nav__link docs-nav__link--page" href="troubleshooting.html"><span>?</span>Troubleshooting</a></div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status"><i></i>Local profile styling</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow"><span>◎</span> PROFILE ATELIER · MIYABI</div>
+                <h1>Customize the profile. <span>Not the server.</span></h1>
+                <p class="docs-hero__lead">Profile Atelier applies a Furina-controlled visual layer to one ClankWorld profile you explicitly connect.</p>
+                <p>The customization is local to your browser. Other Clank users do not see your Miyabi layout, effects or background unless they install and configure their own copy.</p>
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">◎</div><div><strong>Profile targeting is intentional.</strong><p>Miyabi saves a specific connected profile URL and only activates its profile experience on that target instead of styling every profile you visit.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="connect">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>CONNECT PROFILE</small><h2>Tell Miyabi which profile belongs to you.</h2><p>Open your ClankWorld profile, connect the current profile or paste the profile URL, then save the binding.</p></div></div>
+                <div class="profile-connect-demo">
+                    <div class="profile-connect-demo__browser"><span>clank.world/@YourProfile</span><i></i></div>
+                    <div class="profile-connect-demo__panel"><small>MIYABI ENGINE</small><h3>Your profile, your world.</h3><label><span>Connected profile</span><div>https://www.clank.world/@YourProfile</div></label><button type="button">✓ Connected</button><p>Customization activates only when this profile is open.</p></div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="appearance">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>APPEARANCE</small><h2>Reshape the profile layout.</h2></div></div>
+                <div class="profile-preview-demo" id="profilePreviewDemo">
+                    <div class="profile-preview-demo__stage">
+                        <div class="profile-demo-banner"></div><div class="profile-demo-avatar">M</div><div class="profile-demo-copy"><strong>YOUR PROFILE</strong><span>ClankWorld creator page</span></div><div class="profile-demo-grid"><i></i><i></i><i></i><i></i></div>
+                    </div>
+                    <div class="profile-preview-demo__controls">
+                        <label><span>Card roundness <strong id="profileRadiusValue">22px</strong></span><input id="profileRadiusSlider" type="range" min="0" max="48" value="22"></label>
+                        <label><span>Card size <strong id="profileCardValue">240px</strong></span><input id="profileCardSlider" type="range" min="160" max="360" step="10" value="240"></label>
+                        <label><span>Sidebar width <strong id="profileSidebarValue">300px</strong></span><input id="profileSidebarSlider" type="range" min="220" max="420" step="10" value="300"></label>
+                        <div class="profile-color-demo"><span>Accent</span><button class="is-active" type="button" data-profile-accent="#a855f7" aria-label="Purple accent"></button><button type="button" data-profile-accent="#42bff5" aria-label="Blue accent"></button><button type="button" data-profile-accent="#ff76b6" aria-label="Pink accent"></button></div>
+                    </div>
+                </div>
+                <div class="profile-setting-grid"><article><span>▧</span><strong>Background Image URL</strong><p>Use a hosted image as the profile backdrop.</p></article><article><span>✦</span><strong>Accent Color</strong><p>Drive highlights and effect color from one selected accent.</p></article><article><span>◫</span><strong>Card Roundness</strong><p>Move from sharp panels to softer rounded cards.</p></article><article><span>↔</span><strong>Card & Sidebar Size</strong><p>Change profile density and the balance between navigation and content.</p></article></div>
+            </section>
+
+            <section class="docs-section" id="effects">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>EFFECTS</small><h2>Turn the profile into a presentation.</h2><p>Miyabi's effect stack is optional and has a shared intensity control.</p></div></div>
+                <div class="effect-toggle-grid" id="profileEffectsDemo">
+                    <button class="is-enabled" type="button"><span>✓</span><strong>Frosted Glass</strong><small>Blurred translucent cards</small></button>
+                    <button class="is-enabled" type="button"><span>✓</span><strong>Ambient Particles</strong><small>Floating accent particles</small></button>
+                    <button type="button"><span>+</span><strong>3D Tilt Cards</strong><small>Cards follow the cursor</small></button>
+                    <button type="button"><span>+</span><strong>Card Entrance</strong><small>Staggered reveal</small></button>
+                    <button type="button"><span>+</span><strong>Compact Layout</strong><small>Denser profile spacing</small></button>
+                    <button type="button"><span>+</span><strong>Ambient Cursor Light</strong><small>Soft cursor-following glow</small></button>
+                    <button type="button"><span>+</span><strong>Holographic Cards</strong><small>Dynamic shine and depth</small></button>
+                    <button type="button"><span>+</span><strong>Cursor Trail</strong><small>Fading light trail</small></button>
+                    <button class="is-enabled" type="button"><span>✓</span><strong>Header Parallax</strong><small>Banner and avatar respond to cursor</small></button>
+                    <button type="button"><span>+</span><strong>Scroll Reveal</strong><small>Cards animate into view</small></button>
+                    <button type="button"><span>+</span><strong>Theme Particles</strong><small>Particles adapt to the theme</small></button>
+                </div>
+            </section>
+
+            <section class="docs-section" id="atmosphere">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>ATMOSPHERE & THEMES</small><h2>Pick a base identity, then add mood.</h2></div></div>
+                <div class="profile-theme-demo">
+                    <div class="profile-theme-list" id="profileThemeList"><button class="is-active" type="button" data-profile-theme="default"><span>✦</span><strong>Default</strong></button><button type="button" data-profile-theme="cutecore"><span>🌸</span><strong>Cutecore</strong></button><button type="button" data-profile-theme="terminal"><span>💻</span><strong>Terminal</strong></button><button type="button" data-profile-theme="vaporwave"><span>🌆</span><strong>Vaporwave</strong></button></div>
+                    <div class="profile-atmosphere-card"><small>ATMOSPHERE</small><strong id="profileThemeName">Default</strong><div class="profile-atmo-moods"><span>✦ Ethereal</span><span>◈ Cyber</span><span>✧ Dream</span><span>◉ Void</span></div><p>Atmosphere can add environmental particles and a moving ambient glow at low, medium or high intensity.</p></div>
+                </div>
+                <div class="media-slot"><div><span>OPTIONAL MEDIA SLOT</span><strong>profile-atelier-demo.webp</strong><p>A single screenshot or short clip can be added later if you want one real visual example.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="data">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>PROFILE DATA</small><h2>Export it before you reinvent it.</h2></div></div>
+                <div class="portability-grid"><article><span>↗</span><strong>Export Settings</strong><p>Save the current Miyabi profile customization as portable data.</p></article><article><span>↙</span><strong>Import Settings</strong><p>Restore a previous exported profile setup.</p></article><article><span>↺</span><strong>Reset Miyabi</strong><p>Return the visual profile engine to its defaults.</p></article><article><span>◎</span><strong>Disconnect Profile</strong><p>Remove the target profile binding without requiring you to destroy your saved customization first.</p></article></div>
+            </section>
+
+            <section class="docs-section" id="boundaries">
+                <div class="docs-section__heading"><span class="docs-section__number">06</span><div><small>BOUNDARIES</small><h2>What Profile Atelier does — and does not — change.</h2></div></div>
+                <div class="boundary-table"><div><strong>It does</strong><span>Apply a local visual layout to your connected profile.</span><span>Store profile presentation settings in extension storage.</span><span>Change cards, background, spacing, effects and atmosphere in your browser.</span></div><div><strong>It does not</strong><span>Edit Clank's server-side profile data.</span><span>Change what other users see on your profile.</span><span>Change your characters, posts or account data on Clank's backend.</span></div></div>
+            </section>
+
+            <section class="docs-next"><small>NEXT GUIDE</small><h2>Take your Furina setups with you.</h2><p>Theme, Full Setup, Story Bible and Miyabi exports each preserve a different kind of data.</p><div class="docs-next__actions"><a class="button button--secondary" href="response-styles.html">← Response Styles</a><a class="button button--primary" href="sharing.html">Sharing & Portability <span class="button__arrow">→</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

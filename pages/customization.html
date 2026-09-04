@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#07060d">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Furina customization guide — themes, backgrounds, live wallpapers, chat styling and more."
+    >
+
+    <title>
+        Customization — Furina: Clank Chat Atelier
+    </title>
+
+    
+    <link rel="icon" href="../assets/images/furina-icon.png">
+<link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../styles/docs.css"
+    >
+</head>
+
+<body class="docs-page">
+
+    <div
+        class="site-background"
+        aria-hidden="true"
+    >
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="docs-header">
+
+        <a
+            class="brand"
+            href="../index.html"
+        >
+            <span class="brand__mark">
+                ✦
+            </span>
+
+            <span class="brand__text">
+                <strong>FURINA</strong>
+                <small>CLANK CHAT ATELIER</small>
+            </span>
+        </a>
+
+
+        <div class="docs-header__center">
+            <span>
+                DOCUMENTATION
+            </span>
+
+            <strong>
+                Customization
+            </strong>
+        </div>
+
+
+        <div class="docs-header__actions">
+
+            <a
+                class="docs-header__link"
+                href="guides.html"
+            >
+                Browse Guides
+            </a>
+
+            <button
+                class="docs-mobile-nav-button"
+                id="docsMobileNavButton"
+                type="button"
+                aria-label="Open documentation navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         LAYOUT
+    ====================================================== -->
+
+    <main class="docs-layout">
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside
+            class="docs-sidebar"
+            id="docsSidebar"
+        >
+
+            <div class="docs-sidebar__top">
+
+                <small>
+                    FURINA GUIDES
+                </small>
+
+                <h2>
+                    Make it yours.
+                </h2>
+
+                <p>
+                    Themes, backgrounds and the visual side of Furina.
+                </p>
+
+            </div>
+
+
+            <nav class="docs-nav">
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        CUSTOMIZATION
+                    </span>
+
+                    <a
+                        class="docs-nav__link is-active"
+                        href="#overview"
+                    >
+                        <span>01</span>
+                        Overview
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#themes"
+                    >
+                        <span>02</span>
+                        Themes & scope
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#backgrounds"
+                    >
+                        <span>03</span>
+                        Backgrounds
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#live-wallpapers"
+                    >
+                        <span>04</span>
+                        Live wallpapers
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#chat-styling"
+                    >
+                        <span>05</span>
+                        Chat styling
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#finishing-touches"
+                    >
+                        <span>06</span>
+                        Finishing touches
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#power-user"
+                    >
+                        <span>07</span>
+                        Power-user extras
+                    </a>
+
+                </div>
+
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        GUIDES
+                    </span>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="getting-started.html"
+                    >
+                        <span>←</span>
+                        Getting Started
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="immersion.html"
+                    >
+                        <span>☁</span>
+                        Immersion
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="director.html"
+                    >
+                        <span>🎬</span>
+                        Director
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="continuity.html"
+                    >
+                        <span>◆</span>
+                        Continuity
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="story.html"
+                    >
+                        <span>◒</span>
+                        Story
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="interfaces.html"
+                    >
+                        <span>◇</span>
+                        Interfaces
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="profile-atelier.html"
+                    >
+                        <span>◎</span>
+                        Profile Atelier
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <div class="docs-sidebar__footer">
+
+                <span class="docs-sidebar__status">
+                    <i></i>
+                    Furina 1.3.1
+                </span>
+
+                <a href="guides.html">
+                    All guides
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <article class="docs-content">
+
+            <!-- =============================================
+                 OVERVIEW
+            ============================================== -->
+
+            <section
+                class="docs-hero"
+                id="overview"
+            >
+
+                <div class="docs-eyebrow">
+                    <span>✦</span>
+                    CUSTOMIZATION
+                </div>
+
+                <h1>
+                    Make Clank
+                    <span>feel like yours.</span>
+                </h1>
+
+                <p class="docs-hero__lead">
+                    Furina can change much more than the color of a chat.
+                    A conversation can have its own background, atmosphere,
+                    typography, message style, music and visual identity.
+                </p>
+
+                <p>
+                    You can keep things simple with a preset or use Full Atelier
+                    to tune individual pieces yourself.
+                </p>
+
+
+                <div class="docs-callout docs-callout--accent">
+
+                    <div class="docs-callout__icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <strong>
+                            You don't need to customize everything.
+                        </strong>
+
+                        <p>
+                            A theme and background are usually enough to make a
+                            chat feel completely different. Everything else is
+                            optional.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 THEMES
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="themes"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        01
+                    </span>
+
+                    <div>
+                        <small>
+                            THEMES
+                        </small>
+
+                        <h2>
+                            Start with a look.
+                        </h2>
+
+                        <p>
+                            Themes provide a quick visual starting point.
+                            You can keep them as-is or modify them afterward.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="theme-showcase">
+
+                    <button
+                        class="theme-swatch is-active"
+                        type="button"
+                        data-demo-theme="furina"
+                    >
+                        <span class="theme-swatch__preview theme-swatch__preview--furina"></span>
+
+                        <strong>
+                            Furina
+                        </strong>
+                    </button>
+
+
+                    <button
+                        class="theme-swatch"
+                        type="button"
+                        data-demo-theme="midnight"
+                    >
+                        <span class="theme-swatch__preview theme-swatch__preview--midnight"></span>
+
+                        <strong>
+                            Midnight
+                        </strong>
+                    </button>
+
+
+                    <button
+                        class="theme-swatch"
+                        type="button"
+                        data-demo-theme="rose"
+                    >
+                        <span class="theme-swatch__preview theme-swatch__preview--rose"></span>
+
+                        <strong>
+                            Rose
+                        </strong>
+                    </button>
+
+
+                    <button
+                        class="theme-swatch"
+                        type="button"
+                        data-demo-theme="terminal"
+                    >
+                        <span class="theme-swatch__preview theme-swatch__preview--terminal"></span>
+
+                        <strong>
+                            Terminal
+                        </strong>
+                    </button>
+
+                </div>
+
+
+                <div class="scope-demo">
+
+                    <div class="scope-demo__copy">
+
+                        <small>
+                            THEME SCOPE
+                        </small>
+
+                        <h3>
+                            All chats or just this one?
+                        </h3>
+
+                        <p>
+                            Furina can keep one global look across Clank or
+                            give individual conversations their own themes.
+                        </p>
+
+
+                        <div class="scope-demo__buttons">
+
+                            <button
+                                class="scope-demo__button is-active"
+                                type="button"
+                                data-scope="global"
+                            >
+                                Global
+                            </button>
+
+                            <button
+                                class="scope-demo__button"
+                                type="button"
+                                data-scope="chat"
+                            >
+                                This Chat
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="scope-visual"
+                        id="scopeVisual"
+                    >
+
+                        <div class="scope-chat scope-chat--one">
+                            <span>Chat A</span>
+                            <i></i>
+                        </div>
+
+                        <div class="scope-chat scope-chat--two">
+                            <span>Chat B</span>
+                            <i></i>
+                        </div>
+
+                        <div class="scope-chat scope-chat--three">
+                            <span>Chat C</span>
+                            <i></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout">
+
+                    <div class="docs-callout__icon">
+                        ◆
+                    </div>
+
+                    <div>
+                        <strong>
+                            Conversation-specific customization
+                        </strong>
+
+                        <p>
+                            A horror roleplay can use a completely different
+                            setup from a cozy romance without changing your
+                            other conversations.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 BACKGROUNDS
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="backgrounds"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        02
+                    </span>
+
+                    <div>
+                        <small>
+                            BACKGROUNDS
+                        </small>
+
+                        <h2>
+                            Five ways to build the scene.
+                        </h2>
+
+                        <p>
+                            Try the demo below. It uses the same background
+                            concepts available inside Furina.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="background-lab"
+                    id="backgroundLab"
+                >
+
+                    <div class="background-lab__modes">
+
+                        <button
+                            class="background-mode-button is-active"
+                            type="button"
+                            data-background-mode="solid"
+                        >
+                            Solid
+                        </button>
+
+                        <button
+                            class="background-mode-button"
+                            type="button"
+                            data-background-mode="gradient"
+                        >
+                            Gradient
+                        </button>
+
+                        <button
+                            class="background-mode-button"
+                            type="button"
+                            data-background-mode="image"
+                        >
+                            Image
+                        </button>
+
+                        <button
+                            class="background-mode-button"
+                            type="button"
+                            data-background-mode="video"
+                        >
+                            Live
+                        </button>
+
+                        <button
+                            class="background-mode-button"
+                            type="button"
+                            data-background-mode="character"
+                        >
+                            Character
+                        </button>
+
+                    </div>
+
+
+                    <div class="background-lab__body">
+
+                        <div
+                            class="background-preview"
+                            id="backgroundPreview"
+                            data-mode="solid"
+                        >
+
+                            <div class="background-preview__wallpaper"></div>
+                            <div class="background-preview__overlay"></div>
+
+
+                            <div class="background-preview__top">
+                                <span>
+                                    TestingChar
+                                </span>
+
+                                <i></i>
+                            </div>
+
+
+                            <div class="background-preview__conversation">
+
+                                <div class="preview-message preview-message--assistant">
+                                    <span class="preview-avatar"></span>
+
+                                    <p>
+                                        The room settles into silence.
+                                    </p>
+                                </div>
+
+
+                                <div class="preview-message preview-message--user">
+                                    <p>
+                                        I look toward the window.
+                                    </p>
+                                </div>
+
+
+                                <div class="preview-message preview-message--assistant">
+                                    <span class="preview-avatar"></span>
+
+                                    <p>
+                                        Rain begins tapping against the glass.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="background-preview__composer">
+                                Type something...
+                            </div>
+
+                        </div>
+
+
+                        <aside class="background-lab__controls">
+
+                            <div class="background-description">
+
+                                <small>
+                                    CURRENT MODE
+                                </small>
+
+                                <strong id="backgroundModeTitle">
+                                    Solid Color
+                                </strong>
+
+                                <p id="backgroundModeDescription">
+                                    A simple, clean color behind the conversation.
+                                </p>
+
+                            </div>
+
+
+                            <label class="demo-control">
+
+                                <span>
+                                    Darkness
+
+                                    <strong id="darknessValue">
+                                        20%
+                                    </strong>
+                                </span>
+
+                                <input
+                                    id="darknessSlider"
+                                    type="range"
+                                    min="0"
+                                    max="80"
+                                    value="20"
+                                >
+
+                            </label>
+
+
+                            <label class="demo-control">
+
+                                <span>
+                                    Blur
+
+                                    <strong id="blurValue">
+                                        0px
+                                    </strong>
+                                </span>
+
+                                <input
+                                    id="blurSlider"
+                                    type="range"
+                                    min="0"
+                                    max="20"
+                                    value="0"
+                                >
+
+                            </label>
+
+
+                            <label class="demo-toggle">
+
+                                <span>
+                                    <strong>
+                                        Parallax
+                                    </strong>
+
+                                    <small>
+                                        Let the wallpaper move subtly with the pointer.
+                                    </small>
+                                </span>
+
+                                <input
+                                    id="parallaxToggle"
+                                    type="checkbox"
+                                >
+
+                                <i></i>
+
+                            </label>
+
+                        </aside>
+
+                    </div>
+
+                </div>
+
+
+                <div class="background-type-grid">
+
+                    <article>
+                        <span>■</span>
+
+                        <strong>
+                            Solid
+                        </strong>
+
+                        <p>
+                            Minimal and predictable.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>◫</span>
+
+                        <strong>
+                            Gradient
+                        </strong>
+
+                        <p>
+                            Blend multiple colors into the background.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>▧</span>
+
+                        <strong>
+                            Image
+                        </strong>
+
+                        <p>
+                            Use a hosted image or GIF.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>▶</span>
+
+                        <strong>
+                            Live Wallpaper
+                        </strong>
+
+                        <p>
+                            Use a video background.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>◇</span>
+
+                        <strong>
+                            Character Image
+                        </strong>
+
+                        <p>
+                            Let Furina use the current character artwork.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 LIVE WALLPAPERS
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="live-wallpapers"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        03
+                    </span>
+
+                    <div>
+                        <small>
+                            LIVE WALLPAPERS
+                        </small>
+
+                        <h2>
+                            Make the background move.
+                        </h2>
+
+                        <p>
+                            Live wallpapers use video instead of a static
+                            image while keeping Furina's background controls.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="live-demo">
+
+                    <div class="live-demo__screen">
+
+                        <div class="live-demo__motion"></div>
+
+                        <span class="live-demo__badge">
+                            LIVE
+                        </span>
+
+                        <div class="live-demo__glass">
+                            <small>
+                                BACKGROUND EFFECTS
+                            </small>
+
+                            <strong>
+                                Blur · Color grading · Parallax
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="live-demo__copy">
+
+                        <h3>
+                            Treat it like a wallpaper, not a video player.
+                        </h3>
+
+                        <p>
+                            Furina places the live background behind the chat
+                            and lets the conversation remain fully usable.
+                        </p>
+
+                        <ul>
+                            <li>Background darkness</li>
+                            <li>Blur</li>
+                            <li>Brightness and contrast</li>
+                            <li>Saturation and hue</li>
+                            <li>Parallax</li>
+                            <li>Overlay and vignette</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout docs-callout--accent">
+
+                    <div class="docs-callout__icon">
+                        ✦
+                    </div>
+
+                    <div>
+                        <strong>
+                            Tip for live wallpapers
+                        </strong>
+
+                        <p>
+                            Short seamless videos usually work best.
+                            If the first and last frames match naturally,
+                            the loop will feel much less noticeable.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 CHAT STYLING
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="chat-styling"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        04
+                    </span>
+
+                    <div>
+                        <small>
+                            CHAT PRESENTATION
+                        </small>
+
+                        <h2>
+                            The wallpaper is only the beginning.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="styling-grid">
+
+                    <article class="styling-card">
+                        <span>
+                            ◧
+                        </span>
+
+                        <h3>
+                            Message bubbles
+                        </h3>
+
+                        <p>
+                            Assistant and user messages can use different
+                            colors, opacity, radius, borders and shadows.
+                        </p>
+                    </article>
+
+
+                    <article class="styling-card">
+                        <span>
+                            Aa
+                        </span>
+
+                        <h3>
+                            Typography
+                        </h3>
+
+                        <p>
+                            Change font families, size, headings, spacing
+                            and reading presentation.
+                        </p>
+                    </article>
+
+
+                    <article class="styling-card">
+                        <span>
+                            ◉
+                        </span>
+
+                        <h3>
+                            Avatars
+                        </h3>
+
+                        <p>
+                            Adjust avatar size and apply optional visual
+                            treatments.
+                        </p>
+                    </article>
+
+
+                    <article class="styling-card">
+                        <span>
+                            ↔
+                        </span>
+
+                        <h3>
+                            Chat width
+                        </h3>
+
+                        <p>
+                            Make the conversation narrower for reading or
+                            wider for a more cinematic layout.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 FINISHING TOUCHES
+            ============================================== -->
+
+            <section
+                class="docs-section"
+                id="finishing-touches"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        05
+                    </span>
+
+                    <div>
+                        <small>
+                            FINISHING TOUCHES
+                        </small>
+
+                        <h2>
+                            Add as much — or as little — as you want.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="finish-flow">
+
+                    <article>
+                        <span>
+                            ☁
+                        </span>
+
+                        <div>
+                            <strong>
+                                Atmosphere
+                            </strong>
+
+                            <p>
+                                Rain, snow, fog, embers, particles and
+                                other scene effects.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article>
+                        <span>
+                            ♫
+                        </span>
+
+                        <div>
+                            <strong>
+                                Music
+                            </strong>
+
+                            <p>
+                                Direct audio, SoundCloud and YouTube can be
+                                attached to individual conversations.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article>
+                        <span>
+                            ✿
+                        </span>
+
+                        <div>
+                            <strong>
+                                Stickers
+                            </strong>
+
+                            <p>
+                                Decorative images can be placed, resized,
+                                rotated, layered and saved.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article>
+                        <span>
+                            ◇
+                        </span>
+
+                        <div>
+                            <strong>
+                                Reader & Focus
+                            </strong>
+
+                            <p>
+                                Strip away interface clutter when you just
+                                want to read.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <div class="docs-callout docs-callout--good">
+
+                    <div class="docs-callout__icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            The best setup is usually not the busiest one.
+                        </strong>
+
+                        <p>
+                            Use the effects that fit the conversation.
+                            Furina gives you the controls; it doesn't require
+                            you to turn all of them on.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="docs-section" id="power-user">
+                <div class="docs-section__heading">
+                    <span class="docs-section__number">06</span>
+                    <div><small>POWER-USER EXTRAS</small><h2>Polish the experience around the experience.</h2><p>Full Atelier also exposes a few settings that sit outside ordinary theme editing.</p></div>
+                </div>
+
+                <div class="experimental-grid">
+                    <article><strong>Entrance Animations</strong><p>Enable or disable Furina's entrance presentation and preview its longer premiere or shorter returning-user animation from the settings area.</p></article>
+                    <article><strong>Language</strong><p>Choose Furina's interface language or use Automatic. This changes Furina labels; it does not translate chats, saved notes, presets or personal content.</p></article>
+                    <article><strong>Custom CSS</strong><p>Advanced users can add conversation-scoped CSS with optional live preview, then save, disable or reset it.</p></article>
+                    <article><strong>Diagnostics & Reset</strong><p>Advanced tools also contain diagnostics and reset controls for troubleshooting a local Furina setup.</p></article>
+                </div>
+
+                <div class="language-strip">
+                    <span>Automatic</span><span>English</span><span>Español</span><span>日本語</span><span>हिन्दी</span><span>Deutsch</span><span>Français</span><span>Português (Brasil)</span><span>Română</span>
+                </div>
+
+                <div class="docs-callout"><div class="docs-callout__icon">{ }</div><div><strong>Custom CSS is intentionally advanced.</strong><p>Furina blocks some unsafe CSS constructs and gives you preview/reset controls, but custom rules can still make your local chat difficult to read. Keep a theme or Full Setup backup before experimenting heavily.</p></div></div>
+            </section>
+
+
+            <!-- =============================================
+                 NEXT GUIDE
+            ============================================== -->
+
+            <section class="docs-next">
+
+                <small>
+                    NEXT UP
+                </small>
+
+                <h2>
+                    The visual side is only half of Furina.
+                </h2>
+
+                <p>
+                    Next we'll cover atmosphere, music, stickers, Reader Mode
+                    and Focus Mode before moving into Furina's roleplay systems.
+                </p>
+
+
+                <div class="docs-next__actions">
+
+                    <a
+                        class="button button--secondary"
+                        href="getting-started.html"
+                    >
+                        ← Getting Started
+                    </a>
+
+                    <a class="button button--primary" href="immersion.html">Immersion Guide <span class="button__arrow">→</span></a>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <script src="../scripts/docs.js"></script>
+
+</body>
+</html>

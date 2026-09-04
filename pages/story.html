@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Learn Furina Scene State, scene recaps, timelines, snapshots, bookmarks, chapters and Story Bible tools.">
+    <title>Story Tools — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html">
+            <span class="brand__mark">✦</span>
+            <span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span>
+        </a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Story Tools</strong></div>
+        <div class="docs-header__actions">
+            <a class="docs-header__link" href="guides.html">Browse Guides</a>
+            <button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top">
+                <small>FURINA GUIDES</small>
+                <h2>Give the story structure.</h2>
+                <p>Scenes, recaps, timelines and return points for roleplays that keep growing.</p>
+            </div>
+
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">STORY TOOLS</span>
+                    <a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a>
+                    <a class="docs-nav__link" href="#scene-state"><span>02</span>Scene State</a>
+                    <a class="docs-nav__link" href="#scene-workflow"><span>03</span>Start & End Scene</a>
+                    <a class="docs-nav__link" href="#presentation"><span>04</span>Scene Presentation</a>
+                    <a class="docs-nav__link" href="#recaps"><span>05</span>Recaps & Previously On</a>
+                    <a class="docs-nav__link" href="#timeline"><span>06</span>Timeline</a>
+                    <a class="docs-nav__link" href="#snapshots"><span>07</span>Snapshots</a>
+                    <a class="docs-nav__link" href="#bookmarks"><span>08</span>Bookmarks & Chapters</a>
+                    <a class="docs-nav__link" href="#story-bible"><span>09</span>Story Bible</a>
+                </div>
+
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">GUIDES</span>
+                    <a class="docs-nav__link docs-nav__link--page" href="director.html"><span>🎬</span>Director</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="continuity.html"><span>◆</span>Continuity</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="interfaces.html"><span>◇</span>Interfaces</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="sharing.html"><span>↗</span>Sharing</a>
+                </div>
+            </nav>
+
+            <div class="docs-sidebar__footer">
+                <span class="docs-sidebar__status"><i></i>Furina 1.3.1</span>
+                <a href="guides.html">All guides <span>↗</span></a>
+            </div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow"><span>◒</span> STORY TOOLS</div>
+                <h1>Don't just remember the story. <span>Organize it.</span></h1>
+                <p class="docs-hero__lead">Furina's story tools keep track of where a scene is, what changed, what happened before it, and where you might want to return later.</p>
+                <p>Scene State, recaps, timelines, snapshots, bookmarks, chapters and Story Bibles are stored on Furina's side of the experience. They organize your roleplay without rewriting Clank's backend conversation.</p>
+                <div class="docs-callout docs-callout--accent">
+                    <div class="docs-callout__icon">◒</div>
+                    <div><strong>Think of this as the story's production notebook.</strong><p>Director tells the AI how to play the scene. Continuity preserves important facts. Story Tools preserve structure and history around the scene.</p></div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="scene-state">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>SCENE STATE</small><h2>What is happening right now?</h2><p>Scene State gives the current moment an explicit structure instead of leaving every important detail scattered through old messages.</p></div></div>
+
+                <div class="scene-state-demo" id="sceneStateDemo">
+                    <div class="scene-state-demo__presets">
+                        <button class="scene-preset is-active" type="button" data-scene-preset="station"><span>01</span><strong>Abandoned Station</strong><small>Rain · Night · Threat</small></button>
+                        <button class="scene-preset" type="button" data-scene-preset="cafe"><span>02</span><strong>Morning Café</strong><small>Calm · Conversation</small></button>
+                        <button class="scene-preset" type="button" data-scene-preset="rooftop"><span>03</span><strong>School Rooftop</strong><small>Sunset · Tension</small></button>
+                    </div>
+
+                    <div class="scene-state-card">
+                        <div class="scene-state-card__header">
+                            <div><small>CURRENT SCENE</small><h3 id="sceneDemoTitle">The Abandoned Station</h3></div>
+                            <span id="sceneDemoNumber">SCENE 12</span>
+                        </div>
+                        <div class="scene-state-card__grid">
+                            <article><span>LOCATION</span><strong id="sceneDemoLocation">North Station</strong></article>
+                            <article><span>TIME</span><strong id="sceneDemoTime">11:47 PM</strong></article>
+                            <article><span>WEATHER</span><strong id="sceneDemoWeather">Heavy rain</strong></article>
+                            <article><span>MOOD</span><strong id="sceneDemoMood">Uneasy</strong></article>
+                            <article class="scene-state-card__wide"><span>PRESENT</span><strong id="sceneDemoPresent">Aya · Mira</strong></article>
+                            <article class="scene-state-card__wide"><span>OBJECTIVE</span><strong id="sceneDemoObjective">Find the missing journal</strong></article>
+                            <article class="scene-state-card__wide scene-state-card__danger"><span>IMMEDIATE THREAT</span><strong id="sceneDemoThreat">Something is following them</strong></article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scene-state-fields">
+                    <span>Title</span><span>Scene / day</span><span>Location</span><span>Time</span><span>Present</span><span>Not present</span><span>Weather</span><span>Mood</span><span>Objective</span><span>Threat</span><span>Conditions</span><span>Notes</span>
+                </div>
+            </section>
+
+            <section class="docs-section" id="scene-workflow">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>SCENE WORKFLOW</small><h2>Start it. Play it. Preserve it.</h2></div></div>
+                <div class="scene-workflow-demo" id="sceneWorkflowDemo">
+                    <div class="scene-workflow-demo__steps">
+                        <button class="scene-workflow-step is-active" type="button" data-scene-stage="start"><span>1</span><div><strong>Start Scene</strong><small>Establish the current state.</small></div></button>
+                        <button class="scene-workflow-step" type="button" data-scene-stage="play"><span>2</span><div><strong>Roleplay</strong><small>The scene continues normally.</small></div></button>
+                        <button class="scene-workflow-step" type="button" data-scene-stage="end"><span>3</span><div><strong>End Scene</strong><small>Review what changed.</small></div></button>
+                    </div>
+                    <div class="scene-workflow-demo__stage" id="sceneWorkflowStage"><small>START SCENE</small><h3>Establish the situation.</h3><p>Set the title, location, cast, mood, objective and anything immediately important before continuing the RP.</p></div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="presentation">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>SCENE PRESENTATION</small><h2>Start a scene like a scene.</h2><p>Normal chat can show scene title cards, transitions and an optional caption above the composer. These are presentation tools; they do not inspect the roleplay text.</p></div></div>
+
+                <div class="scene-presentation-demo" id="scenePresentationDemo">
+                    <div class="scene-presentation-stage" id="scenePresentationStage" data-card-style="cinematic">
+                        <div class="scene-presentation-caption"><strong>The Abandoned Station</strong><span>Scene 12 · North Station · 11:47 PM</span></div>
+                        <div class="scene-presentation-chat"><span></span><span class="is-user"></span><span></span></div>
+                        <div class="scene-presentation-transition" id="scenePresentationTransition"></div>
+                        <div class="scene-title-card-demo" id="sceneTitleCardDemo" hidden><small>SCENE 12</small><strong>The Abandoned Station</strong><span>North Station · 11:47 PM</span></div>
+                    </div>
+
+                    <aside class="scene-presentation-controls">
+                        <small>TITLE CARD STYLE</small>
+                        <div class="scene-card-style-buttons">
+                            <button class="is-active" type="button" data-scene-card-style="cinematic">Cinematic</button>
+                            <button type="button" data-scene-card-style="minimal">Minimal</button>
+                            <button type="button" data-scene-card-style="theatrical">Theatrical</button>
+                            <button type="button" data-scene-card-style="soft">Soft</button>
+                        </div>
+                        <small>ENTRANCE TRANSITION</small>
+                        <select id="sceneTransitionSelect">
+                            <option value="fade-black">Fade to black</option>
+                            <option value="theme-color">Theme-color sweep</option>
+                            <option value="white-flash">White flash</option>
+                            <option value="red-impact">Red impact</option>
+                            <option value="soft-dissolve">Soft dissolve</option>
+                            <option value="brief-blur">Brief blur</option>
+                            <option value="time-passes">Time passes</option>
+                        </select>
+                        <button id="playScenePresentation" type="button">Preview transition + title card <span>→</span></button>
+                    </aside>
+                </div>
+
+                <div class="presentation-feature-grid">
+                    <article><span>◒</span><strong>Scene caption</strong><p>Keep title, location and time visible as a small normal-chat reminder.</p></article>
+                    <article><span>✦</span><strong>Atmosphere preset</strong><p>Start Scene can optionally apply one of Furina's scene-atmosphere presets at the same time.</p></article>
+                    <article><span>▣</span><strong>Screenshot view</strong><p>Temporarily hide selected UI, widen the transcript and optionally use a 0 / 3 / 5 / 10 second countdown for capture.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="recaps">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>SCENE RECAPS</small><h2>“Wait. What happened last time?”</h2><p>Scene Intelligence stores user-reviewed recaps. Furina does not need to invent a summary from nowhere.</p></div></div>
+                <div class="recap-demo">
+                    <div class="recap-card">
+                        <div class="recap-card__top"><span>SCENE 11</span><small>COMPLETE</small></div>
+                        <h3>The Forest Attack</h3>
+                        <div class="recap-card__section"><span>SUMMARY</span><p>Aya and Ren were attacked while returning from the western ruins.</p></div>
+                        <div class="recap-card__section"><span>MAJOR DEVELOPMENT</span><p>Aya discovered that Ren had known about the danger before they entered the forest.</p></div>
+                        <div class="recap-card__section"><span>OPEN THREAD</span><p>Ren still refuses to explain who warned him.</p></div>
+                    </div>
+                    <div class="recap-demo__previously"><span>RETURNING LATER?</span><button id="showPreviouslyOn" type="button">Show “Previously On...” <strong>→</strong></button></div>
+                </div>
+
+                <div class="previously-overlay-demo" id="previouslyOverlayDemo" hidden>
+                    <div class="previously-overlay-demo__backdrop"></div>
+                    <div class="previously-overlay-demo__content"><small>PREVIOUSLY ON…</small><h3>The Forest Attack</h3><p>Aya learned that Ren had been hiding information about the attack. Their trust has not recovered, and the source of his warning remains unresolved.</p><button id="closePreviouslyOn" type="button">Continue story</button></div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="timeline">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>STORY TIMELINE</small><h2>Keep important events in order.</h2><p>Timeline entries preserve significant events separately from individual chat messages and can be marked completed, ongoing or planned.</p></div></div>
+                <div class="timeline-demo" id="timelineDemo">
+                    <div class="timeline-demo__filters">
+                        <button class="timeline-filter is-active" type="button" data-timeline-filter="all">All</button>
+                        <button class="timeline-filter" type="button" data-timeline-filter="completed">Completed</button>
+                        <button class="timeline-filter" type="button" data-timeline-filter="ongoing">Ongoing</button>
+                        <button class="timeline-filter" type="button" data-timeline-filter="planned">Planned</button>
+                    </div>
+                    <div class="timeline-demo__list">
+                        <article class="timeline-event" data-timeline-status="completed"><i></i><div><span>DAY 4 · COMPLETED</span><strong>Forest attack</strong><p>Aya discovers Ren had prior warning of the attack.</p></div></article>
+                        <article class="timeline-event" data-timeline-status="ongoing"><i></i><div><span>DAY 5 · ONGOING</span><strong>Search for the missing journal</strong><p>Aya and Mira investigate the abandoned station.</p></div></article>
+                        <article class="timeline-event" data-timeline-status="planned"><i></i><div><span>FUTURE · PLANNED</span><strong>Confront Ren</strong><p>Aya intends to demand the full truth once the journal is recovered.</p></div></article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="snapshots">
+                <div class="docs-section__heading"><span class="docs-section__number">06</span><div><small>SCENE SNAPSHOTS</small><h2>Save the setup before an alternate take.</h2><p>A snapshot stores Furina's current scene-side state and selected story context so you can restore that setup later.</p></div></div>
+                <div class="snapshot-demo" id="snapshotDemo">
+                    <div class="snapshot-demo__current">
+                        <small>CURRENT FURINA STATE</small>
+                        <div class="snapshot-state-row"><span>Scene</span><strong id="snapshotSceneValue">Abandoned Station</strong></div>
+                        <div class="snapshot-state-row"><span>Mood</span><strong id="snapshotMoodValue">Uneasy</strong></div>
+                        <div class="snapshot-state-row"><span>Objective</span><strong id="snapshotObjectiveValue">Find the journal</strong></div>
+                        <div class="snapshot-demo__actions"><button id="captureSnapshotButton" type="button">Capture Snapshot</button><button id="changeSnapshotStateButton" type="button">Try alternate take</button></div>
+                    </div>
+                    <div class="snapshot-demo__saved"><small>SAVED SNAPSHOT</small><div class="snapshot-saved-card" id="snapshotSavedCard"><span>No snapshot yet.</span><p>Capture the current Furina state first.</p></div><button id="restoreSnapshotButton" type="button" disabled>Restore Snapshot</button></div>
+                </div>
+                <div class="docs-callout"><div class="docs-callout__icon">!</div><div><strong>A snapshot is not a Clank chat branch.</strong><p>Restoring a Furina snapshot restores saved Furina-side story state. It cannot rewind or replace Clank's server-side message history.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="bookmarks">
+                <div class="docs-section__heading"><span class="docs-section__number">07</span><div><small>BOOKMARKS & CHAPTERS</small><h2>Hundreds of messages deserve landmarks.</h2><p>Bookmarks make individual messages easy to find again. Chapters divide a long conversation into named sections.</p></div></div>
+                <div class="bookmark-demo" id="bookmarkDemo">
+                    <div class="bookmark-demo__chat">
+                        <div class="chapter-divider-demo"><span>CHAPTER 4</span><strong>The Station</strong></div>
+                        <article class="bookmark-message"><p>“I found something,” Mira whispers, holding up the silver key.</p><button class="bookmark-toggle is-bookmarked" type="button" aria-label="Toggle bookmark">★</button></article>
+                        <article class="bookmark-message"><p>Aya turns toward the sound at the end of the platform.</p><button class="bookmark-toggle" type="button" aria-label="Toggle bookmark">☆</button></article>
+                        <article class="bookmark-message"><p>The journal is lying open beneath the broken station clock.</p><button class="bookmark-toggle is-bookmarked" type="button" aria-label="Toggle bookmark">★</button></article>
+                    </div>
+                    <div class="bookmark-demo__summary"><small>ORGANIZATION</small><article><strong id="bookmarkCount">2 bookmarks</strong><span>Important messages saved</span></article><article><strong>Chapter 4</strong><span>Current section</span></article></div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="story-bible">
+                <div class="docs-section__heading"><span class="docs-section__number">08</span><div><small>STORY BIBLE</small><h2>Package the Furina side of the story.</h2><p>Story Bible portability can export the current conversation's Furina story data as JSON, with a readable Markdown export also available.</p></div></div>
+
+                <div class="story-bible-demo" id="storyBibleDemo">
+                    <div class="story-bible-demo__options">
+                        <label><input type="checkbox" data-story-bible-component="Continuity Vault" checked><i></i><span>Continuity Vault</span></label>
+                        <label><input type="checkbox" data-story-bible-component="Director Notes" checked><i></i><span>Director Notes</span></label>
+                        <label><input type="checkbox" data-story-bible-component="Director tools" checked><i></i><span>Director cues / guards / knowledge</span></label>
+                        <label><input type="checkbox" data-story-bible-component="Scene State" checked><i></i><span>Scene State</span></label>
+                        <label><input type="checkbox" data-story-bible-component="Recaps, timeline & snapshots" checked><i></i><span>Scene Intelligence</span></label>
+                        <label><input type="checkbox" data-story-bible-component="Bookmarks" checked><i></i><span>Bookmarks</span></label>
+                        <label><input type="checkbox" data-story-bible-component="Chapters" checked><i></i><span>Chapters</span></label>
+                    </div>
+                    <div class="story-bible-demo__package">
+                        <div class="story-bible-file"><span>◆</span><small>FURINA STORY BIBLE</small><strong>The Station Arc</strong><p id="storyBibleSummary">7 components included</p></div>
+                        <button id="buildStoryBibleButton" type="button">Build example package <span>→</span></button>
+                        <div class="story-bible-demo__result" id="storyBibleResult">Choose what the example package should contain.</div>
+                    </div>
+                </div>
+
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">↗</div><div><strong>Import supports merge or replace workflows.</strong><p>Story Bible data is versioned and validated before Furina uses it. Keep backups before replacing important story state.</p></div></div>
+            </section>
+
+            <section class="docs-next">
+                <small>NEXT GUIDE</small><h2>Now change the entire way the conversation is presented.</h2><p>Visual Novel Mode and Phantom Chat are Furina's experimental alternate interfaces.</p>
+                <div class="docs-next__actions"><a class="button button--secondary" href="continuity.html">← Continuity</a><a class="button button--primary" href="interfaces.html">Interfaces <span class="button__arrow">→</span></a></div>
+            </section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Learn Furina Visual Novel Mode and Phantom Chat, the two alternate conversation interfaces.">
+    <title>Alternate Interfaces — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Alternate Interfaces</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="guides.html">Browse Guides</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>FURINA GUIDES</small><h2>Leave the normal chat behind.</h2><p>Two experimental ways to present and continue the current conversation.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">INTERFACES</span>
+                    <a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a>
+                    <a class="docs-nav__link" href="#visual-novel"><span>02</span>Visual Novel Mode</a>
+                    <a class="docs-nav__link" href="#vn-cast"><span>03</span>Speakers & Group Scenes</a>
+                    <a class="docs-nav__link" href="#phantom"><span>04</span>Phantom Chat</a>
+                    <a class="docs-nav__link" href="#comparison"><span>05</span>Which one?</a>
+                    <a class="docs-nav__link" href="#experimental"><span>06</span>Experimental notes</a>
+                </div>
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">GUIDES</span>
+                    <a class="docs-nav__link docs-nav__link--page" href="story.html"><span>◒</span>Story Tools</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="response-styles.html"><span>Aa</span>Response Styles</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="troubleshooting.html"><span>?</span>Troubleshooting</a>
+                </div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status"><i></i>Experimental interfaces</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow"><span>◇</span> ALTERNATE INTERFACES</div>
+                <h1>Same conversation. <span>Different stage.</span></h1>
+                <p class="docs-hero__lead">Visual Novel Mode and Phantom Chat replace the way the current conversation is presented while still using the real Clank conversation underneath.</p>
+                <p>Both interfaces are experimental. They are deliberately separated from Furina's everyday customization tools because they can replace the normal chat presentation instead of merely restyling it.</p>
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">◇</div><div><strong>You can still continue the conversation.</strong><p>Both interfaces include a composer that sends through Clank's real composer flow rather than trying to reproduce Clank's network request independently.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="visual-novel">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>VISUAL NOVEL MODE</small><h2>Turn the chat into a story screen.</h2><p>Visual Novel Mode reads the current conversation into narration and speaker beats, then presents those beats with portraits and VN-style dialogue staging.</p></div></div>
+
+                <div class="interface-showcase interface-showcase--vn" id="interfaceShowcase">
+                    <div class="vn-stage-demo">
+                        <div class="vn-stage-demo__backdrop"></div>
+                        <div class="vn-stage-demo__portrait"><span>A</span><small>AYA</small></div>
+                        <div class="vn-stage-demo__chapter">THE STATION · 11:47 PM</div>
+                        <div class="vn-stage-demo__dialogue"><span>AYA</span><p id="vnDemoLine">“You heard that too, right?”</p><button id="vnDemoNext" type="button">NEXT →</button></div>
+                    </div>
+                    <div class="interface-showcase__copy">
+                        <span class="interface-badge">EXPERIMENTAL · CURRENT CONVERSATION</span>
+                        <h3>Built around beats instead of message cards.</h3>
+                        <p>Furina parses the conversation into a sequence the reader can move through. Narration and dialogue can be staged separately, and the interface can resume around the latest conversation state.</p>
+                        <div class="interface-feature-list"><span>Speaker beats</span><span>Portraits</span><span>Narration</span><span>Previous / Next</span><span>Built-in composer</span><span>Conversation refresh</span></div>
+                    </div>
+                </div>
+
+                <div class="media-slot"><div><span>OPTIONAL MEDIA SLOT</span><strong>visual-novel-demo.mp4</strong><p>The page works without it. Later, a short 8–12 second real VN clip can replace this placeholder.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="vn-cast">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>SPEAKERS & GROUP SCENES</small><h2>Who is talking?</h2><p>Visual Novel Mode can associate speaker names with captured character portraits. Group scenes can maintain multiple speaker identities instead of treating the whole scene as one character.</p></div></div>
+
+                <div class="cast-demo" id="castDemo">
+                    <div class="cast-demo__scene">
+                        <button class="cast-person is-active" type="button" data-cast="emi"><span>E</span><strong>Emi</strong><small>Speaker portrait</small></button>
+                        <button class="cast-person" type="button" data-cast="raven"><span>R</span><strong>Raven</strong><small>Speaker portrait</small></button>
+                        <button class="cast-person" type="button" data-cast="maya"><span>M</span><strong>Maya</strong><small>Speaker portrait</small></button>
+                        <button class="cast-person" type="button" data-cast="narrator"><span>◇</span><strong>Narrator</strong><small>Scene artwork</small></button>
+                    </div>
+                    <div class="cast-demo__result"><div class="cast-demo__portrait" id="castPortrait">E</div><div><small>CURRENT SPEAKER</small><strong id="castName">Emi</strong><p id="castDescription">Uses Emi's captured portrait when a beat is attributed to Emi.</p></div></div>
+                </div>
+
+                <div class="docs-callout"><div class="docs-callout__icon">!</div><div><strong>Speaker detection depends on the source conversation.</strong><p>If names, scene-member data or portraits cannot be resolved cleanly, Furina may fall back to shared scene artwork or a generic presentation.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="phantom">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>PHANTOM CHAT</small><h2>A kinetic, comic-inspired alternate chat.</h2><p>Phantom uses a more graphic, motion-heavy presentation with staged message history, a scene bar, visual identity treatment and its own composer.</p></div></div>
+
+                <div class="phantom-demo">
+                    <div class="phantom-demo__slash"></div>
+                    <div class="phantom-demo__top"><span>PHANTOM CHAT</span><strong>TURN 042</strong></div>
+                    <div class="phantom-demo__identity"><span>A</span><div><small>SUBJECT</small><strong>AYA // ACTIVE</strong></div></div>
+                    <div class="phantom-demo__message"><small>RESPONSE</small><p>Something moves beyond the broken platform lights.</p></div>
+                    <div class="phantom-demo__composer">Write a Phantom Chat reply <span>↗</span></div>
+                </div>
+
+                <div class="media-slot"><div><span>OPTIONAL MEDIA SLOT</span><strong>phantom-chat-demo.mp4</strong><p>A real clip can be added later, but the documentation does not depend on one.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="comparison">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>CHOOSING AN INTERFACE</small><h2>They are not trying to solve the same problem.</h2></div></div>
+                <div class="interface-comparison">
+                    <article><span>◇ VISUAL NOVEL</span><h3>Read the RP like a VN.</h3><p>Best when dialogue speakers, portraits, narration pacing and scene presentation are the main appeal.</p><ul><li>Sequential beats</li><li>Speaker portraits</li><li>Narration/dialogue staging</li><li>Story-focused reading</li></ul></article>
+                    <article><span>// PHANTOM</span><h3>Make the chat itself perform.</h3><p>Best when you want an energetic, graphic alternate presentation that still feels like a live conversation.</p><ul><li>Kinetic motion</li><li>Comic-inspired identity</li><li>Scene status treatment</li><li>Built-in composer</li></ul></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="experimental">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>EXPERIMENTAL STATUS</small><h2>Know what “experimental” means here.</h2></div></div>
+                <div class="experimental-grid">
+                    <article><strong>DOM changes can matter</strong><p>Both interfaces read the current Clank page. Major upstream layout changes can affect detection.</p></article>
+                    <article><strong>Very long chats take more work</strong><p>Large conversations can require rebuilding or refreshing the interface's local representation.</p></article>
+                    <article><strong>Images are source-dependent</strong><p>Portrait and scene artwork availability depends on what Furina can resolve from the current character or scene.</p></article>
+                    <article><strong>Exit if something looks wrong</strong><p>The normal Clank conversation remains the source of truth. Close the alternate interface and verify there first.</p></article>
+                </div>
+                <div class="docs-callout docs-callout--good"><div class="docs-callout__icon">✓</div><div><strong>These interfaces do not replace your saved chat.</strong><p>They are presentation layers over the current conversation. Closing them returns you to the normal Clank view.</p></div></div>
+            </section>
+
+            <section class="docs-next"><small>NEXT GUIDE</small><h2>Choose how the AI should write.</h2><p>Furina's Response Style Library gives you ready-made prompts for Clank's own Custom Response Styles.</p><div class="docs-next__actions"><a class="button button--secondary" href="story.html">← Story Tools</a><a class="button button--primary" href="response-styles.html">Response Styles <span class="button__arrow">→</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

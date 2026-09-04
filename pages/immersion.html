@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Furina atmosphere effects, music and ambience, stickers, Reader Mode and Focus Mode.">
+    <meta name="theme-color" content="#07060d">
+    <title>Immersion — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Immersion</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="guides.html">Browse Guides</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>FURINA GUIDES</small><h2>Set the mood.</h2><p>Atmosphere, soundtrack, stickers and cleaner ways to read.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">IMMERSION</span>
+                    <a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a>
+                    <a class="docs-nav__link" href="#atmosphere"><span>02</span>Atmosphere</a>
+                    <a class="docs-nav__link" href="#music"><span>03</span>Music & Ambience</a>
+                    <a class="docs-nav__link" href="#stickers"><span>04</span>Stickers</a>
+                    <a class="docs-nav__link" href="#reader"><span>05</span>Reader & Focus</a>
+                    <a class="docs-nav__link" href="#pairing"><span>06</span>Putting it together</a>
+                </div>
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">GUIDES</span>
+                    <a class="docs-nav__link docs-nav__link--page" href="customization.html"><span>◈</span>Customization</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="interfaces.html"><span>◇</span>Interfaces</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="response-styles.html"><span>Aa</span>Response Styles</a>
+                    <a class="docs-nav__link docs-nav__link--page" href="troubleshooting.html"><span>?</span>Troubleshooting</a>
+                </div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status"><i></i>Conversation-scoped ambience</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow"><span>☁</span> IMMERSION</div>
+                <h1>Give the conversation <span>an atmosphere.</span></h1>
+                <p class="docs-hero__lead">Furina can layer visual ambience, a soundtrack, decorative stickers and distraction-free reading modes around an individual conversation.</p>
+                <p>None of these are required. They are there when a scene deserves a little more theatre.</p>
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">✦</div><div><strong>These tools are presentation, not AI context.</strong><p>Rain, music, stickers, Reader Mode and Focus Mode change your local experience. They do not become story facts for the model unless you separately describe those facts in the roleplay.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="atmosphere">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>ATMOSPHERE</small><h2>Put weather and texture above the background.</h2><p>Atmosphere is conversation-scoped and can be controlled through individual effects or quick presets.</p></div></div>
+
+                <div class="atmosphere-lab" id="atmosphereLab">
+                    <div class="atmosphere-stage" id="atmosphereStage" data-atmosphere="rain">
+                        <div class="atmosphere-stage__scene"></div>
+                        <div class="atmosphere-stage__effect" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="atmosphere-stage__chat"><article><i></i><p>The station lights buzz above the empty platform.</p></article><article class="is-user"><p>I pull my coat tighter and keep walking.</p></article></div>
+                        <div class="atmosphere-stage__label"><small>PREVIEW</small><strong id="atmospherePreviewName">Rainy Night</strong></div>
+                    </div>
+
+                    <aside class="atmosphere-controls">
+                        <small>QUICK PRESETS</small>
+                        <div class="atmosphere-presets">
+                            <button class="is-active" type="button" data-atmosphere-preset="rain" data-atmosphere-name="Rainy Night">🌧 <span>Rainy Night</span></button>
+                            <button type="button" data-atmosphere-preset="snow" data-atmosphere-name="Snowfall">❄ <span>Snowfall</span></button>
+                            <button type="button" data-atmosphere-preset="embers" data-atmosphere-name="Ember Room">🔥 <span>Ember Room</span></button>
+                            <button type="button" data-atmosphere-preset="sparkles" data-atmosphere-name="Arcane Glow">✨ <span>Arcane Glow</span></button>
+                            <button type="button" data-atmosphere-preset="fog" data-atmosphere-name="Dream Fog">☁ <span>Dream Fog</span></button>
+                            <button type="button" data-atmosphere-preset="motes" data-atmosphere-name="Quiet Motes">✦ <span>Quiet Motes</span></button>
+                            <button type="button" data-atmosphere-preset="scanlines" data-atmosphere-name="CRT">▤ <span>CRT</span></button>
+                            <button type="button" data-atmosphere-preset="grain" data-atmosphere-name="Old Film">◫ <span>Old Film</span></button>
+                        </div>
+                        <label class="demo-control"><span>Intensity <strong id="atmosphereIntensityValue">48%</strong></span><input id="atmosphereIntensity" type="range" min="5" max="100" value="48"></label>
+                        <label class="demo-control"><span>Speed <strong id="atmosphereSpeedValue">1.25×</strong></span><input id="atmosphereSpeed" type="range" min="25" max="250" value="125"></label>
+                    </aside>
+                </div>
+
+                <div class="atmosphere-effect-strip"><span>Drifting Motes</span><span>Layered Rain</span><span>Fog</span><span>Snow</span><span>Embers</span><span>Magic Sparkles</span><span>Film Grain</span><span>Scanlines</span></div>
+            </section>
+
+            <section class="docs-section" id="music">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>MUSIC / AMBIENCE</small><h2>Give one chat its own soundtrack.</h2><p>Furina accepts direct audio links, SoundCloud links and YouTube links. Playback starts only after user interaction.</p></div></div>
+
+                <div class="music-demo" id="musicDemo">
+                    <div class="music-demo__source">
+                        <div class="music-source-tabs">
+                            <button class="is-active" type="button" data-music-source="direct">Direct audio</button>
+                            <button type="button" data-music-source="soundcloud">SoundCloud</button>
+                            <button type="button" data-music-source="youtube">YouTube</button>
+                        </div>
+                        <div class="music-url-row"><span id="musicUrlLabel">DIRECT .MP3 / .OGG</span><div id="musicUrlExample">https://example.com/rainy-cafe.mp3</div></div>
+                        <div class="music-player-card">
+                            <button id="musicPlayButton" type="button" aria-label="Play demo track"><span id="musicPlayIcon">▶</span></button>
+                            <div><small>NOW LOADED</small><strong id="musicTrackName">Rainy Café</strong><span id="musicSourceNote">Furina player controls</span></div>
+                            <i id="musicPlayingDot"></i>
+                        </div>
+                        <label class="demo-control"><span>Volume <strong id="musicVolumeValue">60%</strong></span><input id="musicVolume" type="range" min="0" max="100" value="60"></label>
+                    </div>
+                    <div class="music-demo__notes">
+                        <article><span>01</span><div><strong>Load first</strong><p>Name the track if you want, paste a URL, then load it.</p></div></article>
+                        <article><span>02</span><div><strong>Press Play</strong><p>Browser autoplay rules mean Furina waits for an explicit user action.</p></div></article>
+                        <article><span>03</span><div><strong>Embedded media differs</strong><p>SoundCloud or YouTube may use the controls inside their embedded player for playback and related controls.</p></div></article>
+                    </div>
+                </div>
+                <div class="docs-callout"><div class="docs-callout__icon">♫</div><div><strong>A soundtrack is saved for the conversation.</strong><p>That makes it easy to give different roleplays different ambience instead of changing one global player every time.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="stickers">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>STICKERS</small><h2>Decorate the chat without editing the page.</h2><p>Add an image or GIF by URL, then position it directly over the Furina chat presentation.</p></div></div>
+
+                <div class="sticker-demo" id="stickerDemo">
+                    <div class="sticker-stage" id="stickerStage">
+                        <div class="sticker-stage__message"></div><div class="sticker-stage__message sticker-stage__message--user"></div><div class="sticker-stage__message"></div>
+                        <button class="sticker-demo-object" id="stickerDemoObject" type="button" aria-label="Draggable example sticker"><span>✦</span><small>DRAG ME</small></button>
+                    </div>
+                    <aside class="sticker-controls">
+                        <small>SELECTED STICKER</small>
+                        <div class="sticker-control-actions"><button id="stickerLockButton" type="button">🔓 Unlocked</button><button id="stickerDuplicateButton" type="button">Duplicate</button></div>
+                        <label class="demo-control"><span>Opacity <strong id="stickerOpacityValue">100%</strong></span><input id="stickerOpacity" type="range" min="20" max="100" value="100"></label>
+                        <label class="demo-control"><span>Rotation <strong id="stickerRotationValue">-8°</strong></span><input id="stickerRotation" type="range" min="-180" max="180" value="-8"></label>
+                        <div class="sticker-position-choice"><span>Position mode</span><button class="is-active" type="button" data-sticker-position="chat">Chat-attached</button><button type="button" data-sticker-position="screen">Screen-fixed</button></div>
+                    </aside>
+                </div>
+
+                <div class="sticker-feature-grid"><article><span>↔</span><strong>Move & resize</strong><p>Arrange stickers directly while Furina is open.</p></article><article><span>↻</span><strong>Rotate & flip</strong><p>Tune individual sticker orientation and mirroring.</p></article><article><span>▤</span><strong>Layering</strong><p>Send a sticker backward or bring it forward.</p></article><article><span>🔒</span><strong>Lock</strong><p>Prevent accidental movement after a layout is finished.</p></article><article><span>▣</span><strong>Packs</strong><p>Save reusable sticker collections for future conversations.</p></article><article><span>◇</span><strong>Layouts</strong><p>Save an arrangement and apply it again later.</p></article></div>
+            </section>
+
+            <section class="docs-section" id="reader">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>READER & FOCUS</small><h2>Sometimes the best effect is less UI.</h2><p>Reader Mode creates a cleaner long-form transcript. Focus Mode goes further and temporarily hides Clank and Furina UI.</p></div></div>
+
+                <div class="reader-demo" id="readerDemo">
+                    <div class="reader-demo__controls">
+                        <label><span><strong>Reader Mode</strong><small>Clean long-form reading view</small></span><input id="readerModeToggle" type="checkbox"><i></i></label>
+                        <label><span><strong>Hide composer</strong><small>Remove the message box while reading</small></span><input class="reader-option" data-reader-class="hide-composer" type="checkbox" checked><i></i></label>
+                        <label><span><strong>Hide avatars</strong><small>Remove portrait circles from the transcript</small></span><input class="reader-option" data-reader-class="hide-avatars" type="checkbox"><i></i></label>
+                        <label><span><strong>Hide message controls</strong><small>Remove edit, continue, reaction and branch controls</small></span><input class="reader-option" data-reader-class="hide-actions" type="checkbox" checked><i></i></label>
+                        <label><span><strong>Wide reading column</strong><small>Give long replies more horizontal room</small></span><input class="reader-option" data-reader-class="wide-reading" type="checkbox"><i></i></label>
+                        <button id="focusModeDemoButton" type="button">Enter Focus Mode</button>
+                    </div>
+                    <div class="reader-preview" id="readerPreview">
+                        <aside><span>⌂</span><span>◇</span><span>⚙</span></aside>
+                        <div class="reader-preview__content"><article><i></i><div><p>The rain had stopped sometime before dawn, leaving the streets silver beneath the lamps.</p><small>⋯  ♡  ↻</small></div></article><article><i></i><div><p>Mira waited beneath the station awning without saying a word.</p><small>⋯  ♡  ↻</small></div></article><div class="reader-preview__composer">Message...</div></div>
+                        <div class="reader-focus-card" id="readerFocusCard" hidden><small>FOCUS MODE</small><strong>Only the story.</strong><p>Furina temporarily hides surrounding UI. Press Escape or the button below to leave.</p><button id="exitFocusModeDemo" type="button">Exit Focus Mode</button></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="pairing">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>PUTTING IT TOGETHER</small><h2>Build a mood, not a checklist.</h2><p>A few coordinated choices usually feel better than every effect enabled at once.</p></div></div>
+                <div class="immersion-recipes">
+                    <article><span>🌧</span><small>QUIET MYSTERY</small><strong>Rainy Night + low-volume ambience</strong><p>Dark image background, restrained rain, quiet music and Reader Mode for slower scenes.</p></article>
+                    <article><span>✨</span><small>MAGICAL SCENE</small><strong>Arcane Glow + character wallpaper</strong><p>Sparkles, a subtle grade, a few decorative stickers and a character-specific soundtrack.</p></article>
+                    <article><span>📺</span><small>ANALOG UNEASE</small><strong>CRT + Old Film styling</strong><p>Scanlines or grain, restrained saturation and a fitting ambient track without overwhelming the text.</p></article>
+                </div>
+                <div class="docs-callout docs-callout--good"><div class="docs-callout__icon">✓</div><div><strong>You can turn all of this off instantly.</strong><p>Immersion should make the roleplay nicer to inhabit. If it starts competing with the writing, simplify it.</p></div></div>
+            </section>
+
+            <section class="docs-next"><small>NEXT GUIDE</small><h2>Want to influence the story itself?</h2><p>Director moves from presentation into user-controlled roleplay guidance: persistent notes, one-shot instructions, Guard Rails, cues and knowledge boundaries.</p><div class="docs-next__actions"><a class="button button--secondary" href="customization.html">← Customization</a><a class="button button--primary" href="director.html">Director <span class="button__arrow">→</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

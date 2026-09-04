@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Troubleshoot Furina installation, panel, wallpaper, media, state and experimental-interface issues.">
+    <title>Troubleshooting — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true"><div class="site-background__glow site-background__glow--one"></div><div class="site-background__glow site-background__glow--two"></div><div class="site-background__grid"></div><div class="site-background__noise"></div></div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>Troubleshooting</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="guides.html">Browse Guides</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>SUPPORT</small><h2>Find the smallest fix first.</h2><p>Most Furina problems are install state, page lifecycle or source-media issues.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group">
+                    <span class="docs-nav__label">TROUBLESHOOTING</span>
+                    <a class="docs-nav__link is-active" href="#diagnose"><span>01</span>Quick diagnosis</a>
+                    <a class="docs-nav__link" href="#installation"><span>02</span>Installation</a>
+                    <a class="docs-nav__link" href="#panel"><span>03</span>Panel & state</a>
+                    <a class="docs-nav__link" href="#visuals"><span>04</span>Backgrounds</a>
+                    <a class="docs-nav__link" href="#media"><span>05</span>Music & media</a>
+                    <a class="docs-nav__link" href="#interfaces"><span>06</span>VN & Phantom</a>
+                    <a class="docs-nav__link" href="#diagnostics"><span>07</span>Diagnostics</a>
+                    <a class="docs-nav__link" href="#boundaries"><span>08</span>Technical boundaries</a>
+                </div>
+                <div class="docs-nav__group"><span class="docs-nav__label">GUIDES</span><a class="docs-nav__link docs-nav__link--page" href="getting-started.html"><span>✦</span>Getting Started</a><a class="docs-nav__link docs-nav__link--page" href="sharing.html"><span>↗</span>Sharing</a><a class="docs-nav__link docs-nav__link--page" href="releases.html"><span>↓</span>Releases</a></div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status"><i></i>Start with reloads</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="diagnose">
+                <div class="docs-eyebrow"><span>?</span> TROUBLESHOOTING</div>
+                <h1>Something broke. <span>What exactly?</span></h1>
+                <p class="docs-hero__lead">Choose the symptom below for the shortest first-pass checklist. If that does not solve it, the deeper sections explain what to inspect next.</p>
+
+                <div class="trouble-picker" id="troublePicker">
+                    <div class="trouble-picker__buttons">
+                        <button class="is-active" type="button" data-trouble="missing">Furina is missing</button>
+                        <button type="button" data-trouble="stuck">Panel / buttons stuck</button>
+                        <button type="button" data-trouble="background">Background problem</button>
+                        <button type="button" data-trouble="audio">Music not playing</button>
+                        <button type="button" data-trouble="interface">VN / Phantom issue</button>
+                    </div>
+                    <div class="trouble-picker__answer" id="troubleAnswer"><small>START HERE</small><strong>Furina is missing</strong><ol><li>Confirm the extension is enabled in your browser.</li><li>Confirm you are on a supported Clank chat route.</li><li>Reload the Clank tab.</li><li>If you just reloaded or updated the extension, reload the tab again so the page gets the new extension context.</li></ol></div>
+                </div>
+            </section>
+
+            <section class="docs-section" id="installation">
+                <div class="docs-section__heading"><span class="docs-section__number">01</span><div><small>INSTALLATION</small><h2>The browser cannot load Furina.</h2></div></div>
+                <div class="issue-grid">
+                    <article><span>MANIFEST NOT FOUND</span><strong>Select the folder containing manifest.json.</strong><p>When you use Load unpacked, choose the extracted Furina folder itself — not the directory above it and not the ZIP file.</p></article>
+                    <article><span>ZIP SELECTED</span><strong>Extract first.</strong><p>Chromium's Load unpacked workflow expects normal extension files on disk.</p></article>
+                    <article><span>OLD BUILD STILL ACTIVE</span><strong>Reload the extension.</strong><p>After replacing files, use the browser extension page's reload control and then reload the Clank tab.</p></article>
+                    <article><span>WRONG PAGE</span><strong>Open a Clank conversation.</strong><p>The normal chat launcher is intentionally tied to supported chat routes rather than appearing everywhere on the site.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="panel">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>PANEL & STATE</small><h2>The launcher exists, but Furina feels stale.</h2></div></div>
+                <div class="support-sequence"><article><span>1</span><strong>Close and reopen the Furina panel</strong><p>Useful for a one-off UI state issue.</p></article><article><span>2</span><strong>Reload the Clank page</strong><p>Rebuilds Furina against the current page DOM.</p></article><article><span>3</span><strong>Reload the extension</strong><p>Use this after updating files or when the extension context was invalidated.</p></article><article><span>4</span><strong>Then reload the Clank page again</strong><p>An already-open page cannot automatically use a content-script context that was destroyed by an extension reload.</p></article></div>
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">!</div><div><strong>“Extension context invalidated” usually means the page still has an old extension instance.</strong><p>Reload the browser extension, then refresh the affected Clank tab. The message is about the extension runtime context, not automatically evidence that your saved Furina data was erased.</p></div></div>
+                <div class="docs-callout"><div class="docs-callout__icon">◆</div><div><strong>Global vs This Chat can make a setting look “wrong.”</strong><p>If one conversation looks different from the rest, check Theme Scope before assuming the theme failed to save.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="visuals">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>BACKGROUNDS</small><h2>Image or live wallpaper problems.</h2></div></div>
+                <div class="issue-grid">
+                    <article><span>IMAGE DOES NOT LOAD</span><strong>Use a direct, browser-accessible image URL.</strong><p>A webpage URL that merely contains an image is not the same thing as the image file itself.</p></article>
+                    <article><span>LIVE WALLPAPER DOES NOT LOAD</span><strong>Use a direct video source that the browser can play.</strong><p>Sites can block hotlinking, require authentication or return HTML instead of a playable media file.</p></article>
+                    <article><span>LOOP HAS A HITCH</span><strong>Check the source clip.</strong><p>Short videos whose first and last frames are visually compatible tend to produce the least noticeable loop transition.</p></article>
+                    <article><span>EFFECT LOOKS TOO SUBTLE</span><strong>Check darkness, blur and color settings.</strong><p>A heavy overlay can hide grading and parallax. Extreme blur can also make movement difficult to notice.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="media">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>MUSIC & AMBIENCE</small><h2>The player is there, but there is no sound.</h2></div></div>
+                <div class="support-sequence"><article><span>1</span><strong>Interact with the page once</strong><p>Browsers can restrict autoplay until a user gesture has occurred.</p></article><article><span>2</span><strong>Check Furina volume and play state</strong><p>Make sure the source is loaded, the player is not paused and volume is above zero.</p></article><article><span>3</span><strong>Verify the source type</strong><p>Direct audio, SoundCloud and YouTube use different playback paths.</p></article><article><span>4</span><strong>Test the source itself</strong><p>If the external source is unavailable or embedding is blocked, Furina cannot make that source playable.</p></article></div>
+                <div class="docs-callout"><div class="docs-callout__icon">♫</div><div><strong>Autoplay is controlled by the browser.</strong><p>Furina can request playback, but browser media policies still decide whether audio is allowed to start without interaction.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="interfaces">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>ALTERNATE INTERFACES</small><h2>Visual Novel or Phantom looks incomplete.</h2></div></div>
+                <div class="issue-grid">
+                    <article><span>NO VN BEATS</span><strong>Return to normal chat and verify the conversation is readable there.</strong><p>Visual Novel Mode builds its local sequence from the current conversation source rows. Upstream DOM changes or unusual message structures can affect parsing.</p></article>
+                    <article><span>WRONG / MISSING PORTRAIT</span><strong>Speaker portrait data may not be available.</strong><p>Group-scene portrait matching depends on speaker names and scene-member information Furina can resolve.</p></article>
+                    <article><span>NEW MESSAGE NOT VISIBLE</span><strong>Refresh or reopen the interface.</strong><p>The alternate interface may need to rebuild its local representation after the source chat changes.</p></article>
+                    <article><span>SEND FAILS</span><strong>Exit the interface and test the normal Clank composer.</strong><p>Furina deliberately relies on the real composer/send flow. If Clank's own composer is unavailable, the alternate composer cannot safely bypass it.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="diagnostics">
+                <div class="docs-section__heading"><span class="docs-section__number">06</span><div><small>DIAGNOSTICS</small><h2>When the simple fixes are not enough.</h2></div></div>
+                <div class="diagnostic-card"><div><span>FULL ATELIER → ADVANCED</span><strong>Diagnostics</strong><p>Use Furina's diagnostics when you need to inspect what the extension believes it can see on the current Clank page.</p></div><div class="diagnostic-card__console"><span>FURINA DIAGNOSTICS</span><i>chat route ............. detected</i><i>composer ............... found</i><i>conversation ........... active</i><i>renderer ............... ready</i></div></div>
+                <div class="docs-callout docs-callout--warning"><div class="docs-callout__icon">!</div><div><strong>Before a reset, export anything important.</strong><p>Theme, Full Setup, Story Bible and Miyabi profile exports exist so you can preserve useful state before destructive troubleshooting.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="boundaries">
+                <div class="docs-section__heading"><span class="docs-section__number">07</span><div><small>TECHNICAL BOUNDARIES</small><h2>Know what Furina cannot promise.</h2></div></div>
+                <div class="boundary-table"><div><strong>Furina can</strong><span>Restyle the local Clank interface.</span><span>Store its own per-conversation data.</span><span>Prepare Director / Continuity context for outgoing messages.</span><span>Present the current chat through alternate local interfaces.</span></div><div><strong>Furina cannot</strong><span>Increase the model's real context window.</span><span>Change Clank's backend memory.</span><span>Guarantee the AI follows instructions.</span><span>Turn Scene Snapshots into real server-side chat branches.</span><span>Make local profile customization visible to other users.</span></div></div>
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">✦</div><div><strong>The normal Clank conversation remains the source of truth.</strong><p>When troubleshooting rendering or alternate-interface behavior, returning to the native chat is the best way to distinguish a Furina presentation issue from the underlying conversation state.</p></div></div>
+            </section>
+
+            <section class="docs-next"><small>KEEP READING</small><h2>Check what changed between versions.</h2><p>The release page keeps the documented version and current download in one place.</p><div class="docs-next__actions"><a class="button button--secondary" href="sharing.html">← Sharing</a><a class="button button--primary" href="releases.html">Releases <span class="button__arrow">→</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

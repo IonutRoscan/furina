@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#07060d">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Learn Furina's Continuity Vault, selective memory injection, context budgets and memory capture tools."
+    >
+
+    <title>
+        Continuity — Furina: Clank Chat Atelier
+    </title>
+
+    
+    <link rel="icon" href="../assets/images/furina-icon.png">
+<link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../styles/docs.css"
+    >
+</head>
+
+<body class="docs-page">
+
+    <div
+        class="site-background"
+        aria-hidden="true"
+    >
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+
+    <header class="docs-header">
+
+        <a
+            class="brand"
+            href="../index.html"
+        >
+            <span class="brand__mark">
+                ✦
+            </span>
+
+            <span class="brand__text">
+                <strong>FURINA</strong>
+                <small>CLANK CHAT ATELIER</small>
+            </span>
+        </a>
+
+
+        <div class="docs-header__center">
+            <span>DOCUMENTATION</span>
+            <strong>Continuity</strong>
+        </div>
+
+
+        <div class="docs-header__actions">
+
+            <a
+                class="docs-header__link"
+                href="guides.html"
+            >
+                Browse Guides
+            </a>
+
+            <button
+                class="docs-mobile-nav-button"
+                id="docsMobileNavButton"
+                type="button"
+                aria-label="Open documentation navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="docs-layout">
+
+        <aside
+            class="docs-sidebar"
+            id="docsSidebar"
+        >
+
+            <div class="docs-sidebar__top">
+
+                <small>
+                    FURINA GUIDES
+                </small>
+
+                <h2>
+                    Remember what matters.
+                </h2>
+
+                <p>
+                    Continuity tools for stories that refuse to stay small.
+                </p>
+
+            </div>
+
+
+            <nav class="docs-nav">
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        CONTINUITY
+                    </span>
+
+                    <a
+                        class="docs-nav__link is-active"
+                        href="#overview"
+                    >
+                        <span>01</span>
+                        Overview
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#vault"
+                    >
+                        <span>02</span>
+                        Continuity Vault
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#selection"
+                    >
+                        <span>03</span>
+                        Selective Memory
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#budget"
+                    >
+                        <span>04</span>
+                        Context Budget
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#capture"
+                    >
+                        <span>05</span>
+                        Memory Capture
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#writing"
+                    >
+                        <span>06</span>
+                        Writing Good Memories
+                    </a>
+
+                </div>
+
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        GUIDES
+                    </span>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="getting-started.html"
+                    >
+                        <span>←</span>
+                        Getting Started
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="customization.html"
+                    >
+                        <span>✦</span>
+                        Customize
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="director.html"
+                    >
+                        <span>🎬</span>
+                        Director
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="story.html"
+                    >
+                        <span>◒</span>
+                        Story
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="interfaces.html"
+                    >
+                        <span>◇</span>
+                        Interfaces
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="profile-atelier.html"
+                    >
+                        <span>◎</span>
+                        Profile Atelier
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <div class="docs-sidebar__footer">
+
+                <span class="docs-sidebar__status">
+                    <i></i>
+                    Furina 1.3.1
+                </span>
+
+                <a href="guides.html">
+                    All guides
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <article class="docs-content">
+
+            <!-- =================================================
+                 OVERVIEW
+            ================================================== -->
+
+            <section
+                class="docs-hero"
+                id="overview"
+            >
+
+                <div class="docs-eyebrow">
+                    <span>◆</span>
+                    CONTINUITY ENGINE
+                </div>
+
+                <h1>
+                    Long stories forget.
+                    <span>Furina can remind.</span>
+                </h1>
+
+                <p class="docs-hero__lead">
+                    The Continuity Vault stores important roleplay facts
+                    locally and helps Furina decide which ones are worth
+                    bringing back into the current context.
+                </p>
+
+                <p>
+                    That can include relationships, injuries, possessions,
+                    secrets, world lore, promises, unfinished plot threads
+                    and other facts that matter over a long conversation.
+                </p>
+
+
+                <div class="docs-callout docs-callout--accent">
+
+                    <div class="docs-callout__icon">
+                        ◆
+                    </div>
+
+                    <div>
+                        <strong>
+                            Furina does not increase Clank's real context window.
+                        </strong>
+
+                        <p>
+                            Continuity works by selecting useful reminders
+                            from information you've saved. It is a context
+                            management tool, not unlimited memory.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 VAULT
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="vault"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        01
+                    </span>
+
+                    <div>
+                        <small>
+                            CONTINUITY VAULT
+                        </small>
+
+                        <h2>
+                            Build a compact record of the story.
+                        </h2>
+
+                        <p>
+                            Memories are stored as individual entries rather
+                            than one enormous wall of notes.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="memory-anatomy">
+
+                    <article class="memory-card-demo">
+
+                        <div class="memory-card-demo__top">
+
+                            <span class="memory-category">
+                                INVENTORY &amp; CONDITION
+                            </span>
+
+                            <span class="memory-priority memory-priority--high">
+                                HIGH
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Aya's injured arm
+                        </h3>
+
+                        <p>
+                            Aya injured her left arm in the forest.
+                            It still hurts when she lifts something heavy.
+                        </p>
+
+
+                        <div class="memory-keywords">
+
+                            <span>Aya</span>
+                            <span>arm</span>
+                            <span>injury</span>
+                            <span>lifting</span>
+
+                        </div>
+
+
+                        <div class="memory-card-demo__footer">
+
+                            <span>
+                                ✓ Enabled
+                            </span>
+
+                            <span>
+                                When relevant
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <div class="memory-anatomy__notes">
+
+                        <article>
+                            <span>01</span>
+
+                            <div>
+                                <strong>
+                                    Category
+                                </strong>
+
+                                <p>
+                                    Helps keep different kinds of continuity
+                                    organized.
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article>
+                            <span>02</span>
+
+                            <div>
+                                <strong>
+                                    Priority
+                                </strong>
+
+                                <p>
+                                    Important memories can be favored when
+                                    Furina has limited context space.
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article>
+                            <span>03</span>
+
+                            <div>
+                                <strong>
+                                    Injection scope
+                                </strong>
+
+                                <p>
+                                    Choose whether the memory is always included,
+                                    selected by relevance, tied to present cast, or manual only.
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article>
+                            <span>04</span>
+
+                            <div>
+                                <strong>
+                                    Keywords & aliases
+                                </strong>
+
+                                <p>
+                                    Give Furina extra clues about when a Relevant
+                                    entry may be useful.
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article>
+                            <span>05</span>
+
+                            <div>
+                                <strong>
+                                    Enabled state
+                                </strong>
+
+                                <p>
+                                    Keep a memory saved without necessarily
+                                    making it available right now.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <div class="memory-category-strip">
+
+                    <span>CHARACTER</span>
+                    <span>RELATIONSHIP</span>
+                    <span>WORLD</span>
+                    <span>INVENTORY &amp; CONDITION</span>
+                    <span>OPEN THREAD</span>
+                    <span>TIMELINE</span>
+                    <span>OTHER</span>
+
+                </div>
+
+                <div class="memory-setting-strips">
+                    <article><small>PRIORITY</small><div><span>Critical</span><span>High</span><span>Normal</span><span>Background</span></div></article>
+                    <article><small>INJECTION</small><div><span>Always include</span><span>When relevant</span><span>While present</span><span>Manual only</span></div></article>
+                </div>
+
+                <div class="docs-callout"><div class="docs-callout__icon">◇</div><div><strong>“While present” uses Scene State.</strong><p>For that injection mode, Furina matches the memory's terms against the Scene State <b>Present</b> field. “When relevant” instead uses keywords and the current outgoing message.</p></div></div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SELECTIVE MEMORY
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="selection"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        02
+                    </span>
+
+                    <div>
+                        <small>
+                            SELECTIVE MEMORY
+                        </small>
+
+                        <h2>
+                            The AI doesn't need every memory.
+                        </h2>
+
+                        <p>
+                            It needs the ones that matter to what is
+                            happening now.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="memory-selector-demo"
+                    id="memorySelectorDemo"
+                >
+
+                    <div class="memory-selector-demo__messages">
+
+                        <small>
+                            CURRENT MESSAGE
+                        </small>
+
+
+                        <button
+                            class="memory-message-option is-active"
+                            type="button"
+                            data-memory-message="arm"
+                        >
+                            “Aya tries to lift the heavy wooden box.”
+                        </button>
+
+
+                        <button
+                            class="memory-message-option"
+                            type="button"
+                            data-memory-message="key"
+                        >
+                            “Mira reaches into her coat for the silver key.”
+                        </button>
+
+
+                        <button
+                            class="memory-message-option"
+                            type="button"
+                            data-memory-message="rain"
+                        >
+                            “Ren watches the rain from the café window.”
+                        </button>
+
+                    </div>
+
+
+                    <div class="memory-selector-demo__arrow">
+                        →
+                    </div>
+
+
+                    <div class="memory-selector-demo__results">
+
+                        <div class="memory-selector-demo__header">
+
+                            <small>
+                                SELECTED CONTINUITY
+                            </small>
+
+                            <strong id="memorySelectionCount">
+                                2 memories
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="memory-result-list"
+                            id="memoryResultList"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="selection-reasons">
+
+                    <article>
+                        <span>◆</span>
+
+                        <strong>
+                            Names & aliases
+                        </strong>
+
+                        <p>
+                            Character references can make related memories
+                            more useful.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>◇</span>
+
+                        <strong>
+                            Keywords
+                        </strong>
+
+                        <p>
+                            Objects, injuries, places and story concepts can
+                            help memories match the current message.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>✦</span>
+
+                        <strong>
+                            Priority
+                        </strong>
+
+                        <p>
+                            Critical facts can survive when the available
+                            memory budget becomes small.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span>◒</span>
+
+                        <strong>
+                            Current scene
+                        </strong>
+
+                        <p>
+                            Scene information can help provide additional
+                            relevance context.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BUDGET
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="budget"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        03
+                    </span>
+
+                    <div>
+                        <small>
+                            CONTEXT BUDGET
+                        </small>
+
+                        <h2>
+                            More memory is not always better.
+                        </h2>
+
+                        <p>
+                            Furina lets you control how much continuity
+                            context can be selected at once.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="budget-demo"
+                    id="budgetDemo"
+                >
+
+                    <div class="budget-demo__buttons">
+
+                        <button
+                            class="budget-option"
+                            type="button"
+                            data-budget="compact"
+                        >
+                            <span>COMPACT</span>
+
+                            <strong>
+                                Keep it lean.
+                            </strong>
+
+                            <small>
+                                Only the strongest matches.
+                            </small>
+                        </button>
+
+
+                        <button
+                            class="budget-option is-active"
+                            type="button"
+                            data-budget="balanced"
+                        >
+                            <span>BALANCED</span>
+
+                            <strong>
+                                Good default.
+                            </strong>
+
+                            <small>
+                                Enough room for useful context.
+                            </small>
+                        </button>
+
+
+                        <button
+                            class="budget-option"
+                            type="button"
+                            data-budget="detailed"
+                        >
+                            <span>DETAILED</span>
+
+                            <strong>
+                                More background.
+                            </strong>
+
+                            <small>
+                                Useful when continuity is complex.
+                            </small>
+                        </button>
+
+                    </div>
+
+
+                    <div class="budget-meter">
+
+                        <div class="budget-meter__top">
+
+                            <span>
+                                MEMORY BUDGET
+                            </span>
+
+                            <strong id="budgetLabel">
+                                Balanced
+                            </strong>
+
+                        </div>
+
+
+                        <div class="budget-meter__track">
+
+                            <i
+                                id="budgetMeterFill"
+                                style="width: 58%;"
+                            ></i>
+
+                        </div>
+
+
+                        <div class="budget-meter__memories">
+
+                            <span class="is-included">
+                                Critical canon
+                            </span>
+
+                            <span class="is-included">
+                                Current injury
+                            </span>
+
+                            <span class="is-included">
+                                Relationship state
+                            </span>
+
+                            <span
+                                id="budgetExtraMemory"
+                                class="is-muted"
+                            >
+                                Old background detail
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout">
+
+                    <div class="docs-callout__icon">
+                        !
+                    </div>
+
+                    <div>
+                        <strong>
+                            Context still has a cost.
+                        </strong>
+
+                        <p>
+                            Every reminder included with a message occupies
+                            some context. Keeping memories concise helps Furina
+                            preserve more useful information.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CAPTURE
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="capture"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        04
+                    </span>
+
+                    <div>
+                        <small>
+                            MEMORY CAPTURE
+                        </small>
+
+                        <h2>
+                            Save important moments before they disappear.
+                        </h2>
+
+                        <p>
+                            Furina includes faster ways to capture useful
+                            continuity without rebuilding every entry manually.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="capture-demo"
+                    id="captureDemo"
+                >
+
+                    <div class="capture-demo__chat">
+
+                        <small>
+                            CLANK RESPONSE
+                        </small>
+
+
+                        <div class="capture-demo__message">
+
+                            <p>
+                                Mira hesitates at the basement door before
+                                finally handing Aya the silver key.
+                            </p>
+
+                            <p>
+                                “Keep it,” she says quietly.
+                                “I don't want to go down there alone again.”
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="capture-demo__remember"
+                            id="captureRememberButton"
+                            type="button"
+                        >
+                            ◆ Simulate suggestion scan
+                        </button>
+
+                    </div>
+
+
+                    <div class="capture-demo__arrow">
+                        →
+                    </div>
+
+
+                    <div class="capture-demo__inbox">
+
+                        <small>
+                            MEMORY INBOX
+                        </small>
+
+
+                        <div
+                            class="capture-inbox-card"
+                            id="captureInboxCard"
+                        >
+
+                            <span class="capture-inbox-card__state">
+                                Waiting for capture
+                            </span>
+
+                            <strong>
+                                Nothing pending yet.
+                            </strong>
+
+                            <p>
+                                Furina can flag a possible fact from an assistant reply for review.
+                            </p>
+
+
+                            <div class="capture-inbox-card__actions">
+
+                                <button
+                                    id="captureAcceptButton"
+                                    type="button"
+                                    disabled
+                                >
+                                    Accept
+                                </button>
+
+                                <button
+                                    id="captureDismissButton"
+                                    type="button"
+                                    disabled
+                                >
+                                    Dismiss
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="capture-paths">
+                    <article><span>🧠</span><strong>Remember message</strong><p>Use the memory action on a message to open the capture editor with that message as source material.</p></article>
+                    <article><span>◆</span><strong>Quick Memory</strong><p>Open a blank capture editor from the composer when you already know the fact you want to save.</p></article>
+                    <article><span>⌁</span><strong>Remember selection</strong><p>Select a useful excerpt inside a Furina-rendered message and turn only that text into a memory draft.</p></article>
+                </div>
+
+                <div class="docs-callout docs-callout--good">
+
+                    <div class="docs-callout__icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Review before canon.
+                        </strong>
+
+                        <p>
+                            Automatic suggestions can wait in the Memory Inbox for review. Manual “Remember this,” Quick Memory, and remembered text selections instead open the memory capture editor so you can shape the fact yourself.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 WRITING
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="writing"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        05
+                    </span>
+
+                    <div>
+                        <small>
+                            GOOD MEMORIES
+                        </small>
+
+                        <h2>
+                            Facts beat essays.
+                        </h2>
+
+                        <p>
+                            The most useful continuity memories are usually
+                            short, specific and easy to recognize later.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="memory-writing-demo">
+
+                    <article class="memory-writing-card memory-writing-card--bad">
+
+                        <span>
+                            TOO VAGUE
+                        </span>
+
+                        <p>
+                            Aya had a really emotional scene in the forest
+                            and many things happened which changed how she
+                            feels about everything.
+                        </p>
+
+                        <small>
+                            Hard to match. Hard to reuse.
+                        </small>
+
+                    </article>
+
+
+                    <div class="memory-writing-demo__arrow">
+                        →
+                    </div>
+
+
+                    <article class="memory-writing-card memory-writing-card--good">
+
+                        <span>
+                            BETTER
+                        </span>
+
+                        <p>
+                            Aya no longer trusts Ren after discovering he
+                            lied about the forest attack.
+                        </p>
+
+                        <small>
+                            Specific relationship change.
+                        </small>
+
+                    </article>
+
+                </div>
+
+
+                <div class="memory-writing-rules">
+
+                    <article>
+                        <strong>
+                            One useful fact per memory
+                        </strong>
+
+                        <p>
+                            Smaller entries are easier for Furina to select
+                            independently.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <strong>
+                            Use names directly
+                        </strong>
+
+                        <p>
+                            Clear names and aliases make future relevance
+                            easier to determine.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <strong>
+                            Record the current truth
+                        </strong>
+
+                        <p>
+                            If something changes, update or archive the old
+                            state rather than stacking contradictions.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NEXT
+            ================================================== -->
+
+            <section class="docs-next">
+
+                <small>
+                    NEXT GUIDE
+                </small>
+
+                <h2>
+                    Memories preserve the facts.
+                    Story tools preserve the structure.
+                </h2>
+
+                <p>
+                    Next we'll document Scene State, Start Scene,
+                    recaps, Previously On, timelines, snapshots,
+                    bookmarks, chapters and Story Bible workflows.
+                </p>
+
+
+                <div class="docs-next__actions">
+
+                    <a
+                        class="button button--secondary"
+                        href="director.html"
+                    >
+                        ← Director
+                    </a>
+
+                    <a class="button button--primary" href="story.html">Story Guide <span class="button__arrow">→</span></a>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <script src="../scripts/docs.js"></script>
+
+</body>
+</html>

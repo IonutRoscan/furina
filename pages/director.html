@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#07060d">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Learn Furina Director Mode, Director Notes, Guard Rails, Cues and character knowledge boundaries."
+    >
+
+    <title>
+        Director — Furina: Clank Chat Atelier
+    </title>
+
+    
+    <link rel="icon" href="../assets/images/furina-icon.png">
+<link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../styles/docs.css"
+    >
+</head>
+
+<body class="docs-page">
+
+    <div
+        class="site-background"
+        aria-hidden="true"
+    >
+        <div class="site-background__glow site-background__glow--one"></div>
+        <div class="site-background__glow site-background__glow--two"></div>
+        <div class="site-background__grid"></div>
+        <div class="site-background__noise"></div>
+    </div>
+
+
+    <header class="docs-header">
+
+        <a
+            class="brand"
+            href="../index.html"
+        >
+            <span class="brand__mark">✦</span>
+
+            <span class="brand__text">
+                <strong>FURINA</strong>
+                <small>CLANK CHAT ATELIER</small>
+            </span>
+        </a>
+
+
+        <div class="docs-header__center">
+            <span>DOCUMENTATION</span>
+            <strong>Director</strong>
+        </div>
+
+
+        <div class="docs-header__actions">
+
+            <a
+                class="docs-header__link"
+                href="guides.html"
+            >
+                Browse Guides
+            </a>
+
+            <button
+                class="docs-mobile-nav-button"
+                id="docsMobileNavButton"
+                type="button"
+                aria-label="Open documentation navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="docs-layout">
+
+        <aside
+            class="docs-sidebar"
+            id="docsSidebar"
+        >
+
+            <div class="docs-sidebar__top">
+                <small>FURINA GUIDES</small>
+
+                <h2>
+                    Direct the story.
+                </h2>
+
+                <p>
+                    Guide the AI without turning your visible roleplay
+                    into a wall of OOC instructions.
+                </p>
+            </div>
+
+
+            <nav class="docs-nav">
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        DIRECTOR
+                    </span>
+
+                    <a
+                        class="docs-nav__link is-active"
+                        href="#overview"
+                    >
+                        <span>01</span>
+                        Overview
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#persistent"
+                    >
+                        <span>02</span>
+                        Persistent Notes
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#next-reply"
+                    >
+                        <span>03</span>
+                        Next Reply
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#guards"
+                    >
+                        <span>04</span>
+                        Guard Rails
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#presets"
+                    >
+                        <span>05</span>
+                        Narrative Presets
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#cues"
+                    >
+                        <span>06</span>
+                        Director Cues
+                    </a>
+
+                    <a
+                        class="docs-nav__link"
+                        href="#knowledge"
+                    >
+                        <span>07</span>
+                        Knowledge Boundaries
+                    </a>
+
+                </div>
+
+
+                <div class="docs-nav__group">
+
+                    <span class="docs-nav__label">
+                        GUIDES
+                    </span>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="getting-started.html"
+                    >
+                        <span>←</span>
+                        Getting Started
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="customization.html"
+                    >
+                        <span>✦</span>
+                        Customize
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="continuity.html"
+                    >
+                        <span>◆</span>
+                        Continuity
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="story.html"
+                    >
+                        <span>◒</span>
+                        Story
+                    </a>
+
+                    <a
+                        class="docs-nav__link docs-nav__link--page"
+                        href="interfaces.html"
+                    >
+                        <span>◇</span>
+                        Interfaces
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <div class="docs-sidebar__footer">
+
+                <span class="docs-sidebar__status">
+                    <i></i>
+                    Furina 1.3.1
+                </span>
+
+                <a href="guides.html">
+                    All guides
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <article class="docs-content">
+
+            <!-- =================================================
+                 OVERVIEW
+            ================================================== -->
+
+            <section
+                class="docs-hero"
+                id="overview"
+            >
+
+                <div class="docs-eyebrow">
+                    <span>🎬</span>
+                    DIRECTOR MODE
+                </div>
+
+                <h1>
+                    Guide the story.
+                    <span>Don't clutter it.</span>
+                </h1>
+
+                <p class="docs-hero__lead">
+                    Director gives you a place to tell the AI what should
+                    remain true, what it should avoid, and where a scene
+                    should go next.
+                </p>
+
+                <p>
+                    The important part: Furina's generated Director context
+                    can be sent with your message while remaining hidden from
+                    your normal local chat presentation.
+                </p>
+
+
+                <div class="docs-callout docs-callout--accent">
+
+                    <div class="docs-callout__icon">
+                        🎬
+                    </div>
+
+                    <div>
+                        <strong>
+                            Director reminds. It does not force.
+                        </strong>
+
+                        <p>
+                            The model can still ignore or misunderstand an
+                            instruction. Furina improves consistency by keeping
+                            guidance available — it cannot guarantee obedience.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PERSISTENT NOTES
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="persistent"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">
+                        01
+                    </span>
+
+                    <div>
+                        <small>PERSISTENT NOTES</small>
+
+                        <h2>
+                            Things the AI should keep remembering.
+                        </h2>
+
+                        <p>
+                            Persistent Director Notes can accompany multiple
+                            messages until you disable them.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="director-flow"
+                    id="directorFlow"
+                >
+
+                    <div class="director-flow__controls">
+
+                        <label class="director-note-demo">
+
+                            <span class="director-note-demo__top">
+
+                                <input
+                                    id="directorPersistentToggle"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <i></i>
+
+                                <strong>
+                                    Do not control my character
+                                </strong>
+
+                            </span>
+
+                            <p>
+                                Never write dialogue, thoughts, decisions or
+                                actions for the user's character.
+                            </p>
+
+                        </label>
+
+
+                        <label class="director-note-demo">
+
+                            <span class="director-note-demo__top">
+
+                                <input
+                                    id="directorCanonToggle"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <i></i>
+
+                                <strong>
+                                    Current injury
+                                </strong>
+
+                            </span>
+
+                            <p>
+                                Aya's left arm is still injured.
+                            </p>
+
+                        </label>
+
+
+                        <button
+                            class="director-send-demo"
+                            id="directorSendDemo"
+                            type="button"
+                        >
+                            Send example message
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <div class="director-flow__stage">
+
+                        <div class="director-view-tabs">
+
+                            <button
+                                class="director-view-tab is-active"
+                                type="button"
+                                data-director-view="visible"
+                            >
+                                What you see
+                            </button>
+
+                            <button
+                                class="director-view-tab"
+                                type="button"
+                                data-director-view="sent"
+                            >
+                                What Clank receives
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="director-message-view is-active"
+                            data-director-panel="visible"
+                        >
+
+                            <small>YOUR CHAT</small>
+
+                            <div class="director-chat-message">
+                                I try to lift the old wooden box.
+                            </div>
+
+                            <p>
+                                Furina keeps its generated Director block out
+                                of the normal rendered message.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            class="director-message-view"
+                            data-director-panel="sent"
+                        >
+
+                            <small>OUTGOING MESSAGE</small>
+
+                            <pre id="directorPayloadPreview">ooc: furina-director:
+[FURINA_DIRECTOR_NOTES]
+RULE:
+- Never write dialogue, thoughts, decisions or actions for the user's character.
+
+CANON:
+- Aya's left arm is still injured.
+[/FURINA_DIRECTOR_NOTES]
+
+I try to lift the old wooden box.</pre>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout">
+
+                    <div class="docs-callout__icon">
+                        ◆
+                    </div>
+
+                    <div>
+                        <strong>
+                            Your own normal OOC messages are not hidden.
+                        </strong>
+
+                        <p>
+                            Furina only recognizes and hides blocks containing
+                            its own internal markers. A normal message you type
+                            beginning with <code>ooc:</code> remains visible.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NEXT REPLY
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="next-reply"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">02</span>
+
+                    <div>
+                        <small>NEXT REPLY</small>
+
+                        <h2>
+                            Direction that expires after one turn.
+                        </h2>
+
+                        <p>
+                            Use this when you want something to influence the
+                            immediate response without becoming a permanent rule.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="next-reply-demo">
+
+                    <div class="next-reply-demo__composer">
+
+                        <small>
+                            DIRECTION FOR NEXT REPLY
+                        </small>
+
+                        <div>
+                            Keep the confrontation tense. Do not reveal who is
+                            behind the door yet.
+                        </div>
+
+                        <span>
+                            Applies once
+                        </span>
+
+                    </div>
+
+
+                    <div class="next-reply-demo__arrow">
+                        →
+                    </div>
+
+
+                    <div class="next-reply-demo__result">
+
+                        <small>
+                            NEXT RESPONSE
+                        </small>
+
+                        <p>
+                            The handle moves.
+
+                            Someone is definitely standing on the other side.
+
+                            But the door does not open.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    After the next successful send, the temporary instruction
+                    can clear instead of staying active throughout the story.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 GUARD RAILS
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="guards"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">03</span>
+
+                    <div>
+                        <small>GUARD RAILS</small>
+
+                        <h2>
+                            Common RP problems, one switch away.
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="guard-grid">
+
+                    <button class="guard-card is-enabled" type="button"><span>✓</span><strong>Never write dialogue for the user</strong><small>Do not invent or complete the user's spoken words.</small></button>
+                    <button class="guard-card is-enabled" type="button"><span>✓</span><strong>Never decide the user's thoughts</strong><small>Do not state what the user thinks, feels, wants, or realizes.</small></button>
+                    <button class="guard-card is-enabled" type="button"><span>✓</span><strong>Protect major user actions</strong><small>Do not perform consequential actions on the user's behalf.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>No unapproved time skips</strong><small>Do not advance time substantially without the user's direction.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>Do not end the scene early</strong><small>Continue the current scene instead of resolving it prematurely.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>Respect character knowledge</strong><small>Characters may only use information they witnessed, learned, or plausibly inferred.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>Preserve character voice</strong><small>Keep established personality, speech patterns, motives and boundaries consistent.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>Avoid repetition</strong><small>Do not restate the previous reply or loop the same emotional beat.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>Continue instead of summarizing</strong><small>Write the next scene beat rather than a recap unless asked.</small></button>
+                    <button class="guard-card" type="button"><span>+</span><strong>Restrained new characters</strong><small>Do not introduce new named characters casually or without story need.</small></button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NARRATIVE PRESETS
+            ================================================== -->
+
+            <section class="docs-section" id="presets">
+                <div class="docs-section__heading">
+                    <span class="docs-section__number">04</span>
+                    <div>
+                        <small>NARRATIVE PRESETS</small>
+                        <h2>A coordinated direction in one choice.</h2>
+                        <p>Presets add a small set of genre-aware Director rules. They work alongside your notes, Guard Rails, cues and knowledge boundaries rather than replacing them.</p>
+                    </div>
+                </div>
+
+                <div class="director-preset-grid">
+                    <article><span>♡</span><small>SLOW-BURN ROMANCE</small><strong>Subtext, uncertainty and earned intimacy.</strong><p>Avoid rushing intimacy; let affection emerge through behavior, small choices and unresolved tension.</p></article>
+                    <article><span>☠</span><small>HORROR PURSUIT</small><strong>Uncertainty, clues and survival continuity.</strong><p>Reveal threats gradually, use environmental clues and keep injuries, routes and resources consistent.</p></article>
+                    <article><span>▦</span><small>ACADEMY RP</small><strong>Schedules, obligations and social consequences.</strong><p>Keep school rules, classes, clubs, faculty roles, reputation and academic complications present.</p></article>
+                    <article><span>★</span><small>EPIC / HIGH STAKES</small><strong>Consequences, momentum and costly choices.</strong><p>Keep consequences persistent, choices meaningful and urgency high without removing user agency.</p></article>
+                    <article><span>⌕</span><small>MYSTERY</small><strong>Fair clues without premature answers.</strong><p>Preserve the central mystery, seed interpretable clues and keep character knowledge limited.</p></article>
+                </div>
+
+                <div class="docs-callout"><div class="docs-callout__icon">◇</div><div><strong>No preset is also a valid preset.</strong><p>Choose “No preset” when your own Director Notes, Guard Rails and scene tools already describe exactly what you want.</p></div></div>
+            </section>
+
+
+            <!-- =================================================
+                 CUES
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="cues"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">05</span>
+
+                    <div>
+                        <small>DIRECTOR CUES</small>
+
+                        <h2>
+                            Prepare drama now. Trigger it later.
+                        </h2>
+
+                        <p>
+                            A Cue can sit quietly until its trigger condition
+                            becomes true.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="cue-demo"
+                    id="cueDemo"
+                >
+
+                    <div class="cue-demo__queue">
+
+                        <button class="cue-card is-active" type="button" data-cue="turns"><span>AFTER 3 TURNS</span><strong>Someone knocks at the door.</strong></button>
+                        <button class="cue-card" type="button" data-cue="keyword"><span>KEYWORD: BASEMENT</span><strong>The lights go out.</strong></button>
+                        <button class="cue-card" type="button" data-cue="character"><span>CHARACTER: REN</span><strong>Ren finally admits what he hid.</strong></button>
+                        <button class="cue-card" type="button" data-cue="next"><span>NEXT REPLY</span><strong>A phone starts ringing.</strong></button>
+                        <button class="cue-card" type="button" data-cue="manual"><span>MANUAL</span><strong>Reveal the letter.</strong></button>
+
+                    </div>
+
+
+                    <div class="cue-demo__simulation">
+
+                        <small>
+                            CUE SIMULATION
+                        </small>
+
+                        <div
+                            class="cue-demo__status"
+                            id="cueDemoStatus"
+                        >
+                            Waiting: 3 turns remaining
+                        </div>
+
+
+                        <button
+                            id="cueAdvanceButton"
+                            type="button"
+                        >
+                            Advance story
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 KNOWLEDGE
+            ================================================== -->
+
+            <section
+                class="docs-section"
+                id="knowledge"
+            >
+
+                <div class="docs-section__heading">
+
+                    <span class="docs-section__number">06</span>
+
+                    <div>
+                        <small>KNOWLEDGE BOUNDARIES</small>
+
+                        <h2>
+                            Characters are not telepathic.
+                        </h2>
+
+                        <p>
+                            Track the truth separately from who is actually
+                            allowed to know it.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="knowledge-demo"
+                    id="knowledgeDemo"
+                >
+
+                    <div class="knowledge-truth">
+
+                        <small>THE TRUTH</small>
+
+                        <strong>
+                            Mira stole the silver key.
+                        </strong>
+
+                    </div>
+
+
+                    <div class="knowledge-cast">
+
+                        <button
+                            class="knowledge-character"
+                            type="button"
+                            data-knowledge-character="aya"
+                        >
+                            <span>A</span>
+
+                            <div>
+                                <strong>Aya</strong>
+                                <small>KNOWS</small>
+                            </div>
+
+                            <i class="knowledge-state knowledge-state--knows">
+                                ✓
+                            </i>
+                        </button>
+
+
+                        <button
+                            class="knowledge-character"
+                            type="button"
+                            data-knowledge-character="ren"
+                        >
+                            <span>R</span>
+
+                            <div>
+                                <strong>Ren</strong>
+                                <small>SUSPECTS</small>
+                            </div>
+
+                            <i class="knowledge-state knowledge-state--suspects">
+                                ?
+                            </i>
+                        </button>
+
+
+                        <button
+                            class="knowledge-character"
+                            type="button"
+                            data-knowledge-character="kai"
+                        >
+                            <span>K</span>
+
+                            <div>
+                                <strong>Kai</strong>
+                                <small>DOES NOT KNOW</small>
+                            </div>
+
+                            <i class="knowledge-state knowledge-state--unknown">
+                                ×
+                            </i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="knowledge-example">
+
+                        <div class="knowledge-example__message">
+                            Kai:
+                            “So Mira stole the silver key.”
+                        </div>
+
+
+                        <div class="knowledge-example__warning">
+                            <strong>
+                                ✕ Knowledge conflict
+                            </strong>
+
+                            <span>
+                                Kai has not learned this yet.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="docs-callout docs-callout--accent">
+
+                    <div class="docs-callout__icon">
+                        !
+                    </div>
+
+                    <div>
+                        <strong>
+                            Furina cannot rewrite a reply after the model sends it.
+                        </strong>
+
+                        <p>
+                            Knowledge Boundaries are reminders supplied as
+                            context. Their purpose is to reduce mistakes, not
+                            secretly alter generated responses afterward.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="docs-next">
+
+                <small>NEXT GUIDE</small>
+
+                <h2>
+                    Director handles guidance.
+                    Continuity handles memory.
+                </h2>
+
+                <p>
+                    Next we'll look at the Continuity Vault and how Furina
+                    selects relevant story facts without blindly sending every
+                    saved memory on every turn.
+                </p>
+
+
+                <div class="docs-next__actions">
+
+                    <a
+                        class="button button--secondary"
+                        href="customization.html"
+                    >
+                        ← Customization
+                    </a>
+
+                    <a class="button button--primary" href="continuity.html">Continuity Guide <span class="button__arrow">→</span></a>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <script src="../scripts/docs.js"></script>
+
+</body>
+</html>

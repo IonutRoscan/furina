@@ -7826,3 +7826,130 @@ code {
   opacity: 0.58;
   cursor: wait;
 }
+
+/* ============================================================
+   REAL DOCUMENTATION MEDIA
+============================================================ */
+
+.media-slot--filled {
+    overflow: hidden;
+
+    padding: 10px;
+
+    border-style: solid;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(143, 103, 239, 0.055),
+            rgba(255, 255, 255, 0.012)
+        );
+}
+
+
+.media-slot--filled video,
+.media-slot--filled img {
+    display: block;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(
+            177,
+            151,
+            255,
+            0.16
+        );
+
+    border-radius: 16px;
+
+    background: #07060d;
+
+    box-shadow:
+        0 20px 55px
+        rgba(
+            0,
+            0,
+            0,
+            0.3
+        );
+}
+
+
+.media-slot--video video {
+    aspect-ratio: 16 / 9;
+
+    object-fit: contain;
+}
+
+
+.media-slot--image {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.media-slot--image img {
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+.media-caption {
+    padding:
+        13px
+        9px
+        6px;
+
+    text-align: left;
+}
+
+
+.media-caption span {
+    color:
+        var(--accent);
+
+    font-size: 6px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.media-caption p {
+    margin:
+        5px
+        0
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size: 8px;
+
+    line-height: 1.6;
+}
+
+
+@media (
+    max-width: 650px
+) {
+
+    .media-slot--filled {
+        padding: 7px;
+    }
+
+
+    .media-slot--filled video,
+    .media-slot--filled img {
+        border-radius: 12px;
+    }
+
+}

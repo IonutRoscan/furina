@@ -39,6 +39,8 @@ Furina expands the ClankWorld chat experience with tools such as:
 Download and installation instructions are available directly from the website:
 
 **https://ionutroscan.github.io/furina/**
+or
+**https://ionutroscan.github.io/**
 
 ## 🔒 How Furina Works
 

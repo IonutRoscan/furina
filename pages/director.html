@@ -454,11 +454,10 @@
 
                             <pre id="directorPayloadPreview">ooc: furina-director:
 [FURINA_DIRECTOR_NOTES]
-RULE:
-- Never write dialogue, thoughts, decisions or actions for the user's character.
-
-CANON:
-- Aya's left arm is still injured.
+[CONTINUITY]
+[RULE] Never write dialogue, thoughts, decisions or actions for the user's character.
+[CANON] Aya's left arm is still injured.
+[/CONTINUITY]
 [/FURINA_DIRECTOR_NOTES]
 
 I try to lift the old wooden box.</pre>
@@ -823,18 +822,22 @@ I try to lift the old wooden box.</pre>
                     <div class="knowledge-example">
 
                         <div class="knowledge-example__message">
-                            Kai:
-                            “So Mira stole the silver key.”
+                            [KNOWLEDGE_BOUNDARIES]<br>
+                            Truth — Silver key: Mira stole the silver key.<br>
+                            Knows: Aya<br>
+                            Suspects: Ren<br>
+                            Does not know: Kai<br>
+                            [/KNOWLEDGE_BOUNDARIES]
                         </div>
 
 
                         <div class="knowledge-example__warning">
                             <strong>
-                                ✕ Knowledge conflict
+                                ✓ Boundary supplied before generation
                             </strong>
 
                             <span>
-                                Kai has not learned this yet.
+                                Furina provides this guidance to the model; it does not scan or rewrite the completed reply afterward.
                             </span>
                         </div>
 

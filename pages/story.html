@@ -185,11 +185,10 @@
             <section class="docs-section" id="timeline">
                 <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>STORY TIMELINE</small><h2>Keep important events in order.</h2><p>Timeline entries preserve significant events separately from individual chat messages and can be marked completed, ongoing or planned.</p></div></div>
                 <div class="timeline-demo" id="timelineDemo">
-                    <div class="timeline-demo__filters">
-                        <button class="timeline-filter is-active" type="button" data-timeline-filter="all">All</button>
-                        <button class="timeline-filter" type="button" data-timeline-filter="completed">Completed</button>
-                        <button class="timeline-filter" type="button" data-timeline-filter="ongoing">Ongoing</button>
-                        <button class="timeline-filter" type="button" data-timeline-filter="planned">Planned</button>
+                    <div class="timeline-demo__filters" aria-label="Timeline status legend" style="pointer-events: none;">
+                        <span class="timeline-filter is-active">Completed</span>
+                        <span class="timeline-filter">Ongoing</span>
+                        <span class="timeline-filter">Planned</span>
                     </div>
                     <div class="timeline-demo__list">
                         <article class="timeline-event" data-timeline-status="completed"><i></i><div><span>DAY 4 · COMPLETED</span><strong>Forest attack</strong><p>Aya discovers Ren had prior warning of the attack.</p></div></article>
@@ -200,18 +199,18 @@
             </section>
 
             <section class="docs-section" id="snapshots">
-                <div class="docs-section__heading"><span class="docs-section__number">06</span><div><small>SCENE SNAPSHOTS</small><h2>Save the setup before an alternate take.</h2><p>A snapshot stores Furina's current scene-side state and selected story context so you can restore that setup later.</p></div></div>
+                <div class="docs-section__heading"><span class="docs-section__number">06</span><div><small>SCENE SNAPSHOTS</small><h2>Save the scene before an alternate take.</h2><p>A snapshot records the current Scene State plus useful story context for reference and alternate-scene packages. Its Restore action reapplies the saved Scene State.</p></div></div>
                 <div class="snapshot-demo" id="snapshotDemo">
                     <div class="snapshot-demo__current">
-                        <small>CURRENT FURINA STATE</small>
+                        <small>CURRENT SCENE STATE</small>
                         <div class="snapshot-state-row"><span>Scene</span><strong id="snapshotSceneValue">Abandoned Station</strong></div>
                         <div class="snapshot-state-row"><span>Mood</span><strong id="snapshotMoodValue">Uneasy</strong></div>
                         <div class="snapshot-state-row"><span>Objective</span><strong id="snapshotObjectiveValue">Find the journal</strong></div>
                         <div class="snapshot-demo__actions"><button id="captureSnapshotButton" type="button">Capture Snapshot</button><button id="changeSnapshotStateButton" type="button">Try alternate take</button></div>
                     </div>
-                    <div class="snapshot-demo__saved"><small>SAVED SNAPSHOT</small><div class="snapshot-saved-card" id="snapshotSavedCard"><span>No snapshot yet.</span><p>Capture the current Furina state first.</p></div><button id="restoreSnapshotButton" type="button" disabled>Restore Snapshot</button></div>
+                    <div class="snapshot-demo__saved"><small>SAVED SNAPSHOT</small><div class="snapshot-saved-card" id="snapshotSavedCard"><span>No snapshot yet.</span><p>Capture the current Scene State first.</p></div><button id="restoreSnapshotButton" type="button" disabled>Restore Scene State</button></div>
                 </div>
-                <div class="docs-callout"><div class="docs-callout__icon">!</div><div><strong>A snapshot is not a Clank chat branch.</strong><p>Restoring a Furina snapshot restores saved Furina-side story state. It cannot rewind or replace Clank's server-side message history.</p></div></div>
+                <div class="docs-callout"><div class="docs-callout__icon">!</div><div><strong>Restore means Scene State — not every recorded setting.</strong><p>The snapshot also records its chapter, Director preset, active Guard Rails and enabled Continuity for the copied alternate-scene package/reference. Restore Scene State reapplies the saved Scene State only; it does not automatically re-enable those other systems or rewind Clank messages.</p></div></div>
             </section>
 
             <section class="docs-section" id="bookmarks">
@@ -231,19 +230,18 @@
                 <div class="docs-section__heading"><span class="docs-section__number">08</span><div><small>STORY BIBLE</small><h2>Package the Furina side of the story.</h2><p>Story Bible portability can export the current conversation's Furina story data as JSON, with a readable Markdown export also available.</p></div></div>
 
                 <div class="story-bible-demo" id="storyBibleDemo">
-                    <div class="story-bible-demo__options">
-                        <label><input type="checkbox" data-story-bible-component="Continuity Vault" checked><i></i><span>Continuity Vault</span></label>
-                        <label><input type="checkbox" data-story-bible-component="Director Notes" checked><i></i><span>Director Notes</span></label>
-                        <label><input type="checkbox" data-story-bible-component="Director tools" checked><i></i><span>Director cues / guards / knowledge</span></label>
-                        <label><input type="checkbox" data-story-bible-component="Scene State" checked><i></i><span>Scene State</span></label>
-                        <label><input type="checkbox" data-story-bible-component="Recaps, timeline & snapshots" checked><i></i><span>Scene Intelligence</span></label>
-                        <label><input type="checkbox" data-story-bible-component="Bookmarks" checked><i></i><span>Bookmarks</span></label>
-                        <label><input type="checkbox" data-story-bible-component="Chapters" checked><i></i><span>Chapters</span></label>
+                    <div class="story-bible-demo__options" aria-label="Story Bible contents" style="pointer-events: none;">
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Continuity Vault</span></label>
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Persistent Director Notes</span></label>
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Director cues / guards / knowledge</span></label>
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Scene State</span></label>
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Scene Intelligence: recaps / timeline / snapshots</span></label>
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Bookmarks</span></label>
+                        <label title="Included automatically"><input type="checkbox" checked disabled><i></i><span>Chapters</span></label>
                     </div>
                     <div class="story-bible-demo__package">
-                        <div class="story-bible-file"><span>◆</span><small>FURINA STORY BIBLE</small><strong>The Station Arc</strong><p id="storyBibleSummary">7 components included</p></div>
-                        <button id="buildStoryBibleButton" type="button">Build example package <span>→</span></button>
-                        <div class="story-bible-demo__result" id="storyBibleResult">Choose what the example package should contain.</div>
+                        <div class="story-bible-file"><span>◆</span><small>FURINA STORY BIBLE</small><strong>The Station Arc</strong><p>7 story-data groups included automatically</p></div>
+                        <div class="story-bible-demo__result">Story Bible export builds the versioned package from the conversation's available Furina story data. These are contents, not selectable export switches.</div>
                     </div>
                 </div>
 

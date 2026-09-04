@@ -1,62 +1,67 @@
-# Furina Site
+# ✦ Furina: Clank Chat Atelier
 
-Dedicated website and documentation for **Furina: Clank Chat Atelier**.
+**Furina** is a client-side browser extension for [ClankWorld](https://www.clank.world/) focused on chat customization, roleplay immersion, story direction, continuity, and long-form roleplay tools.
 
-## Local preview
+## 🌐 Website & Documentation
 
-The site is intentionally static and works without a build step.
+Visit the dedicated Furina website:
 
-1. Open this folder in VS Code.
-2. Open `index.html` in a browser, or use a lightweight local server if you prefer.
-3. All internal links use relative paths so the site can also be hosted as a GitHub Pages project site.
+**https://ionutroscan.github.io/furina/**
 
-## GitHub Pages deployment
+The site includes installation instructions, interactive guides, feature explanations, troubleshooting, release information, and examples of Furina's systems.
 
-The simplest layout is to keep `index.html` at the repository root, push the repository, then enable GitHub Pages from the branch/root you want to publish.
+## ✨ What Furina Does
 
-The current download button expects this file to exist:
+Furina expands the ClankWorld chat experience with tools such as:
 
-```text
-assets/downloads/Furina-Clank-Chat-Atelier-1.3.1.zip
-```
+- Deep chat customization, themes, backgrounds and live wallpapers
+- Music, ambience, atmosphere effects and stickers
+- Essentials Mode for a simpler interface
+- Full Atelier for advanced control
+- Director Notes and next-reply guidance
+- Guard Rails and Director Cues
+- Continuity and long-term story memory tools
+- Scene State, recaps, timelines and Story Bible tools
+- Bookmarks and chapters
+- Visual Novel Mode
+- Phantom Chat
+- Response Style library
+- Profile Atelier
+- Import, export and setup sharing
+- Reader and Focus modes
+- Custom CSS
+- Multiple interface languages
 
-That ZIP is included in this finished site package. If you rename the release ZIP later, update the matching links in `index.html`, `pages/getting-started.html`, `pages/guides.html`, and `pages/releases.html`.
+## 📦 Current Version
 
-## GitHub-ready status
+**Furina 1.3.1**
 
-This package is prepared for a first GitHub Pages deployment. Put the contents of this folder at the repository root and follow `GITHUB-PAGES-CHECKLIST.md`.
+Download and installation instructions are available directly from the website:
 
-The site has no build step, no framework dependency and no required external media. All current page-to-page links are relative so the same files can work locally and under a GitHub Pages project path.
+**https://ionutroscan.github.io/furina/**
 
-## Main pages
+## 🔒 How Furina Works
 
-- `index.html` — product landing page
-- `pages/guides.html` — searchable documentation library
-- `pages/getting-started.html` — Chromium installation + first steps
-- `pages/customization.html` — themes, backgrounds, live wallpaper, chat styling, immersion, language, entrance animations and Custom CSS
-- `pages/director.html` — Director Notes, next reply, Guard Rails, cues and knowledge boundaries
-- `pages/continuity.html` — Continuity Vault, selective memories, budgets and capture workflows
-- `pages/story.html` — Scene State, recaps, timeline, snapshots, bookmarks, chapters and Story Bible
-- `pages/interfaces.html` — Visual Novel Mode and Phantom Chat
-- `pages/response-styles.html` — searchable list of Furina's 32 response styles
-- `pages/profile-atelier.html` — Miyabi / Profile Atelier
-- `pages/sharing.html` — Theme, Full Setup, Story Bible and profile portability
-- `pages/troubleshooting.html` — support, diagnostics and technical boundaries
-- `pages/releases.html` — current download and release-family history
+Furina is a **client-side browser extension**.
 
-## Optional media
+It does not modify ClankWorld's backend, increase a model's real context window, or replace Clank's own memory systems.
 
-The site is designed to remain useful with **zero screenshots or videos**. Optional placeholders are already present on the Interfaces and Profile Atelier pages.
+Features such as Director and Continuity organize information locally and prepare user-controlled context when appropriate.
 
-If you later want real media, see `assets/media/README.md`.
+## 🧭 Documentation
 
-## Firefox
+The website contains dedicated guides for:
 
-Firefox download/setup is intentionally not part of this first website release. Add it later as a separately maintained installation path when desired.
+**Getting Started · Customization · Immersion · Director · Continuity · Story Tools · Interfaces · Response Styles · Profile Atelier · Sharing · Troubleshooting · Releases**
 
-## Editing notes
+Most guides include interactive examples rather than relying on large collections of screenshots.
 
-- Shared landing-page styles live in `style.css`.
-- Shared documentation styles live in `styles/docs.css`.
-- Shared documentation interactions live in `scripts/docs.js`.
-- Searchable guide/style metadata lives in `data/site-data.js` so it works locally through `file://` without fetching JSON.
+## 💜 About the Project
+
+Furina started as a customization extension and gradually grew into a larger toolkit for making ClankWorld roleplays more immersive, organized and personal.
+
+The goal is not to replace Clank — it is to build a richer client-side workspace around it.
+
+---
+
+Furina is an independent community project and is not affiliated with or endorsed by ClankWorld.

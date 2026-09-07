@@ -13,6 +13,16 @@ window.FurinaSiteData = Object.freeze({
       tags: ['install', 'essentials', 'beginner', 'setup']
     },
     {
+      id: 'developer-preview-132',
+      title: '1.3.2 Developer Preview',
+      category: 'preview',
+      icon: '⚗',
+      description:
+        'Test Atelier Markup, choices and dice, chat skins, Quote to Composer, interface/RP sounds, manual SFX cues and HUD skins.',
+      href: 'developer-preview.html',
+      tags: ['1.3.2', 'dev', 'developer preview', 'atelier markup', 'choices', 'dice', 'sfx', 'hud', 'message skins']
+    },
+    {
       id: 'customization',
       title: 'Customization',
       category: 'visual',
@@ -132,9 +142,9 @@ window.FurinaSiteData = Object.freeze({
       category: 'support',
       icon: '↓',
       description:
-        'Current download, release history, update notes and the version of Furina this documentation describes.',
+        'Stable 1.3.1 download, optional 1.3.2 Developer Preview, release history and update notes.',
       href: 'releases.html',
-      tags: ['download', 'version', 'changelog', 'update', '1.3.1']
+      tags: ['download', 'version', 'changelog', 'update', '1.3.1', '1.3.2', 'dev']
     }
   ],
 

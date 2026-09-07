@@ -32,9 +32,11 @@ Furina expands the ClankWorld chat experience with tools such as:
 - Custom CSS
 - Multiple interface languages
 
-## 📦 Current Version
+## 📦 Versions
 
-**Furina 1.3.1**
+**Stable: Furina 1.3.1**
+
+**Developer Preview: Furina 1.3.2** — optional test build for the newest chat customization, Atelier Markup, RP SFX and HUD features. It may receive fixes before becoming stable.
 
 Download and installation instructions are available directly from the website:
 
@@ -54,7 +56,7 @@ Features such as Director and Continuity organize information locally and prepar
 
 The website contains dedicated guides for:
 
-**Getting Started · Customization · Immersion · Director · Continuity · Story Tools · Interfaces · Response Styles · Profile Atelier · Sharing · Troubleshooting · Releases**
+**Getting Started · 1.3.2 Developer Preview · Customization · Immersion · Director · Continuity · Story Tools · Interfaces · Response Styles · Profile Atelier · Sharing · Troubleshooting · Releases**
 
 Most guides include interactive examples rather than relying on large collections of screenshots.
 

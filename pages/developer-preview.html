@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07060d">
+    <meta name="description" content="Guide to the Furina 1.3.2 Developer Preview: Atelier Markup, interactive choices and dice, chat skins, sounds and HUD customization.">
+    <title>1.3.2 Developer Preview — Furina: Clank Chat Atelier</title>
+    <link rel="icon" href="../assets/images/furina-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/docs.css">
+</head>
+<body class="docs-page">
+    <div class="site-background" aria-hidden="true"><div class="site-background__glow site-background__glow--one"></div><div class="site-background__glow site-background__glow--two"></div><div class="site-background__grid"></div><div class="site-background__noise"></div></div>
+
+    <header class="docs-header">
+        <a class="brand" href="../index.html"><span class="brand__mark">✦</span><span class="brand__text"><strong>FURINA</strong><small>CLANK CHAT ATELIER</small></span></a>
+        <div class="docs-header__center"><span>DOCUMENTATION</span><strong>1.3.2 Developer Preview</strong></div>
+        <div class="docs-header__actions"><a class="docs-header__link" href="releases.html">Releases</a><button class="docs-mobile-nav-button" id="docsMobileNavButton" type="button" aria-label="Open documentation navigation" aria-expanded="false">☰</button></div>
+    </header>
+
+    <main class="docs-layout">
+        <aside class="docs-sidebar" id="docsSidebar">
+            <div class="docs-sidebar__top"><small>DEVELOPER PREVIEW</small><h2>Furina 1.3.2</h2><p>A test build for the newest standard-chat customization and roleplay interaction systems. Stable remains 1.3.1.</p></div>
+            <nav class="docs-nav">
+                <div class="docs-nav__group"><span class="docs-nav__label">1.3.2</span><a class="docs-nav__link is-active" href="#overview"><span>01</span>Overview</a><a class="docs-nav__link" href="#markup"><span>02</span>Atelier Markup</a><a class="docs-nav__link" href="#presentation"><span>03</span>Chat presentation</a><a class="docs-nav__link" href="#sounds"><span>04</span>Sounds</a><a class="docs-nav__link" href="#hud"><span>05</span>HUD skins</a><a class="docs-nav__link" href="#testing"><span>06</span>Testing notes</a></div>
+                <div class="docs-nav__group"><span class="docs-nav__label">RELATED</span><a class="docs-nav__link docs-nav__link--page" href="customization.html"><span>◈</span>Customization</a><a class="docs-nav__link docs-nav__link--page" href="immersion.html"><span>☁</span>Immersion</a><a class="docs-nav__link docs-nav__link--page" href="releases.html"><span>↓</span>Releases</a></div>
+            </nav>
+            <div class="docs-sidebar__footer"><span class="docs-sidebar__status docs-sidebar__status--dev"><i></i>Preview: 1.3.2</span><a href="guides.html">All guides <span>↗</span></a></div>
+        </aside>
+
+        <article class="docs-content">
+            <section class="docs-hero" id="overview">
+                <div class="docs-eyebrow docs-eyebrow--dev"><span>⚗</span> DEVELOPER PREVIEW</div>
+                <h1>Furina <span>1.3.2</span></h1>
+                <p class="docs-hero__lead">A visual-and-interaction update for standard Clank chat: richer message formatting, interactive roleplay widgets, sound direction and a new HUD layer.</p>
+
+                <div class="release-hero-card release-hero-card--dev"><div><small>OPTIONAL TEST BUILD · STABLE REMAINS 1.3.1</small><strong>1.3.2</strong><p>May receive fixes before promotion to stable</p></div><a class="button button--primary button--large" href="../assets/downloads/Furina-Clank-Chat-Atelier-1.3.2.zip" download><span class="button__icon">↓</span><span><small>Download developer build</small>Furina 1.3.2 DEV</span></a></div>
+
+                <div class="docs-callout docs-callout--warning"><div class="docs-callout__icon">!</div><div><strong>This is not replacing the stable download yet.</strong><p>If you want the safest path, use 1.3.1. If you want to test the newest systems and are comfortable refreshing/reloading after fixes, use 1.3.2.</p></div></div>
+
+                <div class="dev-preview-summary-grid">
+                    <article><span>◇</span><small>CHAT</small><strong>Atelier Markup</strong><p>Cards, scene headers, meters, details, tooltips and inline effects.</p></article>
+                    <article><span>◫</span><small>INTERACTIVE</small><strong>Choices & Dice</strong><p>Clickable response insertion and rollable dice without auto-sending.</p></article>
+                    <article><span>♪</span><small>SOUND</small><strong>Roleplay SFX</strong><p>Automatic assistant cues plus deliberate user-directed next-send sounds.</p></article>
+                    <article><span>⌗</span><small>DECOR</small><strong>HUD Skins</strong><p>Code-built chat frames that layer with existing Furina Decor.</p></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="markup">
+                <div class="docs-section__heading"><span class="docs-section__number">02</span><div><small>ATELIER MARKUP</small><h2>Give standard chat a richer visual vocabulary.</h2><p>Furina can render its own optional markup locally while leaving normal Clank text usable for everyone else.</p></div></div>
+
+                <div class="styling-grid">
+                    <article class="styling-card"><span>▣</span><h3>Cards & scene headers</h3><p>Package an important beat, scene change or piece of information into a more deliberate visual block.</p></article>
+                    <article class="styling-card"><span>▰</span><h3>Meters & details</h3><p>Show progress/state information or tuck optional content inside expandable details.</p></article>
+                    <article class="styling-card"><span>?</span><h3>Tooltips & inline effects</h3><p>Add small explanations or visual emphasis without building an entirely new layout.</p></article>
+                    <article class="styling-card"><span>◫</span><h3>Choices & dice</h3><p>Choices insert a selected response into the composer. Dice support d4, d6, d8, d10, d12, d20 and d100 with an explicit Insert result action.</p></article>
+                </div>
+
+                <div class="dev-code-example"><small>INTERACTION RULE</small><strong>Nothing sends itself.</strong><p>Clicking a choice or inserting a dice result only edits the current draft. Furina preserves existing composer text and waits for the user to send normally.</p></div>
+            </section>
+
+            <section class="docs-section" id="presentation">
+                <div class="docs-section__heading"><span class="docs-section__number">03</span><div><small>STANDARD CHAT PRESENTATION</small><h2>Change how messages feel without switching layouts.</h2><p>These controls apply to ordinary Clank chat. Visual Novel and Phantom remain separate interfaces.</p></div></div>
+
+                <div class="finish-flow">
+                    <article><span>◧</span><div><strong>Message skins</strong><p>Choose separate assistant and user styles from Standard, Minimal, Glass, Terminal, Parchment and Manga.</p></div></article>
+                    <article><span>▱</span><div><strong>Composer skins</strong><p>Restyle the normal input area with Standard, Minimal, Glass or Terminal while keeping Clank and Furina controls usable.</p></div></article>
+                    <article><span>“”</span><div><strong>Dialogue presentation</strong><p>Optionally distinguish quoted dialogue from italic actions/narration. Speaker nameplates are also optional and OFF by default.</p></div></article>
+                    <article><span>↗</span><div><strong>Quote to Composer</strong><p>Select text in an earlier message and use Quote to insert it as a Markdown quote. Quote and Remember Selection can coexist in the same selection action strip.</p></div></article>
+                    <article><span>…</span><div><strong>Typing indicators & entrances</strong><p>New visual styles follow Clank's real generation state, while reduced-motion and history guards avoid unnecessary replay.</p></div></article>
+                </div>
+            </section>
+
+            <section class="docs-section" id="sounds">
+                <div class="docs-section__heading"><span class="docs-section__number">04</span><div><small>INTERFACE + ROLEPLAY SOUND</small><h2>Let the conversation make noise — only when you want it to.</h2><p>Interface Sounds and Roleplay Sounds are separate systems with separate controls.</p></div></div>
+
+                <div class="dev-sound-columns">
+                    <article><small>INTERFACE SOUNDS</small><strong>Furina UI feedback</strong><p>Optional global sounds for panel actions, choices, dice, Quote/Remember and other interface events. OFF by default, with Soft, Digital and Mechanical test sets.</p></article>
+                    <article><small>ROLEPLAY SOUNDS</small><strong>Story event cues</strong><p>Per-conversation SFX with assistant-event detection, category controls, cooldowns, custom trigger phrases and optional direct-audio URL overrides.</p></article>
+                </div>
+
+                <div class="support-sequence">
+                    <article><span>1</span><strong>Enable RP Sounds</strong><p>Open Full Atelier → Scene → RP Sounds. The master switch is OFF by default and saved per conversation.</p></article>
+                    <article><span>2</span><strong>Choose automatic or manual</strong><p>Automatic assistant detection can listen for explicit events such as thunder, knocks, footsteps, glass, gunshots, fire or heartbeat. Turn it off for a manual-only soundboard.</p></article>
+                    <article><span>3</span><strong>Direct your own cue</strong><p>Use <code>♪ RP SFX</code> above the composer to queue up to three sounds for your next real user send. No sound marker is inserted into the message sent to Clank.</p></article>
+                    <article><span>4</span><strong>Customize when needed</strong><p>Disable categories, add custom trigger phrases or replace a built-in cue with a direct audio URL. Failed custom playback falls back to Furina's built-in cue.</p></article>
+                </div>
+
+                <div class="docs-callout"><div class="docs-callout__icon">♪</div><div><strong>History stays quiet.</strong><p>Roleplay SFX seed existing messages silently and listen for new assistant text, so opening an old horror conversation should not replay every door, thunderclap and gunshot in the transcript.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="hud">
+                <div class="docs-section__heading"><span class="docs-section__number">05</span><div><small>CHAT FRAME / HUD SKINS</small><h2>Decorate the stage, not only the bubbles.</h2><p>HUD skins add a code-built frame layer around standard chat and intentionally coexist with Furina's older Edge Glow and Corner Ornaments.</p></div></div>
+
+                <div class="hud-skin-row">
+                    <article data-hud="arcane"><span>✦</span><strong>Arcane</strong><p>Curved sigils, magical lines and accent glow.</p></article>
+                    <article data-hud="cyber"><span>⌗</span><strong>Cyber</strong><p>Angular brackets, segmented rails and technical cuts.</p></article>
+                    <article data-hud="gothic"><span>◆</span><strong>Gothic</strong><p>Sharper ornamental geometry and pointed framing.</p></article>
+                    <article data-hud="terminal"><span>&gt;_</span><strong>Terminal</strong><p>Technical marks, restrained dashed framing and mono flavor.</p></article>
+                    <article data-hud="minimal"><span>◇</span><strong>Minimal Luxe</strong><p>Thin lines and quiet decorative notches.</p></article>
+                </div>
+
+                <div class="experimental-grid">
+                    <article><strong>Frame rails</strong><p>Top, bottom and side framing around the chat viewport.</p></article>
+                    <article><strong>Composer brackets</strong><p>Attach matching ornaments around the normal Clank composer.</p></article>
+                    <article><strong>Message ornaments</strong><p>Add small style-specific markers to ordinary assistant/user messages.</p></article>
+                    <article><strong>Glyphs & reveal</strong><p>Optional HUD glyphs plus a short assembly/reveal animation that can be replayed for previews or recording.</p></article>
+                </div>
+
+                <div class="docs-callout docs-callout--accent"><div class="docs-callout__icon">✦</div><div><strong>HUD skins follow Furina's accent.</strong><p>Use frame presence, glow strength and inset to tune the effect, then combine it with Edge Glow or Corner Ornaments only if the result still leaves the chat readable.</p></div></div>
+            </section>
+
+            <section class="docs-section" id="testing">
+                <div class="docs-section__heading"><span class="docs-section__number">06</span><div><small>DEVELOPER BUILD NOTES</small><h2>What to check while 1.3.2 is still in preview.</h2><p>The most useful feedback is about behavior, not only whether a setting exists.</p></div></div>
+
+                <div class="safety-checklist">
+                    <article><strong>Standard chat remains normal</strong><p>Nothing should send automatically. Speaker nameplates and sounds remain opt-in. Existing themes should not unexpectedly enable new cosmetics.</p></article>
+                    <article><strong>Streaming stays sane</strong><p>Dice/choices survive rerenders, message entrances do not replay across history, and RP SFX do not machine-gun during streaming updates.</p></article>
+                    <article><strong>Conversation state stays isolated</strong><p>RP Sounds and other conversation-scoped settings should follow the correct chat without leaking into unrelated conversations.</p></article>
+                    <article><strong>Special layouts are unchanged</strong><p>The 1.3.2 feature work targets standard chat. Visual Novel and Phantom are intentionally outside this update's feature passes.</p></article>
+                </div>
+
+                <div class="docs-callout docs-callout--good"><div class="docs-callout__icon">✓</div><div><strong>If the preview behaves well, you can simply keep using it.</strong><p>When a bug-fix build replaces the 1.3.2 ZIP, reload the unpacked extension and refresh already-open Clank tabs so the new content scripts are injected.</p></div></div>
+            </section>
+
+            <section class="docs-next"><small>STABLE OR PREVIEW</small><h2>Choose the build that fits you.</h2><p>1.3.1 remains the stable download. 1.3.2 is for testing the newest standard-chat features while they settle.</p><div class="docs-next__actions"><a class="button button--secondary" href="../assets/downloads/Furina-Clank-Chat-Atelier-1.3.1.zip" download>Stable 1.3.1</a><a class="button button--primary" href="../assets/downloads/Furina-Clank-Chat-Atelier-1.3.2.zip" download>1.3.2 Developer Preview <span class="button__arrow">↓</span></a></div></section>
+        </article>
+    </main>
+
+    <script src="../scripts/docs.js"></script>
+</body>
+</html>

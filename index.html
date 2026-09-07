@@ -29,7 +29,7 @@
     <meta property="og:site_name" content="Furina: Clank Chat Atelier">
     <meta property="og:url" content="https://ionutroscan.github.io/furina/">
     <meta property="og:title" content="Furina: Clank Chat Atelier">
-    <meta property="og:description" content="Official website and documentation for Furina 1.3.1 — customization, immersion, Director tools, Continuity, Story tools, Visual Novel Mode, and more.">
+    <meta property="og:description" content="Official website and documentation for Furina — stable 1.3.1 plus the optional 1.3.2 Developer Preview with Atelier Markup, RP SFX, HUD skins, and more.">
     <meta property="og:image" content="https://ionutroscan.github.io/furina/assets/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -37,7 +37,7 @@
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Furina: Clank Chat Atelier">
-    <meta name="twitter:description" content="Official website and documentation for Furina 1.3.1 — customization, immersion, Director tools, Continuity, Story tools, Visual Novel Mode, and more.">
+    <meta name="twitter:description" content="Official website and documentation for Furina — stable 1.3.1 plus the optional 1.3.2 Developer Preview with Atelier Markup, RP SFX, HUD skins, and more.">
     <meta name="twitter:image" content="https://ionutroscan.github.io/furina/assets/images/social-preview.png">
     <meta name="twitter:image:alt" content="Furina: Clank Chat Atelier promotional banner">
 </head>
@@ -173,7 +173,7 @@
             <div class="hero__copy">
                 <div class="eyebrow reveal">
                     <span class="eyebrow__spark">✦</span>
-                    Furina 1.3.1
+                    Furina 1.3.1 · Stable
                     <span class="eyebrow__dot"></span>
                     Client-side ClankWorld extension
                 </div>
@@ -489,6 +489,64 @@
                 </div>
             </div>
 
+        </section>
+
+
+        <!-- =====================================================
+             1.3.2 DEVELOPER PREVIEW
+        ====================================================== -->
+
+        <section class="dev-preview-section section-shell" id="developer-preview">
+            <div class="dev-preview-card reveal">
+                <div class="dev-preview-card__copy">
+                    <div class="dev-preview-badge"><i></i> Developer Preview</div>
+                    <small class="dev-preview-card__version">FURINA 1.3.2</small>
+                    <h2>Make the chat <span>perform.</span></h2>
+                    <p>
+                        1.3.2 is available as an optional development build while it gets real-world testing.
+                        It adds Furina-specific chat markup, interactive RP widgets, new message presentation,
+                        roleplay sound effects and code-built HUD skins.
+                    </p>
+
+                    <div class="dev-preview-chips">
+                        <span>Atelier Markup</span>
+                        <span>Choices + Dice</span>
+                        <span>Message Skins</span>
+                        <span>RP SFX</span>
+                        <span>Manual SFX</span>
+                        <span>HUD Skins</span>
+                    </div>
+
+                    <div class="dev-preview-card__actions">
+                        <a class="button button--primary" href="assets/downloads/Furina-Clank-Chat-Atelier-1.3.2.zip" download>
+                            <span class="button__icon">↓</span>
+                            <span><small>Developer build</small>Furina 1.3.2 DEV</span>
+                        </a>
+                        <a class="button button--secondary" href="pages/developer-preview.html">
+                            1.3.2 guide <span class="button__arrow">→</span>
+                        </a>
+                    </div>
+
+                    <p class="dev-preview-card__note">
+                        <strong>Want the safest build?</strong> Furina 1.3.1 remains the stable release.
+                        The 1.3.2 preview may receive fixes before it is promoted to stable.
+                    </p>
+                </div>
+
+                <div class="dev-preview-stage" aria-hidden="true">
+                    <div class="dev-preview-stage__hud">
+                        <i class="dev-hud-corner dev-hud-corner--tl"></i>
+                        <i class="dev-hud-corner dev-hud-corner--tr"></i>
+                        <i class="dev-hud-corner dev-hud-corner--bl"></i>
+                        <i class="dev-hud-corner dev-hud-corner--br"></i>
+                        <small>ARCANE HUD · 1.3.2</small>
+                        <div class="dev-preview-message">The lock clicks somewhere in the dark.</div>
+                        <div class="dev-preview-choice-row"><span>Open the door</span><span>Stay quiet</span></div>
+                        <div class="dev-preview-sfx">♪ RP SFX <b>Door</b></div>
+                        <div class="dev-preview-composer">Type something… <span>✦</span></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
@@ -812,6 +870,7 @@
                 <a class="home-guide-card reveal" href="pages/continuity.html"><span>◆</span><small>MEMORY</small><strong>Continuity</strong><p>Save important facts and let Furina select a small relevant group for the current message.</p><i>Open guide →</i></a>
                 <a class="home-guide-card reveal" href="pages/story.html"><span>◒</span><small>STRUCTURE</small><strong>Story Tools</strong><p>Scene State, recaps, timeline, snapshots, bookmarks, chapters and Story Bible.</p><i>Open guide →</i></a>
                 <a class="home-guide-card reveal" href="pages/interfaces.html"><span>◇</span><small>INTERFACES</small><strong>Alternate Interfaces</strong><p>Visual Novel Mode and Phantom Chat turn the same conversation into a different kind of stage.</p><i>Open guide →</i></a>
+                <a class="home-guide-card home-guide-card--dev reveal" href="pages/developer-preview.html"><span>⚗</span><small>1.3.2 DEV</small><strong>Developer Preview</strong><p>Atelier Markup, choices, dice, message skins, RP SFX, manual sound cues and HUD skins.</p><i>See what is new →</i></a>
                 <a class="home-guide-card home-guide-card--all reveal" href="pages/guides.html"><span>✦</span><small>EVERYTHING</small><strong>Browse all guides</strong><p>Response Styles, Profile Atelier, sharing, troubleshooting and release notes live in the full library.</p><i>Browse library →</i></a>
             </div>
         </section>
@@ -936,6 +995,18 @@
                     <span>CLANK CHAT ATELIER</span>
                 </div>
 
+            </div>
+
+            <div class="dev-download-strip reveal">
+                <div>
+                    <span class="dev-preview-badge"><i></i> Developer Preview</span>
+                    <strong>Want to test Furina 1.3.2?</strong>
+                    <p>Try the in-development build without replacing 1.3.1 as the site's stable recommendation.</p>
+                </div>
+                <div class="dev-download-strip__actions">
+                    <a class="button button--secondary" href="pages/developer-preview.html">What's new →</a>
+                    <a class="button button--primary" href="assets/downloads/Furina-Clank-Chat-Atelier-1.3.2.zip" download>Download 1.3.2 DEV</a>
+                </div>
             </div>
         </section>
 
